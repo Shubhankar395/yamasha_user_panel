@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Auto Investment !'
+$page_title = 'Auto Investment !11'
 ?>
 
 <!doctype html>
