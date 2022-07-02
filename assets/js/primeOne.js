@@ -5,7 +5,7 @@ var byId = function( id ) { return document.getElementById( id ); };
 
 function loginCheck(){
     if(!store.get('yamasha_user_data')){
-         location.replace('./login.php')
+         location.replace('./login.html')
     }
 }
 
@@ -13,7 +13,7 @@ function loginCheck(){
 
 function logOut(){
     store.remove('yamasha_user_data')
-    location.replace('./login.php')
+    location.replace('./login.html')
 }
 
 // function for updating user name in header

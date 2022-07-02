@@ -24,7 +24,7 @@
 		<script src="assets/plugins/flot/jquery.flot.pie.js"></script> -->
 
 		<!--Jquery.knob js-->
-		<!-- <script src="assets/plugins/othercharts/jquery.knob.js"></script> -->
+		<!-- <script src="assets/plugins/othercharts/jquery.knob.js"></script> --> 
 
 		<!--Other charts js-->
 		<!-- <script src="assets/js/othercharts.js"></script> -->

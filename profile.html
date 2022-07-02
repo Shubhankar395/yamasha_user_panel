@@ -1,1068 +1,862 @@
+
+
 <!doctype html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-		<meta name="msapplication-TileColor" content="#0061da">
-		<meta name="theme-color" content="#1643a3">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-		<!-- Title -->
-		<title>splink – Admin Bootstrap4 Responsive Webapp Dashboard Template</title>
-		
-		<!-- Dashboard css -->
-		<link href="assets/css/dashboard.css" rel="stylesheet" />
-		
-		<!-- Font family -->
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+<head>
+<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-TileColor" content="#0061da">
+	<meta name="theme-color" content="#1643a3">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<link rel="icon" href="./assets/images/Vector.png" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
 
-		<!-- C3 Charts css -->
-		<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+	<!-- Title -->
+	<title>Profile</title>
+	<!-- Dashboard css -->
+	<link href="assets/css/dashboard.css" rel="stylesheet" />
 
-		<!-- Custom scroll bar css-->
-		<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+	<!-- Font family -->
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
 
-		<!--Horizontal css -->
-        <link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
-        <link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
+	<!--C3 Charts css -->
+	<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
 
-		<!---Font icons css-->
-		<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
-		<link  href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
-		
-	</head>
-	
-	<body class="app sidebar-mini rtl">
-		
-		<!--Global-Loader-->
-		<div id="global-loader"></div>
-		
-		<div class="page">
-			<div class="page-main">
+	<!-- Custom scroll bar css-->
+	<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
 
-				<!--app-header-->
-				<div class="app-header header d-flex">
-					<div class="container">
-						<div class="d-flex">
-						    <a class="header-brand" href="index.html">
-								<img src="assets/images/brand/logo.png" class="header-brand-img" alt="splink logo">
-							</a><!-- logo-->
-							<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a><!-- sidebar-toggle-->
-							<a href="#" data-toggle="search" class="nav-link nav-link d-md-none navsearch"><i class="fa fa-search"></i></a><!-- search icon -->
-							<div class="dropdown d-none d-lg-block d-md-flex user">
-								<a class="nav-link icon" data-toggle="dropdown">
-									<i class="fe fe-user"></i>
-									<span class="pulse bg-danger"></span>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-									<a class="dropdown-item d-flex pb-3" href="#">
-										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/male/4.jpg"></span>
-										<div>
-											<strong>Madeleine Scott</strong> Sent you add request
-											<div class="small text-muted">
-												view profile
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item d-flex pb-3" href="#">
-										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/female/14.jpg"></span>
-										<div>
-											<strong>rebica</strong> Suggestions for you
-											<div class="small text-muted">
-												view profile
-											</div>
-										</div>
-									</a>
-									<a class="dropdown-item d-flex pb-3" href="#">
-										<span class="avatar brround mr-3 align-self-center cover-image" data-image-src="assets/images/faces/male/1.jpg"></span>
-										<div>
-											<strong>Devid robott</strong> sent you add request
-											<div class="small text-muted">
-												view profile
-											</div>
-										</div>
-									</a>
-									<div class="dropdown-divider"></div><a class="dropdown-item text-center text-muted-dark" href="#">View all contact list</a>
-								</div>
-							</div><!-- user-icon -->
-							<div class="dropdown d-none d-lg-block">
-								<a class="nav-link icon" data-toggle="dropdown" aria-expanded="false">
-									<i class="fe fe-bell "></i>
-									<span class="pulse bg-danger"></span>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-									<a href="#" class="dropdown-item text-center">3 New Notifications</a>
-									<div class="dropdown-divider"></div>
-									<a href="#" class="dropdown-item d-flex pb-3">
-										<div class="notifyimg bg-green">
-											<i class="fa fa-thumbs-o-up "></i>
-										</div>
-										<div>
-											<strong>Someone likes our posts.</strong>
-											<div class="small text-muted">3 hours ago</div>
-										</div>
-									</a>
-									<a href="#" class="dropdown-item d-flex pb-3">
-										<div class="notifyimg bg-blue">
-											<i class="fa fa-commenting-o"></i>
-										</div>
-										<div>
-											<strong> 3 New Comments</strong>
-											<div class="small text-muted">5  hour ago</div>
-										</div>
-									</a>
-									<a href="#" class="dropdown-item d-flex pb-3">
-										<div class="notifyimg bg-orange">
-											<i class="fa fa-eye"></i>
-										</div>
-										<div>
-											<strong> 10 views</strong>
-											<div class="small text-muted">2  hour ago</div>
-										</div>
-									</a>
-									<div class="dropdown-divider"></div>
-									<a href="#" class="dropdown-item text-center">View all Notifications</a>
-								</div>
-							</div><!-- notifications -->
-							<div class="dropdown dropgroupicons d-none d-lg-block">
-								<a class="nav-link icon" data-toggle="dropdown">
-									<i class="fe fe-grid floating"></i>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow p-0">
-									<div class="drop-icon-wrap p-0 m-0 clearfix">
-										<div>
-											<a href="#l" class="drop-icon-item">
-												<img src="assets/images/svgicons/calendar.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
-												<span class="block drop-font"> Calender</span>
-											</a>
-										</div>
-										<div>
-											<a href="#l" class="drop-icon-item">
-												<img src="assets/images/svgicons/email.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
-												<span class="block drop-font">E-mail</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/phone-book.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6">
-												<span class="block drop-font">Contacts</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/question.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6">
-												<span class="block drop-font">Help</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/notification.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6">
-												<span class="block drop-font">Notifications</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/report.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6 ">
-												<span class="block drop-font">News</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/accountant.svg" alt="svg-img" class="svgimage mt-1 mb-1  h-6 ">
-												<span class="block drop-font">Account</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/translation.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6 ">
-												<span class="block drop-font">Translate</span>
-											</a>
-										</div>
-										<div>
-											<a href="#" class="drop-icon-item">
-												<img src="assets/images/svgicons/settings.svg" alt="svg-img" class="svgimage mt-1 mb-1 h-6 ">
-												<span class="block drop-font">Settings</span>
-											</a>
-										</div>
-										<div class="clearfix"></div>
-										<div class="dropdown-divider"></div>
-									</div>
-									<a href="#" class="dropdown-item text-center">More</a>
-								</div>
-							</div><!-- gird-icon -->
-							<div class="dropdown d-none d-md-flex">
-								<a  class="nav-link icon full-screen-link">
-									<i class="fe fe-maximize-2"  id="fullscreen-button"></i>
-								</a>
-							</div><!-- full-screen -->
-							<div class="d-flex order-lg-2 ml-auto horizontal-dropdown">
-								<form class="form-inline">
-									<div class="search-element mr-3">
-										<input class="form-control" type="search" placeholder="Search" aria-label="Search">
-										<span class="Search-icon"><i class="fa fa-search"></i></span>
-									</div>
-								</form><!-- search-bar -->
-								<div class="dropdown d-none d-md-flex">
-									<a href="#" class="d-flex nav-link pr-0 country-flag1" data-toggle="dropdown">
-										<span class="avatar country-Flag mr-2 align-self-center"><img src="assets/images/us_flag.jpg" alt="img"></span>
-										<div>
-											<span class="text-gray-white mr-3 mt-0">English</span>
-										</div>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar  mr-3 align-self-center"><img src="assets/images/french_flag.jpg" alt="img"></span>
-											<div class="d-flex">
-												<span class="mt-2">French</span>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar  mr-3 align-self-center"><img src="assets/images/germany_flag.jpg" alt="img"></span>
-											<div class="d-flex">
-												<span class="mt-2">Germany</span>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar mr-3 align-self-center"><img src="assets/images/italy_flag.jpg" alt="img"></span>
-											<div class="d-flex">
-												<span class="mt-2">Italy</span>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar mr-3 align-self-center"><img src="assets/images/russia_flag.jpg" alt="img"></span>
-											<div class="d-flex">
-												<span class="mt-2">Russia</span>
-											</div>
-										</a>
-										<a href="#" class="dropdown-item d-flex pb-3">
-											<span class="avatar  mr-3 align-self-center"><img src="assets/images/spain_flag.jpg" alt="img"></span>
-											<div class="d-flex">
-												<span class="mt-2">spain</span>
-											</div>
-										</a>
-									</div>
-								</div><!-- flag -->
-								<div class="dropdown dropdown-toggle">
-									<a href="#" class="nav-link leading-none" data-toggle="dropdown">
-										<span class="avatar avatar-md brround"><img src="assets/images/faces/male/33.jpg" alt="Profile-img" class="avatar avatar-md brround"></span>
-										<span class="mr-3 d-none d-lg-block ">
-											<span class="text-gray-white"><span class="ml-2">Alexander</span></span>
-										</span>
-									</a>
-									<div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-										<div class="text-center">
-											<a href="#" class="dropdown-item text-center font-weight-sembold user">Alexander</a>
-											<div class="dropdown-divider"></div>
-										</div>
-										<a class="dropdown-item" href="#">
-											<i class="dropdown-icon mdi mdi-account-outline "></i> Profile
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="dropdown-icon  mdi mdi-settings"></i> Settings
-										</a>
-										<a class="dropdown-item" href="#">
-											<span class="float-right"><span class="badge badge-primary">6</span></span>
-											<i class="dropdown-icon mdi  mdi-message-outline"></i> Inbox
-										</a>
-										<a class="dropdown-item" href="#">
-											<i class="dropdown-icon mdi mdi-comment-check-outline"></i> Message
-										</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">
-											<i class="dropdown-icon mdi mdi-compass-outline"></i> Need help?
-										</a>
-										<a class="dropdown-item" href="login.html">
-											<i class="dropdown-icon mdi  mdi-logout-variant"></i> Sign out
-										</a>
-									</div>
-								</div><!-- profile -->
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--app-header end-->
+	<!--Horizontal css -->
+	<link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
+	<link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
 
-				<!--Horizontal-menu-->
-				<div class="horizontal-main clearfix">
-					<div class="horizontal-mainwrapper container clearfix">
-						<nav class="horizontalMenu clearfix">
-							<ul class="horizontalMenu-list">
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-laptop"></i> Home <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li aria-haspopup="true"><a href="index.html">Service Dashboard </a></li>
-										<li aria-haspopup="true"><a href="index2.html">Finance Dashboard</a></li>
-										<li aria-haspopup="true"><a href="index3.html">Gaming Dashboard</a></li>
-										<li aria-haspopup="true"><a href="index4.html">HR Dashboard</a></li>
-										<li aria-haspopup="true"><a href="index5.html">Ecommerce Dashboard</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="widgets.html" class=""><i class="fa fa-window-maximize"></i> widgets</a></li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-th-large"></i> Apps <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li aria-haspopup="true"><a href="cards.html">Cards design</a></li>
-										<li aria-haspopup="true"><a href="cards-image.html">Image  Cards design</a></li>
-										<li aria-haspopup="true"><a href="chat.html">Default Chat</a></li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Calendar</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="calendar.html">Default calendar</a></li>
-												<li aria-haspopup="true"><a href="calendar2.html">Full calendar</a></li>
-											</ul>
-										</li>
-										<li aria-haspopup="true"><a href="notify.html">Notifications</a></li>
-										<li aria-haspopup="true"><a href="sweetalert.html">Sweet alerts</a></li>
-										<li aria-haspopup="true"><a href="rangeslider.html">Range slider</a></li>
-										<li aria-haspopup="true"><a href="scroll.html">Content Scroll bar</a></li>
-										<li aria-haspopup="true"><a href="counters.html">Counters</a></li>
-										<li aria-haspopup="true"><a href="loaders.html">Loaders</a></li>
-										<li aria-haspopup="true"><a href="time-line.html">Time Line</a></li>
-										<li aria-haspopup="true"><a href="rating.html">Rating</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon active"><i class="fa fa-bandcamp"></i> UI Kit <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<div class="horizontal-megamenu clearfix">
-										<div class="container">
-											<div class="mega-menubg">
-												<div class="row">
-													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
-														<ul>
-															<li><a href="alerts.html">Alerts</a></li>
-															<li><a href="buttons.html">Buttons</a></li>
-															<li><a href="colors.html">Colors</a></li>
-															<li><a href="avatars.html"> Avatars</a></li>
-															<li><a href="dropdown.html">Drop downs</a></li>
-															<li><a href="thumbnails.html">Thumbnails</a></li>
-															<li><a href="mediaobject.html">Media Object</a></li>
-														</ul>
-													</div>
-													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
-														<ul>
-															<li><a href="list.html">List</a></li>
-															<li><a href="tags.html">Tags</a></li>
-															<li><a href="pagination.html">Pagination</a></li>
-															<li><a href="navigation.html">Navigation</a></li>
-															<li><a href="typography.html">Typography</a></li>
-															<li><a href="breadcrumbs.html"> Breadcrumbs</a></li>
-															<li><a href="invoice.html">Invoice</a></li>
-														</ul>
-													</div>
-													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
-														<ul>
-															<li><a href="badge.html">Badges</a></li>
-															<li><a href="jumbotron.html">Jumbotron</a></li>
-															<li><a href="panels.html">Panels</a></li>
-															<li><a href="profile.html">Profile</a></li>
-															<li><a href="editprofile.html">Edit Profile</a></li>
-															<li><a href="pricing.html">Pricing Tables</a></li>
-															<li><a href="gallery.html">Gallery</a></li>
-														</ul>
-													</div>
-													<div class="col-lg-3 col-md-12 col-xs-12 link-list">
-														<ul>
-															<li><a href="email.html"> Email</a></li>
-															<li><a href="emailservices.html">Email Inbox</a></li>
-															<li><a href="about.html">About Company</a></li>
-															<li><a href="services.html">Services</a></li>
-															<li><a href="faq.html">FAQS</a></li>
-															<li><a href="terms.html">Terms and Conditions</a></li>
-															<li><a href="blog.html">Blog</a></li>
-														</ul>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-cubes"></i> Advanced UI <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li aria-haspopup="true"><a href="modal.html">Modal</a></li>
-										<li aria-haspopup="true"><a href="tooltipandpopover.html">Tooltip and popover</a></li>
-										<li aria-haspopup="true"><a href="progress.html">Progress</a></li>
-										<li aria-haspopup="true"><a href="chart.html">Charts</a></li>
-										<li aria-haspopup="true"><a href="carousel.html">Carousels</a></li>
-										<li aria-haspopup="true"><a href="accordion.html">Accordions</a></li>
-										<li aria-haspopup="true"><a href="tabs.html">Tabs</a></li>
-										<li aria-haspopup="true"><a href="headers.html">Headers</a></li>
-										<li aria-haspopup="true"><a href="footers.html">Footers</a></li>
-										<li aria-haspopup="true"><a href="crypto-currencies.html">Crypto-currencies</a></li>
-										<li aria-haspopup="true"><a href="users-list.html">User List</a></li>
-										<li aria-haspopup="true"><a href="search.html">Search page</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-pie-chart"></i> Charts <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li aria-haspopup="true"><a href="chart-chartist.html">Chartjs Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-morris.html">Morris Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-am.html">Am Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-peity.html">Pie Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-echart.html">Echart Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-flot.html">Flot Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-high.html">High Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-nvd3.html">Nvd3 Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-dygraph.html">Dygraph Charts</a></li>
-										<li aria-haspopup="true"><a href="chart-c3.html">C3 Charts</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-newspaper-o"></i> Pages <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li><a href="maps.html">Vector Maps</a></li>
-										<li><a href="empty.html">Empty Page</a></li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Tables</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="tables.html">Default table</a></li>
-												<li aria-haspopup="true"><a href="datatable.html">Data Table</a></li>
-											</ul>
-										</li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Forms</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="form-elements.html">Form Elements</a></li>
-												<li aria-haspopup="true"><a href="form-wizard.html">Form-wizard Elements</a></li>
-												<li aria-haspopup="true"><a href="wysiwyag.html">Text Editor</a></li>
-											</ul>
-										</li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">E-commerce</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="shop.html">Products</a></li>
-												<li aria-haspopup="true"><a href="shop-des.html">Product Details</a></li>
-												<li aria-haspopup="true"><a href="cart.html">Shopping Cart</a></li>
-											</ul>
-										</li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Account</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="login.html">Login</a></li>
-												<li aria-haspopup="true"><a href="register.html">Register</a></li>
-												<li aria-haspopup="true"><a href="forgot-password.html">Forgot password</a></li>
-												<li aria-haspopup="true"><a href="lockscreen.html">Lock screen</a></li>
-											</ul>
-										</li>
-										<li aria-haspopup="true" class="sub-menu-sub"><a href="#">Error Pages</a>
-											<ul class="sub-menu">
-												<li aria-haspopup="true"><a href="400.html">400 Error</a></li>
-												<li aria-haspopup="true"><a href="401.html">401 Error</a></li>
-												<li aria-haspopup="true"><a href="403.html">403 Error</a></li>
-												<li aria-haspopup="true"><a href="404.html">404 Error</a></li>
-												<li aria-haspopup="true"><a href="500.html">500 Error</a></li>
-												<li aria-haspopup="true"><a href="503.html">503 Error</a></li>
-											</ul>
-										</li>
-										<li><a href="construction.html">Under Construction</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-info-circle"></i> Icons <i class="fa fa-angle-down horizontal-icon"></i></a>
-									<ul class="sub-menu">
-										<li aria-haspopup="true"><a href="icons.html">Font Awesome</a></li>
-										<li aria-haspopup="true"><a href="icons2.html">Material Design Icons</a></li>
-										<li aria-haspopup="true"><a href="icons3.html">Simple line Icons</a></li>
-										<li aria-haspopup="true"><a href="icons4.html">Feather Icons</a></li>
-										<li aria-haspopup="true"><a href="icons5.html">Ionic Icons</a></li>
-										<li aria-haspopup="true"><a href="icons6.html"> Flag Icons</a></li>
-										<li aria-haspopup="true"><a href="icons7.html">pe7 Icons</a></li>
-										<li aria-haspopup="true"><a href="icons8.html">Themify Icons</a></li>
-										<li aria-haspopup="true"><a href="icons9.html"> Typicons Icons</a></li>
-										<li aria-haspopup="true"><a href="icons10.html">Weather Icons</a></li>
-									</ul>
-								</li>
-								<li aria-haspopup="true"><a href="https://themeforest.net/item/splink-admin-bootstrap-4-responsive-webapp-dashboard-template/23260674" class=""><i class="fa fa-question-circle"></i> Help & Support</a></li>
-							</ul>
-						</nav>
-						<!--Menu HTML Code-->
-					</div>
-				</div>
+	<!-- jvectormap css -->
+	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 
-                <!-- content-area-->
-				<div class="content-area">
-					<div class="container">
+	<!---Font icons css-->
+	<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+	<link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
 
-						<!-- page-header -->
-						<div class="page-header">
-							<h4 class="page-title">Profile</h4>
-							<ol class="breadcrumb"><!-- breadcrumb -->
-								<li class="breadcrumb-item"><a href="#">UI Kit</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Profile</li>
-							</ol><!-- breadcrumb end -->
-						</div>
-						<!-- page-header end -->
 
-						<!-- row -->
-						<div class="row">
-							<div class="col-md-12">
-								<div class="card card-profile  overflow-hidden">
-									<div class="card-body text-center profile-bg">
-										<div class=" card-profile">
-											<div class="row justify-content-center">
-												<div class="">
-													<div class="">
-														<a href="#">
-															<img src="assets/images/faces/male/33.jpg" class="avatar-xxl rounded-circle" alt="profile">
-														</a>
-													</div>
-												</div>
-											</div>
-										</div>
-										<h3 class="mt-3 text-white">Alexander</h3>
-										<p class="mb-4 text-white">Ui Designer</p>
-										<button class="btn btn-orange btn-sm">
-											<span class="fa fa-twitter"></span> Follow
-										</button>
-										<a href="#" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Edit profile</a>
-									</div>
-									<div class="card-body">
-										<div class="nav-wrapper p-0">
-											<ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
-												<li class="nav-item">
-													<a class="nav-link mb-sm-3 mb-md-0 mt-md-2 mt-0 mt-lg-0 active show" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="fa fa-home mr-2"></i>About</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link mb-sm-3 mb-md-0 mt-md-2 mt-0 mt-lg-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="fa fa-user mr-2"></i>Friends</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link mb-sm-3 mb-md-0 mt-md-2 mt-0 mt-lg-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="fa fa-picture-o mr-2"></i>Photos</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link mb-sm-3 mb-md-0 mt-md-2 mt-0 mt-lg-0" id="tabs-icons-text-4-tab" data-toggle="tab" href="#tabs-icons-text-4" role="tab" aria-controls="tabs-icons-text-4" aria-selected="false"><i class="fa fa-newspaper-o mr-2 mt-1"></i>Timeline</a>
-												</li>
-												<li class="nav-item">
-													<a class="nav-link mb-sm-0 mb-md-0 mt-md-2 mt-0 mt-lg-0" id="tabs-icons-text-5-tab" data-toggle="tab" href="#tabs-icons-text-5" role="tab" aria-controls="tabs-icons-text-5" aria-selected="false"><i class="fa fa-cog mr-2"></i>More</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="card">
-									<div class="card-body pb-0">
-										<div class="tab-content" id="myTabContent">
-											<div class="tab-pane fade active show" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
-												<h4><strong>About Me</strong></h4>
-												<p class="description">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.</p>
-												<div class="table-responsive border ">
-													<table class="table row table-borderless w-100 m-0 ">
-														<tbody class="col-lg-6 p-0">
-															<tr>
-																<td><strong>Full Name :</strong> Alexander</td>
-															</tr>
-															<tr>
-																<td><strong>Location :</strong> USA</td>
-															</tr>
-															<tr>
-																<td><strong>Languages :</strong> English, German, Spanish.</td>
-															</tr>
-															<tr>
-																<td><strong>DOB :</strong> 18/02/1992</td>
-															</tr>
-														</tbody>
-														<tbody class="col-lg-6 p-0">
-															<tr>
-																<td><strong>Occupation :</strong> Ui Designer</td>
-															</tr>
-															<tr>
-																<td><strong>Website :</strong> camal.com</td>
-															</tr>
-															<tr>
-																<td><strong>Email :</strong> lunaklippel@camal.com</td>
-															</tr>
-															<tr>
-																<td><strong>Phone :</strong> +222-6652-6325</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<div class="media-heading mt-3">
-													<h4><strong>Biography</strong></h4>
-												</div>
-												<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus</p>
-												<p class="mb-4">because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
-											</div>
-											<div aria-labelledby="tabs-icons-text-2-tab" class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel">
-												<div class="row">
-													<div class="col-md-12">
-														<div class="content content-full-width" id="content">
-															<!-- begin profile-content -->
-															<div class="profile-content">
-																<!-- begin tab-content -->
-																<div class="tab-content p-0">
-																	<!-- begin #profile-friends tab -->
-																	<div class="tab-pane fade in active show" id="profile-friends">
-																		<h4 class="mt-0 mb-4">Friend List (14)</h4><!-- begin row -->
-																		<div class="row row-space-2">
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/2.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Latoya Laver</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/4.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Polly Amon</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/male/2.jpg"></a>
-																						<div class="media-body valign-middle ">
-																							<b class="text-inverse">Paul Molive</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/1.jpg"></a>
-																						<div class="media-body valign-middle ">
-																							<b class="text-inverse">Corinna Eifert</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/3.jpg"></a>
-																						<div class="media-body valign-middle ">
-																							<b class="text-inverse">Kenna Pride</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/male/3.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Mark Sunseri</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/5.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Kenna Pride</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/6.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Anna Sthesia</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/male/5.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Trenton Tookes</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/male/6.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Elias Arboleda</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/7.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Sarah Yevo</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/male/7.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Sergio Silverio</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/9.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Kathern Risner</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div>
-																			<!-- end col-6 -->
-																			<div class="col-xl-6">
-																				<div class="card border shadow">
-																					<div class="media card-body media-xs overflow-visible">
-																						<a class="media-left" href="javascript:;"><img alt="" class="avatar avatar-md brround" src="assets/images/faces/female/8.jpg"></a>
-																						<div class="media-body valign-middle">
-																							<b class="text-inverse">Honey Maloney</b>
-																						</div>
-																						<div class="media-body valign-middle text-right overflow-visible">
-																							<div class="btn-group">
-																								<button class="btn btn-sm btn-primary d-none d-sm-block btn-square" type="button">Friends</button> <button class="btn btn-sm btn-primary btn-square dropdown-toggle" data-toggle="dropdown" type="button"><span class="caret"></span> <span class="sr-only">View profile</span></button>
-																								<div class="dropdown-menu">
-																									<a class="dropdown-item" href="#">Follow</a> <a class="dropdown-item" href="#">Message</a> <a class="dropdown-item" href="#">Suggestion</a>
-																									<div class="dropdown-divider"></div><a class="dropdown-item" href="#">Un friend</a>
-																								</div>
-																							</div>
-																						</div>
-																					</div>
-																				</div>
-																			</div><!-- end col-6 -->
-																		</div><!-- end row -->
-																	</div><!-- end #profile-friends tab -->
-																</div><!-- end tab-content -->
-															</div><!-- end profile-content -->
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
-												<div class="row">
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/14.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/19.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/20.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/4.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/5.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/6.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/10.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/8.jpg" alt="gallery">
-														</div>
-													</div>
-													<div class="col-lg-4 profile-image">
-														<div class="card shadow">
-															<img src="assets/images/photos/9.jpg" alt="gallery">
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane fade" id="tabs-icons-text-4" role="tabpanel" aria-labelledby="tabs-icons-text-4-tab">
-												<div class="row profile ng-scope">
-													<div class="col-md-12">
-														<div class="card">
-															<form class="mt ng-pristine ng-valid" action="#">
-																<div class="form-group mb-0">
-																	<label class="sr-only" for="new-event">New event</label>
-																	<textarea class="form-control " id="new-event" placeholder="Post something..." rows="3"></textarea>
-																</div>
-																<div class="btn-toolbar">
-																	<div class=""><a href="#" class="btn btn-sm btn-primary mr-2"><i class="fa fa-camera fa-lg"></i></a> <a href="#" class="btn btn-sm btn-info"><i class="fa fa-map-marker fa-lg"></i></a>
-																	</div>
-																	<button type="submit" class="btn btn-danger btn-sm ml-3">Post</button>
-																</div>
-															</form>
-														</div>
-														<div class="activities">
-															<section class="event card border">
-																<div class="d-flex">
-																	<span class="thumb-sm  pull-left mr-sm"><img class="avatar avatar-md brround" src="assets/images/faces/female/18.jpg" alt="..."></span>
-																	<div>
-																		<h4 class="event-heading"><a href="#">John doe</a><span><small class="text-muted"><a href="#">@nils</a></small></span></h4>
-																		<p class="text-xs text-muted">February 22, 2014 at 01:59 PM</p>
-																	</div>
-																</div>
-																<p class="text-sm ">There is no such thing as maturity. There is instead an ever-evolving process of maturing. Because when there is a maturity, there is ...</p>
-																<div class="border-top post-comments">
-																	<ul class="post-links mb-0 pt-2 pl-2 pr-2">
-																		<li><a href="#">1 hour</a>
-																		</li>
-																		<li><a href="#"><span class="text-danger"><i class="fa fa-heart"></i> Like</span></a>
-																		</li>
-																		<li><a href="#">Comment</a>
-																		</li>
-																	</ul>
-																</div>
-															</section>
-															<section class="event card border">
-															<div class="d-flex">
-																<span class="thumb-sm  pull-left mr-sm"><img class="avatar avatar-md brround" src="assets/images/faces/male/17.jpg" alt="..."></span>
-																<div>
-																	<h4 class="event-heading"><a href="#">john doe</a><span><small class="text-muted"><a href="#">@jess</a></small></span></h4>
-																	<p class="text-xs text-muted">February 22, 2014 at 01:59 PM</p>
-																</div>
-																</div>
-																<p class="text-sm mb-0">Check out this awesome photo I made in Italy last summer. Seems it was lost somewhere deep inside my brand new HDD 40TB. Thanks god I found it!</p>
-																<div>
-																	<div class="clearfix border-top post-comments">
-																		<ul class="post-links mt-sm pull-left p-2">
-																			<li><a href="#">1 hour</a>
-																			</li>
-																			<li><a href="#"><span class="text-danger"><i class="fa fa-heart-o"></i> Like</span></a>
-																			</li>
-																			<li><a href="#">Comment</a>
-																			</li>
-																		</ul>
-																	</div>
-																	<ul class="post-comments mt-sm mb-0">
-																		<li class="d-flex"><span class="thumb-sm  float-left mr-sm"><img class="avatar avatar-md brround" src="assets/images/faces/female/5.jpg" alt="..."></span>
-																			<div class="comment-body">
-																				<h6 class="author fw-semi-bold">Ignacio Abad <small>6 mins ago</small></h6>
-																				<p class="text-xs">Hey, have you heard anything about that?</p>
-																			</div>
-																		</li>
-																		<li><span class="thumb-sm float-left mr-sm mr-4" ><img class="avatar avatar-md brround" src="assets/images/faces/male/33.jpg" alt="..."></span>
-																			<div class="msb-reply d-flex">
-																				<textarea placeholder="Write your comment..."></textarea>
-																				<button><i class="fa fa-paper-plane-o"></i></button>
-																			</div>
-																		</li>
-																	</ul>
-																</div>
-															</section>
+    <style>
+        body {
+            background-color: #000;
+        }
 
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="tab-pane fade" id="tabs-icons-text-5" role="tabpanel" aria-labelledby="tabs-icons-text-5-tab">
-												<p>Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-												<p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus</p>
-												<p class="mb-4">because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- row end -->
-						
-					</div>
-					
-					<!--footer-->
-					<footer class="footer">
-						<div class="container">
-							<div class="row align-items-center flex-row-reverse">
-								<div class="col-lg-12 col-sm-12   text-center">
-									Copyright © 2019 <a href="#">splink</a>. Designed by <a href="#">Spruko</a> All rights reserved.
-								</div>
-							</div>
-						</div>
-					</footer>
-					<!-- End Footer-->
-					
-				</div>
-				<!-- end content-area-->
+        .line1 {
+            border-bottom: 2px solid #407Bff;
+        }
+
+        .box-shaddow {
+            background-color: #407Bff;
+            box-shadow: 0px 0px 5px 1px rgb(178, 178, 180);
+            border-radius: 10px;
+        }
+
+        .line-draw {
+            border-bottom: 2px solid #97aad3;
+        }
+
+        .box-content-items-border {
+
+            border-bottom: 2px solid #737478;
+
+        }
+
+        .line {
+            border-bottom: 2px solid #97aad3;
+            margin: 25px;
+        }
+
+        .line2 {
+            border-bottom: 2px solid rgb(217, 212, 212);
+        }
+
+        .bg-darks {
+            background-color: #000;
+            border: none;
+            cursor: pointer;
+        }
+
+        .bg-dark1 {
+            background-color: #407Bff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .placeholder input::placeholder {
+            color: white;
+        }
+
+        .placeholder input {
+            border: 1px solid white;
+            border-radius: 6px;
+            padding: 5px;
+        }
+
+        /* .right-line-draw{
+            border-right: 2px solid rgb(217, 212, 212);
+            font-size: medium;
+        } */
+
+
+        @media (min-width:992px) and (max-width:1329px) {
+
+            .box-shaddow {
+                width: 100%;
+            }
+
+            .box-shaddow p {
+                font-size: smaller;
+            }
+        }
+
+        @media (min-width:577px) and (max-width:991px) {
+
+            /* .box{
+                width: 85%;
+            } */
+            .box h4 {
+                font-size: small;
+            }
+
+            /* .line1{
+            width: 85%;
+        }
+        .box-shaddow{
+            width: 85%;
+        } */
+            .line2 {
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+
+            .line2 p {
+                font-size: smaller;
+            }
+        }
+
+        @media (max-width:576px) {
+
+            .box-shaddow {
+                width: 100%;
+                position: relative;
+                left: -23.5px;
+            }
+
+            .box-shaddow p {
+                font-size: smaller;
+            }
+
+            .box {
+                width: 80%;
+            }
+
+            .heading {
+                font-size: 10px;
+            }
+
+            .img-box {
+                display: none;
+            }
+
+            .line2 p {
+                font-size: xx-small;
+            }
+
+            .line2 h4 {
+                font-size: small;
+            }
+
+        }
+    </style>
+</head>
+
+<body class="app sidebar-mini rtl">
+
+    <!--Global-Loader-->
+    <div id="global-loader"></div>
+
+    <div class="page">
+        <div class="page-main">
+
+            	<!--app-header-->
+			<div class="app-header header d-flex" id="header_div">
+				<script src="./includes/header.js"></script>
 			</div>
-		</div>
-		<!-- End Page -->
-		
-		<!-- Back to top -->
+			<!--app-header end-->
+			<!--Horizontal-menu-->
+			<div class="horizontal-main clearfix" id="nav_div">
+				<script src="./includes/nav.js"></script>
+			</div>
+
+
+
+            <!--content-area-->
+            <div class="content-area">
+                <!-- Client id and client logo with Name -->
+
+                <div class="d-flex justify-content-between align-items-center m-4 box">
+                    <div>
+                        <h4 class="text-light heading">Client Id :<span id="cid_span1"></span> </h4>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center ">
+                        <img src="https://cdn.discordapp.com/attachments/962990670962900992/962991194718232596/yamasha_brand_hr.png" alt="#error" class="mx-3 img-box" style="height: 60%; width: 30%; border-radius:0%;">
+                        <h4 class="text-light text-uppercase heading"><span id="cname_span1"></span></h4>
+                    </div>
+                </div>
+
+                <!-- Line -->
+
+                <div class=" m-4 line1"></div>
+
+
+                <!-- ////////////////////////////////////////////////////////////////////////////////// -->
+                <!-- Content -->
+
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4">
+                            <div class="d-flex flex-column ">
+                                <div class="box-shaddow m-4">
+                                    <h4 class="text-light text-capitalize mx-4 py-2">personal details</h4>
+                                    <div class="mx-4 my-2  line-draw"></div>
+                                    <div class="d-flex   flex-column justify-content-center">
+                                        <div class="row  mx-4 box-content-items-border">
+                                            <p class=" col-3 text-light">Name</p>
+                                            <p class="col-7 text-light text-capitalize font-weight-600"><span id="cname_span2"></span></p>
+                                            <p class="col-1"></p>
+                                        </div>
+                                        <!-- <form action=""> -->
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light">Phone Number</p>
+                                            <input id="UP_MOB_NUMBER_input" type="text" class="col-6 text-light text-capitalize bg-dark1" readonly>
+                                            <button id="UP_MOB_NUMBER_edit_btn" onclick="prof_edit('UP_MOB_NUMBER')" type="button" class="col-2 text-light bg-dark1">edit</button>
+                                            <button id="UP_MOB_NUMBER_submit_btn" onclick="prof_submit('UP_MOB_NUMBER')" type="button" class="btn text-light bg-success d-none">Submit</button>
+                                        </div>
+                                        <!-- </form> -->
+                                        <!-- <form action=""> -->
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light">Email</p>
+                                            <input id="UP_EMAIL_input" type="email" class="col-6 text-light text-capitalize bg-dark1" readonly>
+                                            <button id="UP_EMAIL_edit_btn" onclick="prof_edit('UP_EMAIL')" type="button" class="col-2 text-light bg-dark1">edit</button>
+                                            <button id="UP_EMAIL_submit_btn" onclick="prof_submit('UP_EMAIL')" type="button" class="btn text-light bg-success d-none">Submit</button>
+                                        </div>
+                                        <!-- </form> -->
+                                        <!-- <form action=""> -->
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light">Alt Number</p>
+                                            <input id="UP_ALT_NUM_input" class="col-6 text-light text-capitalize bg-dark1" readonly type="text"></p>
+                                            <button id="UP_ALT_NUM_edit_btn" onclick="prof_edit('UP_ALT_NUM')" type="button" class="col-2 text-light bg-dark1">edit</button>
+                                            <button id="UP_ALT_NUM_submit_btn" onclick="prof_submit('UP_ALT_NUM')" type="button" class="btn text-light bg-success d-none">Submit</button>
+                                        </div>
+                                        <!-- </form> -->
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light"><span id="UP_DOC_TYPE"></span>
+                                            </p>
+                                            <p class="col-6 text-light text-capitalize"><span id="UP_DOC_ID"></span> </p>
+                                            <p class="col-3"></p>
+                                        </div>
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light">Aadhar</p>
+                                            <p class="col-6 text-light text-capitalize"><span id="UP_AADHAR_NUM"></span></p>
+                                            <p class="col-3"></p>
+                                        </div>
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-3 text-light">DOB</p>
+                                            <p class="col-6 text-light text-capitalize"><span id="UP_DOB"></span></p>
+                                            <p class="col-3"></p>
+                                        </div>
+                                        <!-- <div class="row mx-4 ">
+                                            <p class="col-3 text-light">Gender</p>
+                                            <p class="col-6 text-light text-capitalize"></p>
+                                            <p class="col-3"></p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                                <div class="box-shaddow m-4">
+                                    <h4 class="text-light text-capitalize mx-4 py-2">Electronic Contract Note</h4>
+                                    <div class="mx-4 my-2  line-draw"></div>
+                                    <div class="d-flex   flex-column justify-content-center">
+                                        <form action="">
+                                            <div class="row mx-4 box-content-items-border">
+                                                <p class="col-4 text-light">Cash</p>
+                                                <p class="col-5 text-light text-uppercase">Electronic</p>
+                                                <p class="col-3"><button type="button" class="text-light bg-dark1 d-none">edit</button></p>
+                                                <button type="submit" class="btn text-light bg-success d-none">Submit</button>
+                                            </div>
+                                        </form>
+                                        <form action="">
+                                            <div class="row mx-4">
+                                                <p class="col-4 text-light">Commodities</p>
+                                                <p class="col-5 text-light text-uppercase">Electronic</p>
+                                                <p class="col-3"><button type="button" class="text-light bg-dark1 d-none">edit</button></p>
+                                                <button type="submit" class="btn text-light bg-success d-none">Submit</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="box-shaddow m-4">
+                                    <h4 class="text-light text-capitalize mx-4 py-2">my AMC Due</h4>
+                                    <div class="mx-4 my-2  line-draw"></div>
+                                    <div class="d-flex   flex-column justify-content-center">
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-6 text-light text-uppercase">amc Due</p>
+                                            <p class="col-6 text-light text-capitalize">₹</p>
+                                        </div>
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-6 text-light">AMC Date</p>
+                                            <p class="col-6 text-light text-capitalize">-</p>
+                                        </div>
+                                        <div class="row mx-4 box-content-items-border">
+                                            <p class="col-6 text-light">DP Ledger</p>
+                                            <p class="col-6 text-light text-capitalize">₹</p>
+                                        </div>
+                                        <div class="row mx-4 ">
+                                            <p class="col-6 text-light">Accrual</p>
+                                            <p class="col-6 text-light text-capitalize">₹</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="d-flex flex-column">
+                                <div class="row line2">
+                                    <div class="col-3 text-light">Client type </div>
+                                    <div class="col-9 text-light">Online</div>
+                                </div>
+                                <div class="row line2 text-light text-uppercase my-3">
+                                    <p class="col-lg-3 col-md-3 col-2">Address Segment</p>
+                                    <p class="col-1 right-line-draw">Equity</p>
+                                    <p class="col-1 right-line-draw">F&Q</p>
+                                    <p class="col-2 right-line-draw">CURRENCY</p>
+                                    <p class="col-2 right-line-draw">Commodity</p>
+                                    <P class="col-1">MF</P>
+                                    <p class="col-1 d-none"><a href="#">form</a></p>
+                                    <p class="col-1"><a class="text-light d-none" href="">edit</a></p>
+                                </div>
+                                <div class="row text-light line2">
+                                    <p class="col-3 text-capitalize">Equity adviser</p>
+                                    <p class="col-3">NA</p>
+                                    <p class="col-3 text-capitalize">Commodity adviser</p>
+                                    <p class="col-1">NA</p>
+                                    <p class="col-1">y</p>
+                                </div>
+                                <form action="">
+                                    <div class="row text-light line2 my-3">
+                                        <p class="col-3">Address</p>
+                                        <p class="col-7 text-capitalize"><span id="address_span"></span></p>
+                                        <p class="col-1"><button type="button" class="text-light bg-darks d-none">edit</button></p>
+                                        <button type="submit" class="text-light bg-success border-0 btn d-none">Submit</button>
+                                    </div>
+                                </form>
+                                <div class="row text-light line2 my-3">
+                                    <h4 class="col-7 text-capitalize">my dp details</h4>
+                                    <p class="col-3"><a class="text-capitalize d-none" href="#">Upload Form</a></p>
+                                    <p class="col-1 d-none"><a class="text-light d-none" href="#">edit</a></p>
+                                </div>
+                                <div class="row text-light line2 my-3">
+                                    <p class="col-4 text-capitalize">ID</p>
+                                    <p class="col-4"><span id="cid_span2"></span></p>
+                                    <p class="col-4 d-none"><a class="" href="#">View</a></p>
+                                </div>
+                                <form>
+                                    <div class="row text-light line2 my-3">
+                                        <h4 class="col-7 text-capitalize">my account details</h4>
+                                        <p class="col-3 d-none"><a class="text-capitalize" href="#">Upload Form</a></p>
+                                        <p class="col-1 ">
+                                            <button id="BANK_edit_btn" onclick="prof_bank_edit(true)" type="button" class="text-light bg-darks">edit</button>
+                                            <button id="BANK_submit_btn" onclick="prof_bank_submit()" type="button" class="btn bg-success text-light d-none">Submit</button>
+                                        </p>
+
+                                    </div>
+                                    <div class="row text-light line2 my-3 align-items-center">
+                                        <p class="col-3 text-capitalize">bank Name</p>
+                                        <input id="BANK_NAME" class="col-3 text-capitalize bg-darks text-light" readonly >
+                                        <p class="col-3 text-capitalize">bank account number</p>
+                                        <input id="BANK_AC_NUM" class="col-3 text-light bg-darks" readonly >
+                                    </div>
+                                    <div class="row line2 my-3">
+                                        <label for="" class="col-3 text-uppercase text-light">ifsc code</label>
+                                        <input id="BANK_IFSC" type="text" class="col-3 text-light bg-darks" readonly >
+                                        <label for="" class="col-3 text-uppercase text-light">upi id</label>
+                                        <input id="UPI_ID" type="text" class="col-3 text-light bg-darks" readonly >
+
+                                    </div>
+                                </form>
+                                <div class="row text-light line2 my-3">
+                                    <h4 class="col-7 text-capitalize">my KYC copy</h4>
+                                    <p class="col-4 d-none"><a class="" href="#">View</a></p>
+                                </div>
+                                <div class="row text-light line2 my-3">
+                                    <h4 class="col-8 text-capitalize">my brokerage</h4>
+                                </div>
+                                <div class="row text-light line2 my-3">
+                                    <h4 class="col-8 text-capitalize">nominee details</h4>
+                                </div>
+                                <div>
+                                    <div id="nominee_submit_div" class=" line2 my-3  row placeholder d-none" style="gap: 20px;">
+                                        <div class="d-flex flex-column">
+                                            <label for="" class="text-light">Name</label>
+                                            <input id="NOMINEE_NAME" type="text" class="bg-darks  text-light mb-2"  placeholder="enter nominee name">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <label for="" class="text-light">Number</label>
+                                            <input id="NOMINEE_NUMBER" type="text" class="bg-darks text-light mb-2"  placeholder="enter nominee number">
+                                        </div>
+                                        <div class="d-flex flex-column">
+                                            <label for="" class="text-light">Relation</label>
+                                            <input id="NOMINEE_RELATION" type="text" class="bg-darks text-light mb-2"  placeholder="enter nominee Relation">
+                                        </div>
+                                        <button id="nominee_submit_btn" onclick="submit_nominee()" type="button" class="btn btn-outline-info text-light mb-2 ml-4 m-4">Submit</button>
+                                    </div>
+                                    <div id="nominee_display_div" class="line2 my-3  d-none  ">
+                                        <ul class="d-flex justify-content-between" style="list-style: none;">
+                                            <li class="text-light text-uppercase">Name : </li>
+                                            <li class="text-light text-capitalize"><span id="NOMINEE_NAME_span"></span></li>
+                                            <li class="text-light text-uppercase">Number : </li>
+                                            <li class="text-light"><span id="NOMINEE_NUMBER_span"></span></li>
+                                            <li class="text-light text-uppercase">Relation : </li>
+                                            <li class="text-light text-capitalize"><span id="NOMINEE_RELATION_span"></span></li>
+                                        </ul>
+                                    </div>
+
+                                    <div id="nominee_add_div">
+                                        <div class="text-light text-center text-capitalize ">
+                                            <p> NO nominee added to your demat account </p>
+                                        </div>
+                                        <div class="text-center text-light text-uppercase line2 pb-2">
+                                            <button onclick="add_nominee()" class="btn  px-5 text-light font-weight-bold" style="background-color: #2e63d8;">add nominee</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row text-light line2 my-3">
+                                    <p class="col-8 text-capitalize">request for DIS book</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--footer-->
+				<footer class="footer" id="footer_div">
+					<script defer src="./includes/footer.js"></script>
+				</footer>
+				<!-- End Footer-->
+            </div>
+            <!-- End content-area-->
+        </div>
+    </div>
+    <!-- End Page-->
+   		<!-- Back to top -->
 		<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-		<!-- Jquery js-->
-		<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
-		
-		<!--Bootstrap js-->
-		<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
-		
-		<!--Jquery Sparkline js-->
-		<script src="assets/js/vendors/jquery.sparkline.min.js"></script>
-		
-		<!-- Chart Circle js-->
-		<script src="assets/js/vendors/circle-progress.min.js"></script>
-		
-		<!-- Star Rating js-->
-		<script src="assets/plugins/rating/jquery.rating-stars.js"></script>
-		
-		<!-- Custom scroll bar js-->
-		<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
-		
-		<!--Horizontal js-->
-		<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
-		
-		<!-- Custom js-->
-		<script src="assets/js/custom.js"></script>
-		
-	</body>
+<!-- config js-->
+<script src="assets/js/config.js"></script>
+<!-- Jquery js-->
+<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+
+<!--Bootstrap js-->
+<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+
+<!--Jquery Sparkline js-->
+<!-- <script src="assets/js/vendors/jquery.sparkline.min.js"></script> -->
+
+<!-- Chart Circle js-->
+<!-- <script src="assets/js/vendors/circle-progress.min.js"></script> -->
+
+<!-- Star Rating js-->
+<!-- <script src="assets/plugins/rating/jquery.rating-stars.js"></script> -->
+
+<!-- Flot Chart js-->
+<!-- <script src="assets/plugins/flot/jquery.flot.js"></script>
+<script src="assets/plugins/flot/jquery.flot.fillbetween.js"></script>
+<script src="assets/plugins/flot/jquery.flot.pie.js"></script> -->
+
+<!--Jquery.knob js-->
+<!-- <script src="assets/plugins/othercharts/jquery.knob.js"></script> --> 
+
+<!--Other charts js-->
+<!-- <script src="assets/js/othercharts.js"></script> -->
+
+<!-- Chart js -->
+<!-- <script src="assets/plugins/chart/Chart.bundle.js"></script>
+<script src="assets/plugins/chart/utils.js"></script> -->
+
+<!-- Peity Chart js-->
+<!-- <script src="assets/plugins/peitychart/jquery.peity.min.js"></script>
+<script src="assets/plugins/peitychart/peitychart.init.js"></script> -->
+
+<!-- Input Mask js -->
+<!-- <script src="assets/plugins/input-mask/jquery.mask.min.js"></script> -->
+
+<!-- Custom scroll bar js-->
+<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--Horizontal js-->
+<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
+
+<!-- Index js -->
+<!-- <script src="assets/js/index1.js"></script> -->
+
+<!-- Search Js-->
+<!-- <script src="assets/js/prefixfree.min.js"></script> -->
+
+<!-- ECharts js -->
+<!-- <script src="./assets/plugins/echarts/echarts.js"></script> -->
+
+<!-- Custom js-->
+<script src="assets/js/custom.js"></script>
+
+<!-- primexop js  -->
+<script src="./assets/js/primeOne.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="./assets/js/store.everything.min.js"></script>
+<script src="./assets/js/sweetalert2.all.min.js"></script>
+    <!-- extra scripts  -->
+    <script>
+        loginCheck()
+        setUsernameInHeader()
+        fetch_clients_data()
+        fetch_clients_data1()
+
+        // elements byId
+        cid_span1 = byId('cid_span1')
+        cid_span2 = byId('cid_span2')
+        cname_span1 = byId('cname_span1')
+        cname_span2 = byId('cname_span2')
+        UP_MOB_NUMBER_input = byId('UP_MOB_NUMBER_input')
+        UP_MOB_NUMBER_edit_btn = byId('UP_MOB_NUMBER_edit_btn')
+        UP_MOB_NUMBER_submit_btn = byId('UP_MOB_NUMBER_submit_btn')
+        UP_EMAIL_input = byId('UP_EMAIL_input')
+        UP_EMAIL_edit_btn = byId('UP_EMAIL_edit_btn')
+        UP_EMAIL_submit_btn = byId('UP_EMAIL_submit_btn')
+        UP_ALT_NUM_input = byId('UP_ALT_NUM_input')
+        UP_ALT_NUM_edit_btn = byId('UP_ALT_NUM_edit_btn')
+        UP_ALT_NUM_submit_btn = byId('UP_ALT_NUM_submit_btn')
+        UP_DOC_TYPE = byId('UP_DOC_TYPE')
+        UP_DOC_ID = byId('UP_DOC_ID')
+        BANK_edit_btn = byId('BANK_edit_btn')
+        BANK_submit_btn = byId('BANK_submit_btn')
+        BANK_NAME = byId('BANK_NAME')
+        BANK_AC_NUM = byId('BANK_AC_NUM')
+        BANK_IFSC = byId('BANK_IFSC')
+        UPI_ID = byId('UPI_ID')
+        NOMINEE_NAME = byId('NOMINEE_NAME')
+        NOMINEE_NUMBER = byId('NOMINEE_NUMBER')
+        NOMINEE_RELATION = byId('NOMINEE_RELATION')
+        NOMINEE_NAME_span = byId('NOMINEE_NAME_span')
+        NOMINEE_NUMBER_span = byId('NOMINEE_NUMBER_span')
+        NOMINEE_RELATION_span = byId('NOMINEE_RELATION_span')
+        nominee_submit_btn = byId('nominee_submit_btn')
+        nominee_display_div = byId('nominee_display_div')
+        nominee_add_div = byId('nominee_add_div')
+
+
+        // setting id from local
+        cid_span1.innerHTML=store.get('yamasha_user_data').ID
+        cid_span2.innerHTML=store.get('yamasha_user_data').ID
+
+
+
+        function fetch_clients_data() {
+            var bodyFormData = new URLSearchParams();
+
+            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+
+            axios.post(api_base+'clients.php', bodyFormData)
+                .then(function(response) {
+                    console.log(response.data);
+
+                    if (response.data.status == 0) {
+
+                    }
+                    if (response.data.status == 1) {
+
+                        cname_span1.innerHTML=response.data.NAME
+                        cname_span2.innerHTML=response.data.NAME
+                        UP_MOB_NUMBER_input.value=response.data.MOB_NUMBER
+                        UP_EMAIL_input.value=response.data.EMAIL
+                        UP_ALT_NUM_input.value=response.data.ALT_NUM
+                        UP_DOC_TYPE.innerHTML=response.data.DOC_TYPE
+                        UP_DOC_ID.innerHTML=response.data.DOC_ID
+                        UP_AADHAR_NUM.innerHTML=response.data.AADHAR_NUM
+                        UP_DOB.innerHTML=response.data.DOB
+                        address_span.innerHTML=response.data.ADDRESS+','+response.data.CITY
+
+                    }
+
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        }
+        function fetch_clients_data1() {
+            var bodyFormData = new URLSearchParams();
+
+            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+
+            axios.post(api_base+'clients_data1.php', bodyFormData)
+                .then(function(response) {
+                    console.log(response.data);
+
+                    if (response.data.status == 0) {
+
+                    }
+                    if (response.data.status == 1) {
+
+                        
+                        BANK_NAME.value=response.data.BANK_NAME
+                        BANK_AC_NUM.value=response.data.BANK_AC_NUM
+                        BANK_IFSC.value=response.data.BANK_IFSC
+                        UPI_ID.value=response.data.UPI_ID
+                        
+                        if(response.data.NOMINEE_NAME!=""){
+                            d_none(nominee_add_div,true)
+                            d_none(nominee_display_div,false)
+
+                            NOMINEE_NAME_span.innerHTML=response.data.NOMINEE_NAME
+                            NOMINEE_NUMBER_span.innerHTML=response.data.NOMINEE_NUMBER
+                            NOMINEE_RELATION_span.innerHTML=response.data.NOMINEE_RELATION
+                        }
+
+                    }
+
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+        }
+    </script>
+    <script>
+        function prof_edit(id_base) {
+
+            input_id = `${id_base}_input`;
+            edit_btn_id = `${id_base}_edit_btn`;
+            submit_btn_id = `${id_base}_submit_btn`;
+
+            document.getElementById(input_id).removeAttribute('readonly');
+
+            //   console.log(document.getElementById(input_id).classList)
+            document.getElementById(edit_btn_id).classList.add("d-none");
+            document.getElementById(submit_btn_id).classList.remove("d-none");
+
+        }
+
+        function prof_bank_edit(status) {
+            edit_btn = document.getElementById('BANK_edit_btn');
+            submit_btn = document.getElementById('BANK_submit_btn');
+            name_input = document.getElementById('BANK_NAME');
+            ac_num_input = document.getElementById('BANK_AC_NUM');
+            ifsc_input = document.getElementById('BANK_IFSC');
+            upi_input = document.getElementById('UPI_ID');
+
+            // actions
+            if (status == true) {
+                name_input.removeAttribute('readonly');
+                ac_num_input.removeAttribute('readonly');
+                ifsc_input.removeAttribute('readonly');
+                upi_input.removeAttribute('readonly');
+                edit_btn.classList.add("d-none");
+                submit_btn.classList.remove("d-none");
+            }
+            if (status == false) {
+                name_input.setAttribute('readonly', '');
+                ac_num_input.setAttribute('readonly', '');
+                ifsc_input.setAttribute('readonly', '');
+                upi_input.setAttribute('readonly', '');
+                edit_btn.classList.remove("d-none");
+                submit_btn.classList.add("d-none");
+            }
+
+
+        }
+
+        function add_nominee() {
+
+            nominee_submit_div = document.getElementById('nominee_submit_div');
+            nominee_add_div = document.getElementById('nominee_add_div');
+            nominee_submit_div.classList.remove("d-none");
+            nominee_add_div.classList.add("d-none");
+        }
+
+        function prof_processing(id_base, status) {
+            submit_btn_id = `${id_base}_submit_btn`;
+            input_id = `${id_base}_input`;
+
+            if (status == true) {
+                document.getElementById(submit_btn_id).textContent = '...'
+                document.getElementById(submit_btn_id).disabled = true;
+                document.getElementById(input_id).setAttribute('readonly', '');
+            }
+            if (status == false) {
+                document.getElementById(submit_btn_id).textContent = 'Submit'
+                document.getElementById(submit_btn_id).disabled = false;
+                document.getElementById(input_id).removeAttribute('readonly');
+            }
+        }
+
+        function prof_submit(id_base) {
+            input_id = `${id_base}_input`;
+            edit_btn_id = `${id_base}_edit_btn`;
+            submit_btn_id = `${id_base}_submit_btn`;
+
+            // make button processing 
+            prof_processing(id_base, true)
+
+            input_value = document.getElementById(input_id).value
+
+            var bodyFormData = new URLSearchParams();
+            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('info_name', id_base);
+            bodyFormData.append(id_base, input_value);
+
+            /// api call
+            axios.post(api_base+'edit_profile.php', bodyFormData)
+                .then(function(response) {
+                    prof_processing(id_base, false)
+                    // console.log(response);
+
+                    if (response.data.status == 1) {
+                        document.getElementById(input_id).setAttribute('readonly', '');
+                        document.getElementById(submit_btn_id).classList.add("d-none");
+                        document.getElementById(edit_btn_id).classList.remove("d-none");
+
+                    } else {
+                        console.log(response.data);
+                        document.getElementById(submit_btn_id).textContent = 'Retry'
+
+                    }
+
+
+
+
+
+
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+
+        }
+
+        function prof_bank_submit() {
+            edit_btn = document.getElementById('BANK_edit_btn');
+            submit_btn = document.getElementById('BANK_submit_btn');
+            name_input = document.getElementById('BANK_NAME');
+            ac_num_input = document.getElementById('BANK_AC_NUM');
+            ifsc_input = document.getElementById('BANK_IFSC');
+            upi_input = document.getElementById('UPI_ID');
+
+            // actions
+            prof_bank_edit(false)
+            edit_btn.textContent = 'Processing'
+            edit_btn.disabled = true;
+            var bodyFormData = new URLSearchParams();
+            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('info_name', 'BANK');
+            bodyFormData.append('BANK_NAME', name_input.value);
+            bodyFormData.append('BANK_AC_NUM', ac_num_input.value);
+            bodyFormData.append('BANK_IFSC', ifsc_input.value);
+            bodyFormData.append('UPI_ID', upi_input.value);
+
+            /// api call
+            axios.post(api_base+'edit_profile.php', bodyFormData)
+                .then(function(response) {
+                    edit_btn.disabled = false;
+
+                    console.log(response.data);
+
+                    if (response.data.status == 1) {
+
+                        edit_btn.textContent = 'edit'
+
+
+
+                    } else {
+                        console.log(response.data);
+                        edit_btn.textContent = 'Retry'
+
+                    }
+
+
+
+
+
+
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+
+
+        }
+
+        function submit_nominee() {
+            nominee_submit_btn = document.getElementById('nominee_submit_btn');
+            NOMINEE_NAME = document.getElementById('NOMINEE_NAME');
+            NOMINEE_NUMBER = document.getElementById('NOMINEE_NUMBER');
+            NOMINEE_RELATION = document.getElementById('NOMINEE_RELATION');
+
+            ///actions
+            nominee_submit_btn.textContent = 'Processing'
+            nominee_submit_btn.disabled = true;
+
+            var bodyFormData = new URLSearchParams();
+            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('info_name', 'NOMINEE');
+            bodyFormData.append('NOMINEE_NAME', NOMINEE_NAME.value);
+            bodyFormData.append('NOMINEE_NUMBER', NOMINEE_NUMBER.value);
+            bodyFormData.append('NOMINEE_RELATION', NOMINEE_RELATION.value);
+            /// api call
+            axios.post(api_base+'edit_profile.php', bodyFormData)
+                .then(function(response) {
+                    nominee_submit_btn.disabled = false;
+
+                    console.log(response.data);
+
+                    if (response.data.status == 1) {
+
+                        fetch_clients_data1()
+                        nominee_submit_btn.textContent = 'EDIT'
+
+
+                    } else {
+                        console.log(response.data);
+                        nominee_submit_btn.textContent = 'Retry'
+
+                    }
+
+
+
+
+
+
+
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
+
+
+        }
+    </script>
+</body>
+
 </html>

@@ -142,7 +142,7 @@
                     <div class="col-lg-5 p-2">
                         <div class="py-2  ml-5">
                             <h3 class="text-light">Log in to Yamasha</h3>
-                            <p class="text-light" id="text">New user register to yamasha ? <a href="./register.php">Register</a> </p>
+                            <p class="text-light" id="text">New user register to yamasha ? <a href="./register.html">Register</a> </p>
                             <div class="alert alert-danger  align-items-center d-none" role="alert">
                                 <!-- <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
                                     <use xlink:href="#exclamation-triangle-fill" />
@@ -156,7 +156,7 @@
                                 <input type="text" id="MOB_NUMBER" class="bg-dark form-control" required autocomplete="mobile number" placeholder="MOBIL NUMBER" style="border: 1px solid #0e56f0;"><br>
                                 <label class="text-light" for="PASS">Password</label>
                                 <input type="password" class="bg-dark form-control" name="PASS" id="PASS" placeholder="Password" style="border: 1px solid #0e56f0;">
-                                <p class="text-right"><a href="./forgot_password.php">forget password</a></p> <br>
+                                <p class="text-right"><a href="./forgot_password.html">forget password</a></p> <br>
 
                                 <div class="text-center">
                                     <button type="button" onclick="login()" class="btn border-0 border-radius-2 text-light px-5 py-1 font-weight-bold " style="background-color: #0e56f0;">login</button>
@@ -215,7 +215,7 @@
                         errorMessage(response.data.msg);
                     }
                     if (response.data.status == 1) {
-                        // location.replace('./index.php');
+                        // location.replace('./index.html');
                         // storing data to local storage
                         store.set('yamasha_user_data', {
                             ID: response.data.ID,
@@ -224,7 +224,7 @@
 
 
                         })
-                            location.replace('./index.php');
+                            location.replace('./index.html');
                     }
 
 

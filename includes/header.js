@@ -1,8 +1,7 @@
-	<!--app-header-->
-	<div class="app-header header d-flex">
-		<div class="container">
+headerData = `	
+<div class="container">
 			<div class="d-flex">
-				<a class="header-brand" href="index.php">
+				<a class="header-brand" href="index.html">
 					<img src="https://cdn.discordapp.com/attachments/937292233735032862/959912439988748288/Frame_12.png" class="header-brand-img" alt="splink logo">
 				</a><!-- logo-->
 				<a id="horizontal-navtoggle" class="animated-arrow"><span></span></a><!-- sidebar-toggle-->
@@ -212,7 +211,7 @@
 								<a href="#" class="dropdown-item text-center font-weight-sembold user" id="header_name_span2"> Username</a>
 								<div class="dropdown-divider"></div>
 							</div>
-							<!-- <a class="dropdown-item" onclick="location.replace('./auto_investment.php?show_trx')">
+							<!-- <a class="dropdown-item" onclick="location.replace('./auto_investment.html?show_trx')">
 								<i class="dropdown-icon mdi mdi-account-outline "></i> Transaction History
 							</a> -->
 							<!-- <a class="dropdown-item" href="#">
@@ -240,5 +239,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!--app-header end-->
+`
+// including header
+document.getElementById('header_div').innerHTML = headerData

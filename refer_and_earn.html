@@ -1,21 +1,46 @@
-<?php
 
-
-
-
-
-$nav_i = 1;
-$page_title = 'Refer and earn';
-// include './includes/config.php';
-
-?>
 
 <!doctype html>
 <html lang="en" dir="ltr">
 
 <head>
-    <?php include "./includes/com_head.php";
-    include "./includes/com_css.php"; ?>
+<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="msapplication-TileColor" content="#0061da">
+	<meta name="theme-color" content="#1643a3">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<link rel="icon" href="./assets/images/Vector.png" type="image/x-icon" />
+	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
+
+	<!-- Title -->
+	<title>Refer and earn</title>
+	<!-- Dashboard css -->
+	<link href="assets/css/dashboard.css" rel="stylesheet" />
+
+	<!-- Font family -->
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+
+	<!--C3 Charts css -->
+	<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+	<!-- Custom scroll bar css-->
+	<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+	<!--Horizontal css -->
+	<link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
+	<link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
+
+	<!-- jvectormap css -->
+	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+	<!---Font icons css-->
+	<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+	<link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
 
     <style>
         * {
@@ -105,9 +130,15 @@ $page_title = 'Refer and earn';
     <div class="page">
         <div class="page-main">
 
-            <?php include "./includes/header.php";
-            include "./includes/nav.php";
-            ?>
+           	<!--app-header-->
+			<div class="app-header header d-flex" id="header_div">
+				<script src="./includes/header.js"></script>
+			</div>
+			<!--app-header end-->
+			<!--Horizontal-menu-->
+			<div class="horizontal-main clearfix" id="nav_div">
+				<script src="./includes/nav.js"></script>
+			</div>
 
 
 
@@ -250,16 +281,81 @@ $page_title = 'Refer and earn';
 
                     </div>
                 </div>
-                <?php
-                include "./includes/footer.php"; ?>
+                <!--footer-->
+				<footer class="footer" id="footer_div">
+					<script defer src="./includes/footer.js"></script>
+				</footer>
+				<!-- End Footer-->
             </div>
             <!-- End content-area-->
         </div>
     </div>
     <!-- End Page-->
-    <?php
-    include "./includes/com_js.php";
-    ?>
+   		<!-- Back to top -->
+		<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<!-- config js-->
+<script src="assets/js/config.js"></script>
+<!-- Jquery js-->
+<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+
+<!--Bootstrap js-->
+<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
+
+<!--Jquery Sparkline js-->
+<!-- <script src="assets/js/vendors/jquery.sparkline.min.js"></script> -->
+
+<!-- Chart Circle js-->
+<!-- <script src="assets/js/vendors/circle-progress.min.js"></script> -->
+
+<!-- Star Rating js-->
+<!-- <script src="assets/plugins/rating/jquery.rating-stars.js"></script> -->
+
+<!-- Flot Chart js-->
+<!-- <script src="assets/plugins/flot/jquery.flot.js"></script>
+<script src="assets/plugins/flot/jquery.flot.fillbetween.js"></script>
+<script src="assets/plugins/flot/jquery.flot.pie.js"></script> -->
+
+<!--Jquery.knob js-->
+<!-- <script src="assets/plugins/othercharts/jquery.knob.js"></script> --> 
+
+<!--Other charts js-->
+<!-- <script src="assets/js/othercharts.js"></script> -->
+
+<!-- Chart js -->
+<!-- <script src="assets/plugins/chart/Chart.bundle.js"></script>
+<script src="assets/plugins/chart/utils.js"></script> -->
+
+<!-- Peity Chart js-->
+<!-- <script src="assets/plugins/peitychart/jquery.peity.min.js"></script>
+<script src="assets/plugins/peitychart/peitychart.init.js"></script> -->
+
+<!-- Input Mask js -->
+<!-- <script src="assets/plugins/input-mask/jquery.mask.min.js"></script> -->
+
+<!-- Custom scroll bar js-->
+<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!--Horizontal js-->
+<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
+
+<!-- Index js -->
+<!-- <script src="assets/js/index1.js"></script> -->
+
+<!-- Search Js-->
+<!-- <script src="assets/js/prefixfree.min.js"></script> -->
+
+<!-- ECharts js -->
+<!-- <script src="./assets/plugins/echarts/echarts.js"></script> -->
+
+<!-- Custom js-->
+<script src="assets/js/custom.js"></script>
+
+<!-- primexop js  -->
+<script src="./assets/js/primeOne.js"></script>
+<script src="./assets/js/axios.min.js"></script>
+<script src="./assets/js/store.everything.min.js"></script>
+<script src="./assets/js/sweetalert2.all.min.js"></script>
     <script>
         loginCheck()
         setUsernameInHeader()
@@ -274,9 +370,9 @@ $page_title = 'Refer and earn';
        
 
         if (location.host == '192.168.100.5') {
-            url = 'http://192.168.100.5/yamasha_v1/user_panel/register.php';
+            url = 'http://192.168.100.5/yamasha_v1/user_panel/register.html';
         } else {
-            url = 'https://yamasha.in/user_panel/register.php';
+            url = 'https://yamasha.in/user_panel/register.html';
         }
         refer_link.value = url + '?refer=' + store.get('yamasha_user_data').ID
 

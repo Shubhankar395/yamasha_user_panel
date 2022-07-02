@@ -1,16 +1,4 @@
-<?php
 
-if (!isset($nav_i)) {
-    $nav_i = 0;
-}
-
-function nav_s_i($index, $nav_i)
-{
-    if ($index == $nav_i) {
-        echo 'active';
-    }
-}
-?>
 
 
 
@@ -19,20 +7,20 @@ function nav_s_i($index, $nav_i)
     <div class="horizontal-mainwrapper container clearfix">
         <nav class="horizontalMenu clearfix">
             <ul class="horizontalMenu-list">
-                <li aria-haspopup="true"><a href="index.php" class="sub-icon <?= nav_s_i(1, $nav_i); ?>"><i class="fa fa-laptop"></i> Home <i class="fa  horizontal-icon"></i></a>
+                <li aria-haspopup="true"><a href="index.html" class="sub-icon "><i class="fa fa-laptop"></i> Home <i class="fa  horizontal-icon"></i></a>
                     <!-- <ul class="sub-menu">
-                        <li aria-haspopup="true"><a href="index.php">Service Dashboard </a></li>
+                        <li aria-haspopup="true"><a href="index.html">Service Dashboard </a></li>
                         <li aria-haspopup="true"><a href="index2.html">Finance Dashboard</a></li>
                         <li aria-haspopup="true"><a href="index3.html">Gaming Dashboard</a></li>
                         <li aria-haspopup="true"><a href="index4.html">HR Dashboard</a></li>
                         <li aria-haspopup="true"><a href="index5.html">Ecommerce Dashboard</a></li>
                     </ul> -->
                 </li>
-                <li aria-haspopup="true"><a href="wallet.php" class=" <?= nav_s_i(2, $nav_i); ?>"><i class="fa fa-window-maximize"></i>Wallet</a></li>
-                <li aria-haspopup="true"><a href="auto_investment.php" class=" <?= nav_s_i(3, $nav_i); ?>"><i class="fa fa-window-maximize"></i>Auto Investment</a></li>
-                <li aria-haspopup="true"><a href="profile.php" class=" <?= nav_s_i(4, $nav_i); ?>"><i class="fa fa-window-maximize"></i>Profile</a></li>
-                <li aria-haspopup="true"><a href="refer_and_earn.php" class=" <?= nav_s_i(5, $nav_i); ?>"><i class="fa fa-window-maximize"></i>Referral</a></li>
-                <li aria-haspopup="true"><a href="watch_list.php" class=" <?= nav_s_i(6, $nav_i); ?>"><i class="fa fa-window-maximize"></i>watch_list</a></li>
+                <li aria-haspopup="true"><a href="wallet.html" class=" "><i class="fa fa-window-maximize"></i>Wallet</a></li>
+                <li aria-haspopup="true"><a href="auto_investment.html" class=" "><i class="fa fa-window-maximize"></i>Auto Investment</a></li>
+                <li aria-haspopup="true"><a href="profile.html" class=" "><i class="fa fa-window-maximize"></i>Profile</a></li>
+                <li aria-haspopup="true"><a href="refer_and_earn.html" class=" "><i class="fa fa-window-maximize"></i>Referral</a></li>
+                <li aria-haspopup="true"><a href="watch_list.html" class=" "><i class="fa fa-window-maximize"></i>watch_list</a></li>
                 <!-- <li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-th-large"></i> Apps <i class="fa fa-angle-down horizontal-icon"></i></a>
                     <ul class="sub-menu">
                         <li aria-haspopup="true"><a href="cards.html">Cards design</a></li>
@@ -164,7 +152,7 @@ function nav_s_i($index, $nav_i)
                         </li>
                         <li aria-haspopup="true" class="sub-menu-sub"><a href="#">Account</a>
                             <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="login.html">Login</a></li>
+                                <li aria-haspopup="true"><a href="login.html">Login</a></li> 
                                 <li aria-haspopup="true"><a href="register.html">Register</a></li>
                                 <li aria-haspopup="true"><a href="forgot-password.html">Forgot password</a></li>
                                 <li aria-haspopup="true"><a href="lockscreen.html">Lock screen</a></li>
