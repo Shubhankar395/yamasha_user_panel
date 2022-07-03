@@ -1,120 +1,80 @@
-
+<?php
+$page_title = 'Auto Investment !'
+?>
 
 <!doctype html>
 <html lang="en" dir="ltr">
 
 <head>
-<meta charset="UTF-8">
-	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="msapplication-TileColor" content="#0061da">
-	<meta name="theme-color" content="#1643a3">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
-	<link rel="icon" href="./assets/images/Vector.png" type="image/x-icon" />
-	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
-
-	<!-- Title -->
-	<title>Auto Investment</title>
-	<!-- Dashboard css -->
-	<link href="assets/css/dashboard.css" rel="stylesheet" />
-
-	<!-- Font family -->
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
-
-	<!--C3 Charts css -->
-	<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
-
-	<!-- Custom scroll bar css-->
-	<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
-
-	<!--Horizontal css -->
-	<link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
-	<link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
-
-	<!-- jvectormap css -->
-	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
-
-	<!---Font icons css-->
-	<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
-	<link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
+    <?php include "./includes/com_head.php";
+	include "./includes/com_css.php"; ?>
 
 
 
-	<style>
-		.box {
-			/* border: 2px solid rgb(206, 201, 201); */
-			background-color: #022647;
-			border-radius: 08px;
-			box-shadow: 9px 5px 5px #0286FF;
+    <style>
+    .box {
+        /* border: 2px solid rgb(206, 201, 201); */
+        background-color: #022647;
+        border-radius: 08px;
+        box-shadow: 9px 5px 5px #0286FF;
+    }
+
+    .background_img {
+        background-image: url('./assets/images/auto-investment-img/auto_invest_bg-img.png');
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .line {
+        border: none;
+        border-bottom: 3px solid #0286FF;
+        margin: 0 25px;
+        margin-top: 25px;
+    }
+
+    @media (max-width:991px) {
+        .plus {
+            text-align: center;
+        }
+
+        .box {
+            margin: 28px;
+        }
+
+		.banner-img{
+			display: none;
 		}
-	
-		.background_img {
-			background-image: url('./assets/images/auto-investment-img/auto_invest_bg-img.png');
-			width: 100%;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
-	
-		.line {
-			border: none;
-			border-bottom: 3px solid #0286FF;
-			margin: 0 25px;
-			margin-top: 25px;
-		}
-	
-		@media (max-width:991px) {
-			.plus {
-				text-align: center;
-			}
-	
-			.box {
-				margin: 28px;
-			}
-	
-			.banner-img{
-				display: none;
-			}
-		}
-		@media (max-width:576px) {
-			 
-			.ai_action_init_div{
-				display: flex;
-				flex-wrap : wrap;
-				/* flex-direction:column; */
-				justify-content : center;
-			}
-	
-		}
-		</style>
+    }
+	@media (max-width:576px) {
+	     
+		.ai_action_init_div{
+			display: flex;
+			flex-wrap : wrap;
+			/* flex-direction:column; */
+			justify-content : center;
+	    }
+
+	}
+    </style>
 </head>
 
 <body class="app sidebar-mini rtl">
 
-	<!--Global-Loader-->
-	<div id="global-loader"></div>
+    <!--Global-Loader-->
+    <div id="global-loader"></div>
 
-	<div class="page">
-		<div class="page-main">
+    <div class="page">
+        <div class="page-main">
 
-			<!--app-header-->
-			<div class="app-header header d-flex" id="header_div">
-				<script src="./includes/header.js"></script>
-			</div>
-			<!--app-header end-->
-			<!--Horizontal-menu-->
-			<div class="horizontal-main clearfix" id="nav_div">
-				<script src="./includes/nav.js"></script>
-			</div>
+            <?php include "./includes/header.php";
+			include "./includes/nav.php";
+			?>
 
 
 
-
-			<!--content-area-->
+            <!--content-area-->
             <div class="content-area background_img">
 
                 <div class="container-fluid">
@@ -301,144 +261,88 @@
                 </div>
             </div>
             <br>
-			<!--footer-->
-			<footer class="footer" id="footer_div">
-					<script defer src="./includes/footer.js"></script>
-				</footer>
-				<!-- End Footer-->
-		</div>
-		<!-- End content-area-->
-	</div>
-	</div>
-	<!-- End Page-->
-			<!-- Back to top -->
-			<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
-
-<!-- config js-->
-<script src="assets/js/config.js"></script>
-<!-- Jquery js-->
-<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
-
-<!--Bootstrap js-->
-<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
-
-<!--Jquery Sparkline js-->
-<!-- <script src="assets/js/vendors/jquery.sparkline.min.js"></script> -->
-
-<!-- Chart Circle js-->
-<!-- <script src="assets/js/vendors/circle-progress.min.js"></script> -->
-
-<!-- Star Rating js-->
-<!-- <script src="assets/plugins/rating/jquery.rating-stars.js"></script> -->
-
-<!-- Flot Chart js-->
-<!-- <script src="assets/plugins/flot/jquery.flot.js"></script>
-<script src="assets/plugins/flot/jquery.flot.fillbetween.js"></script>
-<script src="assets/plugins/flot/jquery.flot.pie.js"></script> -->
-
-<!--Jquery.knob js-->
-<!-- <script src="assets/plugins/othercharts/jquery.knob.js"></script> --> 
-
-<!--Other charts js-->
-<!-- <script src="assets/js/othercharts.js"></script> -->
-
-<!-- Chart js -->
-<!-- <script src="assets/plugins/chart/Chart.bundle.js"></script>
-<script src="assets/plugins/chart/utils.js"></script> -->
-
-<!-- Peity Chart js-->
-<!-- <script src="assets/plugins/peitychart/jquery.peity.min.js"></script>
-<script src="assets/plugins/peitychart/peitychart.init.js"></script> -->
-
-<!-- Input Mask js -->
-<!-- <script src="assets/plugins/input-mask/jquery.mask.min.js"></script> -->
-
-<!-- Custom scroll bar js-->
-<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<!--Horizontal js-->
-<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
-
-<!-- Index js -->
-<!-- <script src="assets/js/index1.js"></script> -->
-
-<!-- Search Js-->
-<!-- <script src="assets/js/prefixfree.min.js"></script> -->
-
-<!-- ECharts js -->
-<!-- <script src="./assets/plugins/echarts/echarts.js"></script> -->
-
-<!-- Custom js-->
-<script src="assets/js/custom.js"></script>
-
-<!-- primexop js  -->
-<script src="./assets/js/primeOne.js"></script>
-<script src="./assets/js/axios.min.js"></script>
-<script src="./assets/js/store.everything.min.js"></script>
-<script src="./assets/js/sweetalert2.all.min.js"></script>
-
-	<script>
-		loginCheck()
-		setUsernameInHeader()
-
-		ai_locked_span = byId('ai_locked_span')
-		ai_profit_span = byId('ai_profit_span')
-		ai_total_span = byId('ai_total_span')
-		ai_action_div = byId('ai_action_div')
-		amt_val = byId('amt_val')
-		i_i_n_btn = byId('i_i_n_btn')
-		d_i_n_btn = byId('d_i_n_btn')
-		r_p_n_btn = byId('r_p_n_btn')
-		ai_action_init_div = byId('ai_action_init_div')
-		ai_action_err_div = byId('ai_action_err_div')
-
-		//updating wallets
-		function fetchWallet() {
-			var bodyFormData = new URLSearchParams();
-
-			bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-			bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
-
-			axios.post(api_base+'wallets.php', bodyFormData)
-				.then(function(response) {
-					console.log(response.data);
-
-					if (response.data.status == 0) {
-
-					}
-					if (response.data.status == 1) {
-						ai_locked_span.innerHTML = Number(response.data.AI_LOCKED).toFixed(2)
-						ai_profit_span.innerHTML = Number(response.data.AI_PROFIT).toFixed(2)
-						ai_total_span.innerHTML = Number(Number(response.data.AI_LOCKED) + Number(response.data.AI_PROFIT)).toFixed(2)
-					}
 
 
-				})
-				.catch(function(error) {
-					console.log(error);
-				});
-		}
-		fetchWallet()
-		function aiTrxFun() {
-            var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+        </div>
+        <!-- End row -->
 
-            axios.post(api_base+'ai_trx.php', bodyFormData)
-                .then(function(response) {
-                    console.log(response.data);
+    </div>
+    <?php
+			include "./includes/footer.php"; ?>
+    </div>
+    <!-- End content-area-->
+    </div>
+    </div>
+    <!-- End Page-->
+    <?php
+	include "./includes/com_js.php";
+	?>
 
-                    if (response.data.status == 0) {
+    <script>
+    loginCheck()
+    setUsernameInHeader()
 
-                    }
-                    if (response.data.status == 1) {
-                        res_index = 0
-                        // console.log(response.data.res_data[res_index]);
-                        if (response.data.res_data.length > 0) {
-                            while (response.data.res_data.length > res_index) {
+    ai_locked_span = byId('ai_locked_span')
+    ai_profit_span = byId('ai_profit_span')
+    ai_total_span = byId('ai_total_span')
+    ai_action_div = byId('ai_action_div')
+    amt_val = byId('amt_val')
+    i_i_n_btn = byId('i_i_n_btn')
+    d_i_n_btn = byId('d_i_n_btn')
+    r_p_n_btn = byId('r_p_n_btn')
+    ai_action_init_div = byId('ai_action_init_div')
+    ai_action_err_div = byId('ai_action_err_div')
 
-                                ai_trx_body.innerHTML += `<tr class="table-line">
+    //updating wallets
+    function fetchWallet() {
+        var bodyFormData = new URLSearchParams();
+
+        bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+        bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+
+        axios.post(api_base + 'wallets.php', bodyFormData)
+            .then(function(response) {
+                console.log(response.data);
+
+                if (response.data.status == 0) {
+
+                }
+                if (response.data.status == 1) {
+                    ai_locked_span.innerHTML = Number(response.data.AI_LOCKED).toFixed(2)
+                    ai_profit_span.innerHTML = Number(response.data.AI_PROFIT).toFixed(2)
+                    ai_total_span.innerHTML = Number(Number(response.data.AI_LOCKED) + Number(response.data
+                        .AI_PROFIT)).toFixed(2)
+                }
+
+
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    }
+    fetchWallet()
+
+    function aiTrxFun() {
+        var bodyFormData = new URLSearchParams();
+
+        bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+        bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+
+        axios.post(api_base + 'ai_trx.php', bodyFormData)
+            .then(function(response) {
+                console.log(response.data);
+
+                if (response.data.status == 0) {
+
+                }
+                if (response.data.status == 1) {
+                    res_index = 0
+                    // console.log(response.data.res_data[res_index]);
+                    if (response.data.res_data.length > 0) {
+                        while (response.data.res_data.length > res_index) {
+
+                            ai_trx_body.innerHTML += `<tr class="table-line">
                                                         <th scope="row">
                                                             <p>${response.data.res_data[res_index].DAT}</p>
                                                         </th>
@@ -457,55 +361,55 @@
                                                         </td>
                                                     </tr>`
 
-                                res_index++
+                            res_index++
 
-                            }
                         }
                     }
+                }
 
 
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
 
-        }
-        aiTrxFun()
+    }
+    aiTrxFun()
 
-		function ai_action_init_fun(btn_id) {
-			d_none(ai_action_div, false)
-			d_none(btn_id, false)
-			d_none(ai_action_init_div, true)
-		}
+    function ai_action_init_fun(btn_id) {
+        d_none(ai_action_div, false)
+        d_none(btn_id, false)
+        d_none(ai_action_init_div, true)
+    }
 
-		function ai_action_fun(action) {
-			var bodyFormData = new URLSearchParams();
-			bodyFormData.append('action', action);
-			bodyFormData.append('amt_val', amt_val.value);
-			bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-			bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    function ai_action_fun(action) {
+        var bodyFormData = new URLSearchParams();
+        bodyFormData.append('action', action);
+        bodyFormData.append('amt_val', amt_val.value);
+        bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+        bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
 
-			axios.post(api_base+'ai_action.php', bodyFormData)
-				.then(function(response) {
-					console.log(response.data);
+        axios.post(api_base + 'ai_action.php', bodyFormData)
+            .then(function(response) {
+                console.log(response.data);
 
-					if (response.data.status == 0) {
-						bootstrapAlert(ai_action_err_div, response.data.msg, "danger", 3)
-					}
-					if (response.data.status == 1) {
-						bootstrapAlert(ai_action_err_div, response.data.msg, "success", 3)
-						fetchWallet()
-						ai_trx_body.innerHTML =""
-						aiTrxFun()
-					}
+                if (response.data.status == 0) {
+                    bootstrapAlert(ai_action_err_div, response.data.msg, "danger", 3)
+                }
+                if (response.data.status == 1) {
+                    bootstrapAlert(ai_action_err_div, response.data.msg, "success", 3)
+                    fetchWallet()
+                    ai_trx_body.innerHTML = ""
+                    aiTrxFun()
+                }
 
 
-				})
-				.catch(function(error) {
-					console.log(error);
-				});
-		}
-	</script>
+            })
+            .catch(function(error) {
+                console.log(error);
+            });
+    }
+    </script>
 
 </body>
 
