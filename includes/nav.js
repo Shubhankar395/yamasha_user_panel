@@ -11,11 +11,11 @@ navData = `
                 <li aria-haspopup="true"><a href="index5.html">Ecommerce Dashboard</a></li>
             </ul> -->
         </li>
-        <li aria-haspopup="true"><a href="wallet.html" class=" "><i class="fa fa-window-maximize"></i>Wallet</a></li>
-        <li aria-haspopup="true"><a href="auto_investment.html" class=" "><i class="fa fa-window-maximize"></i>Auto Investment</a></li>
-        <li aria-haspopup="true"><a href="profile.html" class=" "><i class="fa fa-window-maximize"></i>Profile</a></li>
-        <li aria-haspopup="true"><a href="refer_and_earn.html" class=" "><i class="fa fa-window-maximize"></i>Referral</a></li>
-        <li aria-haspopup="true"><a href="watch_list.html" class=" "><i class="fa fa-window-maximize"></i>watch_list</a></li>
+        <li aria-haspopup="true"><a href="wallet.html" class=" "><i class="fa fa-university"></i>Wallet</a></li>
+        <li aria-haspopup="true"><a href="auto_investment.html" class=" "><i class="fa fa-inr"></i>Auto Investment</a></li>
+        <li aria-haspopup="true"><a href="profile.html" class=" "><i class="fa fa-user-circle-o"></i>Profile</a></li>
+        <li aria-haspopup="true"><a href="refer_and_earn.html" class=" "><i class="fa fa-share-alt"></i>Referral</a></li>
+        <li aria-haspopup="true"><a href="watch_list.html" class=" "><i class="fa fa-exchange"></i>Watch List</a></li>
         <!-- <li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-th-large"></i> Apps <i class="fa fa-angle-down horizontal-icon"></i></a>
             <ul class="sub-menu">
                 <li aria-haspopup="true"><a href="cards.html">Cards design</a></li>
