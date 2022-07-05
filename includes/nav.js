@@ -2,7 +2,7 @@ navData = `
 <div class="horizontal-mainwrapper container clearfix">
 <nav class="horizontalMenu clearfix">
     <ul class="horizontalMenu-list">
-        <li aria-haspopup="true"><a href="index.html" class="sub-icon "><i class="fa fa-laptop"></i> Home <i class="fa  horizontal-icon"></i></a>
+        <li aria-haspopup="true"><a href="index.html" class="sub-icon "><i class="fa fa-th-large"></i> Home <i class="fa  horizontal-icon"></i></a>
             <!-- <ul class="sub-menu">
                 <li aria-haspopup="true"><a href="index.html">Service Dashboard </a></li>
                 <li aria-haspopup="true"><a href="index2.html">Finance Dashboard</a></li>
