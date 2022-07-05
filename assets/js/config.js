@@ -11,4 +11,4 @@ if (location.host == "192.168.100.5") {
 /// asset version control variable
 // yamasha global assets version
 
-y_g_a_v = 1;
+y_g_a_v=1
