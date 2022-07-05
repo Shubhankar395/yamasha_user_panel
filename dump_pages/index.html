@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
 		<meta name="msapplication-TileColor" content="#0061da">
 		<meta name="theme-color" content="#1643a3">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
@@ -16,14 +17,14 @@
 
 		<!-- Title -->
 		<title>splink – Admin Bootstrap4 Responsive Webapp Dashboard Template</title>
-		
+
 		<!-- Dashboard css -->
 		<link href="../assets/css/dashboard.css" rel="stylesheet" />
-		
+
 		<!-- Font family -->
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
 
-		<!-- C3 Charts css -->
+		<!--C3 Charts css -->
 		<link href="../assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
 
 		<!-- Custom scroll bar css-->
@@ -32,18 +33,20 @@
 		<!--Horizontal css -->
         <link href="../assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
         <link href="../assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
-		
+
+		<!-- jvectormap css -->
+        <link href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
 		<!---Font icons css-->
 		<link href="../assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
 		<link  href="../assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
-		
+
 	</head>
-	
 	<body class="app sidebar-mini rtl">
-		
+
 		<!--Global-Loader-->
 		<div id="global-loader"></div>
-		
+
 		<div class="page">
 			<div class="page-main">
 
@@ -294,7 +297,7 @@
 					<div class="horizontal-mainwrapper container clearfix">
 						<nav class="horizontalMenu clearfix">
 							<ul class="horizontalMenu-list">
-								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-laptop"></i> Home <i class="fa fa-angle-down horizontal-icon"></i></a>
+								<li aria-haspopup="true"><a href="#" class="sub-icon active"><i class="fa fa-laptop"></i> Home <i class="fa fa-angle-down horizontal-icon"></i></a>
 									<ul class="sub-menu">
 										<li aria-haspopup="true"><a href="index.html">Service Dashboard </a></li>
 										<li aria-haspopup="true"><a href="index2.html">Finance Dashboard</a></li>
@@ -409,7 +412,7 @@
 										<li aria-haspopup="true"><a href="chart-c3.html">C3 Charts</a></li>
 									</ul>
 								</li>
-								<li aria-haspopup="true"><a href="#" class="sub-icon active"><i class="fa fa-newspaper-o"></i> Pages <i class="fa fa-angle-down horizontal-icon"></i></a>
+								<li aria-haspopup="true"><a href="#" class="sub-icon"><i class="fa fa-newspaper-o"></i> Pages <i class="fa fa-angle-down horizontal-icon"></i></a>
 									<ul class="sub-menu">
 										<li><a href="maps.html">Vector Maps</a></li>
 										<li><a href="empty.html">Empty Page</a></li>
@@ -475,555 +478,313 @@
 					</div>
 				</div>
 
-                <!-- content-area-->
+                <!--content-area-->
 				<div class="content-area">
 					<div class="container">
 
 					    <!-- page-header -->
 						<div class="page-header">
-							<h4 class="page-title">Shop</h4>
+							<h4 class="page-title">Dashboard</h4>
 							<ol class="breadcrumb"><!-- breadcrumb -->
-								<li class="breadcrumb-item"><a href="#">Pages</a></li>
-								<li class="breadcrumb-item"><a href="#">E-commerce</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Products</li>
-							</ol><!-- breadcrumb end -->
+								<li class="breadcrumb-item"><a href="#">Home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">Dashboard 1</li>
+							</ol><!-- End breadcrumb -->
 						</div>
-						<!-- page-header -->
+						<!-- End page-header -->
+
+						<!-- row -->
+						<div class="row">
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class=" ">
+											<h5>First call resolution</h5>
+										</div>
+										<h2 class="mb-2">6,382<span class="sparkline_bar1 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 30% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Unresolved calls</h5>
+										</div>
+										<h2 class="mb-2">654<span class="sparkline_bar2 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 10% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Avg Response time</h5>
+										</div>
+										<h2 class="mb-2">7,637<span class="sparkline_bar3 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-down  text-danger"></i> 8% Decrease</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-lg-6 col-xl-3 col-md-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="">
+											<h5>Candidates Placed</h5>
+										</div>
+										<h2 class="mb-2">$7,850<span class="sparkline_bar4 float-right"></span></h2>
+										<div><i class="fa fa-arrow-circle-o-up  text-success"></i> 15% Increase</div>
+									</div>
+								</div>
+							</div><!-- End col -->
+						</div>
+						<!-- End row -->
+
+						<!-- row -->
+						<div class="row">
+							<div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+								<div class="card overflow-hidden">
+									<div class="card-header">
+										<h3 class="card-title">Request Volume Vs Service Level</h3>
+									</div>
+									<div class="card-body">
+										<div id="echart1" class="chart-dropshadow h-300"></div>
+									</div>
+								</div>
+							</div><!-- End col -->
+							<div class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+								<div class="card overflow-hidden">
+									<div class="card-header">
+										<h3 class="card-title">Customer Satisfaction</h3>
+									</div>
+									<div class="">
+										<div class="card-body">
+											<canvas id="pieChart" class="chart-dropshadow h-300"></canvas>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- End col -->
+						<!-- End row -->
+
+						<!-- row -->
+                        <div class="row">
+						    <div class="col-xs-12 col-sm-12 col-lg-6 col-xl-7">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Customer retention</h3>
+									</div>
+									<div class="card-body">
+										<canvas id="service-chart" class="chart-dropshadow"></canvas>
+									</div>
+								</div>
+							</div><!-- End col -->
+						    <div class="col-xl-5 col-lg-6 col-sm-12 col-sm-12">
+								<div class="card">
+									<div class="card-header">
+										<h4 class="card-title">Incoming Conversations</h4>
+									</div>
+									<div class="card-body">
+										<div id="echart6" class="chartsh chart-dropshadow h-300"></div>
+									</div>
+								</div>
+							</div>
+						</div><!-- End col -->
+						<!-- End row -->
 
 						<!-- row -->
 						<div class="row row-cards">
-							<div class="col-lg-12 col-xl-9">
-							    <div class="card">
-									<div class="row card-body p-2">
-										<div class="col-sm-12 p-0">
-											<div class="input-group">
-												<input type="text" class="form-control" placeholder="Search ...">
-												<span class="input-group-append">
-													<button class="btn btn-primary" type="button">Search</button>
-												</span>
+							<div class="col-xl-4 col-lg-6 col-md-12 col-sm-12">
+								<div class="card">
+									<div class="card-header">
+										<h3 class="card-title">Avg Time to Solve an issue</h3>
+									</div>
+									<div class="card-body">
+										<div class="">
+											<p class="text-muted mb-0">Less than 1 Hour</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-primary  w-95"></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">95%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">1-2 hours</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-secondary   w-70"  ></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">75%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">More than hours </p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-success w-55" ></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">55%</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<p class="text-muted mb-0">more than 3hours</p>
+											<div class="d-flex justify-content-between align-items-center">
+												<div class="progress h-3 w-100 mt-2 flex-grow-1 mr-4">
+													<div class="progress-bar bg-warning  w-30"></div>
+												</div>
+												<p class="text-muted mt-1 mb-0">35%</p>
 											</div>
 										</div>
 									</div>
 								</div>
-								<div class="row">
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-										     <div class="ribbone">
-												<span class="ribbon1">
-													<span>25%</span>
-												</span>
-											</div>
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/7.png" alt="img" class="img-fluid">
-												</div>
-												<div class="text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Fashion shoes</h5></a>
-													<div class="price mt-3 h4 mb-0 ">
-														<s class="h4 text-muted mr-4">$999.00</s>$799.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center ">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
+							</div><!-- End col -->
+							<div class="col-xl-8 col-lg-6 col-md-12 col-sm-12">
+								<div class="card Revenue">
+									<div class="card-header">
+										<h3 class="card-title">Revenue Vs Support Cost</h3>
 									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/1.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Watch</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$80.00</s>$59.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
+									<div class="card-body">
+										<canvas id="service-chart2" class="chart-dropshadow "></canvas>
 									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/9.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Mens Shoes</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$56.00</s>$38.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
-									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/2.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Leather Watch</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$76.00</s>$58.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
-									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-										    <div class="ribbone">
-												<span class="ribbon1">
-													<span>15%</span>
-												</span>
-											</div>
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/4.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-														<i class="fa fa-star-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Digital Watch</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$99.00</s>$74.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/8.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Ladies shoes</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$45.00</s>$23.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
-									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/3.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Leather Watch</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$25.00</s>$15.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
-									</div>
-
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/5.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-														<i class="fa fa-star-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Gold Watch</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$56.00</s>$39.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-									    </div>
-									</div>
-									<div class="col-lg-4 col-xl-4">
-										<div class="card item-card">
-										    <div class="ribbone">
-												<span class="ribbon1">
-													<span>30%</span>
-												</span>
-											</div>
-											<div class="card-body">
-												<div class="text-center product-img">
-													<img src="../assets/images/products/6.png" alt="img" class="img-fluid">
-												</div>
-												<div class=" text-center mt-4">
-												    <div class="text-center text-warning">
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star"></i>
-														<i class="fa fa-star-half-o"></i>
-													</div>
-													<a href="#"><h5 class="mb-0 mt-2">Sport shoes</h5></a>
-													<div class="price mt-3 h4 mb-0">
-														<s class="h4 text-muted mr-4">$28.00</s>$15.00
-													</div>
-												</div>
-											</div>
-											<div class="card-footer text-center">
-												<a class="btn  btn-info btn-sm mt-1 mb-1 text-sm  text-white">
-													<i class="fe fe-heart"></i>
-												</a>
-												<a class="btn btn-icon btn-sm btn-danger mt-1 text-sm  mb-1 text-white">
-													<i class="fe fe-share-2"></i>
-												</a>
-												<a href="cart.html" class="btn btn-icon btn-sm  btn-primary mt-1 mb-1  text-sm text-white">
-													<i class="fe fe-shopping-cart"></i>
-													Add to Cart
-												</a>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-12 mb-3 shop-count">
-										<p>1 - 10 of 234 photos</p>
-									</div>
-									<div class="col-md-6 mb-3 col-sm-12">
-										<div class="float-right shop-pagination">
-											<ul class="pagination">
-												<li class="page-item page-prev disabled">
-													<a class="page-link" href="#" tabindex="-1">Prev</a>
-												</li>
-												<li class="page-item active"><a class="page-link" href="#">1</a></li>
-												<li class="page-item"><a class="page-link" href="#">2</a></li>
-												<li class="page-item"><a class="page-link" href="#">3</a></li>
-												<li class="page-item"><a class="page-link" href="#">4</a></li>
-												<li class="page-item"><a class="page-link" href="#">5</a></li>
-												<li class="page-item page-next">
-													<a class="page-link" href="#">Next</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div><!-- row end -->
+								</div>
 							</div>
-							<!-- row end -->
+						</div><!-- End col -->
+						<!-- End row -->
 
-
-							<div class="col-lg-12 col-xl-3">
-								<div class="row">
-									<div class="col-md-12 col-lg-12">
-										<form class="shop__filter card">
-											<div class="card-header">
-												<h3 class="card-title">
-													Colors
-												</h3>
-											</div>
-											<div class="card-body">
-												<div class="row gutters-xs">
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="azure" class="colorinput-input" checked="">
-															<span class="colorinput-color bg-azure"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="indigo" class="colorinput-input">
-															<span class="colorinput-color bg-indigo"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="purple" class="colorinput-input">
-															<span class="colorinput-color bg-purple"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="pink" class="colorinput-input">
-															<span class="colorinput-color bg-pink"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="red" class="colorinput-input">
-															<span class="colorinput-color bg-red"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="orange" class="colorinput-input">
-															<span class="colorinput-color bg-orange"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="yellow" class="colorinput-input">
-															<span class="colorinput-color bg-yellow"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="lime" class="colorinput-input">
-															<span class="colorinput-color bg-lime"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="green" class="colorinput-input">
-															<span class="colorinput-color bg-green"></span>
-														</label>
-													</div>
-													<div class="col-auto">
-														<label class="colorinput">
-															<input name="color" type="radio" value="teal" class="colorinput-input">
-															<span class="colorinput-color bg-teal"></span>
-														</label>
-													</div>
-												</div>
-											</div>
-										</form>
-										<div class="card">
-											<div class="card-header">
-												<div class="card-title"> Categories</div>
-											</div>
-											<div class="card-body">
-												<div class="form-group">
-													<label class="form-label">Mens</label>
-													<select name="beast" id="select-beast" class="form-control custom-select">
-														<option value="0">--Select--</option>
-														<option value="1">Foot wear</option>
-														<option value="2">Top wear</option>
-														<option value="3">Bootom wear</option>
-														<option value="4">Men's Groming</option>
-														<option value="5">Accessories</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label class="form-label">Women</label>
-													<select name="beast" id="select-beast1" class="form-control custom-select">
-														<option value="0">--Select--</option>
-														<option value="1">Western wear</option>
-														<option value="2">Foot wear</option>
-														<option value="3">Top wear</option>
-														<option value="4">Bootom wear</option>
-														<option value="5">Beuty Groming</option>
-														<option value="6">Accessories</option>
-														<option value="7">jewellery</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label class="form-label">Baby & Kids</label>
-													<select name="beast" id="select-beast2" class="form-control custom-select">
-														<option value="0">--Select--</option>
-														<option value="1">Boys clothing</option>
-														<option value="2">girls Clothing</option>
-														<option value="3">Toys</option>
-														<option value="4">Baby Care</option>
-														<option value="5">Kids footwear</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label class="form-label">Electronics</label>
-													<select name="beast" id="select-beast3" class="form-control custom-select">
-														<option value="0">--Select--</option>
-														<option value="1">Mobiles</option>
-														<option value="2">Laptops</option>
-														<option value="3">Gaming & Accessories</option>
-														<option value="4">Health care Appliances</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<label class="form-label">Sport,Books & More </label>
-													<select name="beast" id="select-beast4" class="form-control custom-select">
-														<option value="0">--Select--</option>
-														<option value="1">Stationery</option>
-														<option value="2">Books</option>
-														<option value="3">Gaming</option>
-														<option value="4">Music</option>
-														<option value="5">Exercise & fitness</option>
-													</select>
-												</div>
-											</div>
-										</div>
-
-										<!-- Filter -->
-										<form class="shop__filter card">
-											<div class="card-header">
-												<h3 class="card-title">
-													Price
-												</h3>
-											</div>
-											<div class="card-body">
-												<label class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" name="example-radios" value="option1" checked="">
-													<span class="custom-control-label">Under $25</span>
-												</label>
-												<label class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" name="example-radios" value="option2">
-													<span class="custom-control-label">$25 to $50</span>
-												</label>
-												<label class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" name="example-radios" value="option2">
-													<span class="custom-control-label">$50 to $100</span>
-														</label>
-												<label class="custom-control custom-radio">
-													<input type="radio" class="custom-control-input" name="example-radios" value="option2">
-													<span class="custom-control-label">Other (specify)</span>
-												</label>
-											</div>
-										</form>
+                        <!-- row -->
+						<div class="row row-cards">
+						    <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12">
+								<div class="card">
+									<div class="card-body text-center">
+										<h6>Total Conversation</h6>
+										<div class="h1 font-weight-semibold mb-1 text-primary">15,425</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
 									</div>
-								</div><!-- row end -->
-							</div><!-- col end -->
+								</div>
+								<div class="card">
+									<div class="card-body text-center">
+										<div class="h6">Total Customers</div>
+										<div class="h1 font-weight-semibold mb-1 text-secondary">5,435</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body text-center">
+										<div class="h6">Requests Answered</div>
+										<div class="h1 font-weight-semibold mb-1 text-success">32,784</div>
+										<small class="displayblock"><i class="fe fe-arrow-up-circle  mr-1 text-success" aria-hidden="true"></i>21% Higher Than Average </small>
+									</div>
+								</div>
+							</div><!-- End col -->
+                            <div class="col-xl-9 col-md-12 col-sm-12 col-lg-12">
+								<div class="card">
+									<div class="card-header ">
+										<h3 class="card-title">Rating Record</h3>
+									</div>
+									<div class="card-body">
+										<div class="table-responsive service">
+											<table class="table table-bordered table-hover mb-0 text-nowrap ">
+												<thead>
+													<tr>
+														<th>Total calls</th>
+														<th>Trend</th>
+														<th>Call Duration</th>
+														<th>Resolution Rate</th>
+														<th>Satisfaction Rate</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>5,245</td>
+														<td>Ryan MacLeod</td>
+														<td>5min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(96, 82, 159,0.9)", "rgb(96, 82, 159,0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-primary  w-55"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>4,845</td>
+														<td>Jacob Sutherland</td>
+														<td>17min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(50, 202, 254, 0.9)", "rgb(50, 202, 254, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-secondary  w-70"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>2,736</td>
+														<td>James Oliver</td>
+														<td>12min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(255, 204, 0, 0.9)", "rgb(255, 204, 0, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-warning  w-50"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>3,637</td>
+														<td>Lisa Nash</td>
+														<td>25min</td>
+														<td>
+														    <span class="bar h-6" data-peity='{ "fill": ["rgb(94, 216, 79, 0.9)", "rgb(94, 216, 79, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-success  w-60"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>6,365</td>
+														<td>Alan Walsh</td>
+														<td>10min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(134, 126, 252,0.9)", "rgb(134, 126, 252,0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-purple  w-50"></div>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td>4,269</td>
+														<td>Pippa Mills</td>
+														<td>14min</td>
+														<td>
+															<span class="bar h-6" data-peity='{ "fill": ["rgb(249, 80, 88, 0.9)", "rgb(249, 80, 88, 0.7)"]}'>6,2,8,4,3,8,1,3,6</span>
+														</td>
+														<td>
+															<div class="progress progress-md mt-2 h-2">
+																<div class="progress-bar bg-danger w-30"></div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div><!-- End col -->
 						</div>
-						<!-- row end -->
+						<!-- End row -->
 
 					</div>
+
 					<!--footer-->
 					<footer class="footer">
 						<div class="container">
@@ -1035,36 +796,66 @@
 						</div>
 					</footer>
 					<!-- End Footer-->
-					
 				</div>
-				<!--end content-area-->
+				<!-- End content-area-->
 			</div>
 		</div>
-		<!-- End Page -->
-		
+		<!-- End Page-->
+
 		<!-- Back to top -->
 		<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 		<!-- Jquery js-->
 		<script src="../assets/js/vendors/jquery-3.2.1.min.js"></script>
-		
+
 		<!--Bootstrap js-->
 		<script src="../assets/js/vendors/bootstrap.bundle.min.js"></script>
-		
+
 		<!--Jquery Sparkline js-->
 		<script src="../assets/js/vendors/jquery.sparkline.min.js"></script>
-		
+
 		<!-- Chart Circle js-->
 		<script src="../assets/js/vendors/circle-progress.min.js"></script>
-		
+
 		<!-- Star Rating js-->
 		<script src="../assets/plugins/rating/jquery.rating-stars.js"></script>
-		
+
+		<!-- Flot Chart js-->
+		<script src="../assets/plugins/flot/jquery.flot.js"></script>
+		<script src="../assets/plugins/flot/jquery.flot.fillbetween.js"></script>
+		<script src="../assets/plugins/flot/jquery.flot.pie.js"></script>
+
+		<!--Jquery.knob js-->
+		<script src="../assets/plugins/othercharts/jquery.knob.js"></script>
+
+		<!--Other charts js-->
+		<script src="../assets/js/othercharts.js"></script>
+
+		<!-- Chart js -->
+		<script src="../assets/plugins/chart/Chart.bundle.js"></script>
+		<script src="../assets/plugins/chart/utils.js"></script>
+
+		<!-- Peity Chart js-->
+		<script src="../assets/plugins/peitychart/jquery.peity.min.js"></script>
+		<script src="../assets/plugins/peitychart/peitychart.init.js"></script>
+
+		<!-- Input Mask js -->
+		<script src="../assets/plugins/input-mask/jquery.mask.min.js"></script>
+
 		<!-- Custom scroll bar js-->
 		<script src="../assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
-		
+
 		<!--Horizontal js-->
 		<script src="../assets/plugins/horizontal-menu/horizontal.js"></script>
+
+		<!-- Index js -->
+		<script src="../assets/js/index1.js"></script>
+
+		<!-- Search Js-->
+		<script src="../assets/js/prefixfree.min.js"></script>
+
+		<!-- ECharts js -->
+	    <script src="./assets/plugins/echarts/echarts.js"></script>
 
 		<!-- Custom js-->
 		<script src="../assets/js/custom.js"></script>
