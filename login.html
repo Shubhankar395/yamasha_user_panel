@@ -161,7 +161,7 @@
                 <br />
 
                 <div class="text-center">
-                  <button type="button" onclick="login()"
+                  <button type="button" id='login_btn' onclick="login()"
                     class="btn border-0 border-radius-2 text-light px-5 py-1 font-weight-bold"
                     style="background-color: #0e56f0">
                     login
@@ -190,6 +190,7 @@
     MOB_NUMBER = byId("MOB_NUMBER");
     PASS = byId("PASS");
     err_div = byId("err_div");
+    login_btn = byId("login_btn");
 
     function errorMessage(msg) {
       err_div.parentElement.classList.remove("d-none");
@@ -201,6 +202,7 @@
     }
 
     function login() {
+      btn_loading(login_btn,"Loading...",true)
       var bodyFormData = new URLSearchParams();
 
       bodyFormData.append("MOB_NUMBER", MOB_NUMBER.value);
@@ -210,6 +212,7 @@
         .post(api_base + "login.php", bodyFormData)
         .then(function (response) {
           console.log(response.data);
+          btn_loading(login_btn,"Loading...",false)
 
           if (response.data.status == 0) {
             // loading(false);
