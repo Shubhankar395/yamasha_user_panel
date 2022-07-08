@@ -2,83 +2,81 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <!-- Dashboard css -->
     <link href="assets/css/dashboard.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div id="verification_div">
-        <!-- this div is regarding verification 
-          state of div
-          1. user have un verified email
-          2. user requesting verification email
-          3. user verified email successfully
-         -->
-
-        <div id="verification_div_one" class='d-none'>
-            <h1>Please Verify Your Email First to activate your account. </h1>
-
-            <p id="email_sending">sending email ....</p>
-
-            <p id="email_sended_p" class="d-none">
-                Email Verification link is send to your registered email. <br> If not Received please check in Spam Folder Also.
-            </p>
-        </div>
-      
-        <div id="verification_div_two" class="d-none">
-            <p id='v_loading'>sending email ....</p>
-            <p id='v_done' class='d-none'>congratulation your mail verified successfully now u can login</p>
-        </div>
+    <div id='loading_div' class='d-none'>
+        loading.....
     </div>
 
-    <div id="subscription_div" class="d-none"></div>
+    <div id='email_sended_div' class='d-none'>
+
+
+        <h1> Login from new ip detected</h1>
+        To continue verify your ip  <br>we already sended an email with ip verification link on your registered email address
+        <br>
+        Also check spam
+    </div>
+
+    <div id='ip_verified_div' class='d-none'>
+        new ip verified you can login now
+    </div>
+
 
     <script src="./assets/js/config.js?y_g_a_v=1"></script>
     <script src="./assets/js/primeOne.js"></script>
     <script src="./assets/js/axios.min.js"></script>
     <script src="./assets/js/sweetalert2.all.min.js"></script>
 
-    <script>
-        // getting elements by id
+    <Script>
+        loading_div = byId("loading_div");
+        email_sended_div = byId("email_sended_div");
+        ip_verified_div = byId("ip_verified_div");
 
-        email_sending = byId("email_sending");
-        email_sended_p = byId("email_sended_p");
-        verification_div_one = byId("verification_div_one");
-        verification_div_two = byId("verification_div_two");
-        v_loading = byId("v_loading");
-        v_done = byId("v_done");
 
         // reading query
         const params = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
         });
 
-        // required verification
-        if (params.rv) {
-            id = params.rv;
+        // sending verification link
+        if (params.r_id) {
+
+            if (params.r_ip) {
+
+
+            id = params.r_id;
+            ip = params.r_ip;
             action = "send_v_link";
-            d_none(verification_div_one,false)
-        }
-        //  verify link
-        if (params.vl) {
-            id = params.vl;
-            action = "validate_v_link";
-            d_none(verification_div_two,false)
+            d_none(loading_div, false)
+
+
+            }
         }
 
-        function email_action_fun(id, action) {
+          //  verify link
+          if (params.vl) {
+            id = params.vl;
+            ip = '';
+            action = "validate_v_link";
+            d_none(loading_div,false)
+        }
+
+        function ip_action_fun(id,ip, action) {
             var bodyFormData = new URLSearchParams();
 
             bodyFormData.append("id", id);
+            bodyFormData.append("ip", ip);
             bodyFormData.append("action", action);
             bodyFormData.append("host", location.host);
 
             axios
-                .post(api_base + "email_action.php", bodyFormData)
+                .post(api_base + "ip_action.php", bodyFormData)
                 .then(function (response) {
                     console.log(response.data);
                     res = response.data;
@@ -99,15 +97,15 @@
                         });
                     }
                     if (response.data.status == 1) {
-                        d_none(email_sending,true)
-                        d_none(email_sended_p,false)
+                        d_none(loading_div,true)
+                        d_none(email_sended_div,false)
                     }
                     if (response.data.status == 2) {
-                        d_none(v_loading,true)
-                        d_none(v_done,false)
+                        d_none(loading_div,true)
+                        d_none(ip_verified_div,false)
 
                         setTimeout(() => {
-                            location.replace("index.html");
+                            location.replace("login.html");
                         }, 3000);
                     }
                 })
@@ -115,8 +113,8 @@
                     console.log(error);
                 });
         }
-        email_action_fun(id, action);
-    </script>
+        ip_action_fun(id,ip, action);
+    </Script>
 </body>
 
 </html>
