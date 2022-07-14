@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <style>html, body {
+  height: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header {
+  flex: 0 auto;
+}
+
+main {
+  flex: auto;
+}
+
+footer {
+  flex: 0 40px;
+}
+
+.logo-img {
+  height: 60px;
+  width: 260px;
+  padding: 10px 40px;
+}
+
+.bg-img {
+  height: auto;
+  background-image: url("https://cdn.discordapp.com/attachments/962990670962900992/963014170914222110/Background_wallpaper.png");
+}
+
+.bg-img .box-shaddow {
+  height: auto;
+  width: 70%;
+  background-color: #000;
+  border-radius: 12px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  box-shadow: 0 0 5px 1px #221bf2;
+}
+
+.img {
+  height: 350px;
+  padding: 70px;
+}
+
+#text {
+  font-size: small;
+  position: relative;
+  top: -13px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #dShowHide {
+    display: none;
+  }
+
+  form {
+    position: relative;
+    left: -20px;
+  }
+
+  .logo-image {
+    text-align: center;
+  }
+}
+
+@media (min-width: 408px) and (max-width: 767px) {
+  #dShowHide {
+    display: none;
+  }
+
+  form {
+    position: relative;
+    left: -20px;
+  }
+
+  .logo-image {
+    text-align: center;
+  }
+}
+
+@media (max-width: 409px) {
+  #dShowHide {
+    display: none;
+  }
+
+  form {
+    position: relative;
+    left: -20px;
+  }
+
+  .logo-image {
+    text-align: center;
+  }
+
+  .bg-img .box-shaddow {
+    width: 90%;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div style="background-color: #0e56f0" class="logo-image">
+      <img src="https://cdn.discordapp.com/attachments/962990670962900992/962991194718232596/yamasha_brand_hr.png" alt="#error" class="logo-img">
+    </div>
+  </header>
+
+  <!-- Content -->
+
+  <main class="bg-img">
+    <div>
+      <div class="box-shaddow">
+        <div class="row">
+          <div class="col-lg-5 p-2" id="dShowHide">
+            <img src="https://cdn.discordapp.com/attachments/962990670962900992/962991216490864660/yamasha_brand_sq.png" alt="#error" class="img">
+          </div>
+          <div class="col-lg-5 p-2">
+            <div class="py-2 ml-5">
+              <h3 class="text-light">Log in to Yamasha</h3>
+              <p class="text-light" id="text">
+                New user register to yamasha ?
+                <a href="register.html">Register</a>
+              </p>
+              <div class="alert alert-danger align-items-center d-none" role="alert">
+                <!-- <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                                    <use xlink:href="#exclamation-triangle-fill" />
+                                </svg> -->
+                <div id="err_div"></div>
+              </div>
+              <form class="form-group">
+                <label class="text-light" for="MOB_NUMBER">Mobile Number</label>
+                <input type="text" id="MOB_NUMBER" class="bg-dark form-control" required="" autocomplete="mobile number" placeholder="MOBIL NUMBER" style="border: 1px solid #0e56f0"><br>
+                <label class="text-light" for="PASS">Password</label>
+                <input type="password" class="bg-dark form-control" name="PASS" id="PASS" placeholder="Password" style="border: 1px solid #0e56f0">
+                <p class="text-right">
+                  <a href="forgot_password.html">forget password</a>
+                </p>
+                <br>
+
+                <div class="text-center">
+                  <button type="button" id="login_btn" onclick="login()" class="btn border-0 border-radius-2 text-light px-5 py-1 font-weight-bold" style="background-color: #0e56f0">
+                    login
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- Footer -->
+  <footer class=" ">
+    <div style="background-color: #0e56f0" class="logo-image">
+      <img src="https://cdn.discordapp.com/attachments/962990670962900992/962991194718232596/yamasha_brand_hr.png" alt="#error" class="logo-img">
+    </div>
+  </footer>
+  <script src="register.0e82045d.js"></script>
+  <script src="watch_list.b8ac48d9.js"></script>
+  <script src="watch_list.3aa589b6.js"></script>
+  <script src="watch_list.859cca1b.js"></script>
+
+  <script>MOB_NUMBER = byId("MOB_NUMBER");
+PASS = byId("PASS");
+err_div = byId("err_div");
+login_btn = byId("login_btn");
+function errorMessage(msg) {
+    err_div.parentElement.classList.remove("d-none");
+    err_div.innerHTML = msg;
+    const myTimeout = setTimeout(()=>{
+        err_div.parentElement.classList.add("d-none");
+    }, 3000);
+}
+function login() {
+    btn_loading(login_btn, "Loading...", true);
+    var bodyFormData = new URLSearchParams();
+    bodyFormData.append("MOB_NUMBER", MOB_NUMBER.value);
+    bodyFormData.append("PASS", PASS.value);
+    axios.post(api_base + "login.php", bodyFormData).then(function(response) {
+        console.log(response.data);
+        btn_loading(login_btn, "Loading...", false);
+        if (response.data.status == 0) // loading(false);
+        errorMessage(response.data.msg);
+        if (response.data.status == 1) {
+            // location.replace('./index.html');
+            // storing data to local storage
+            store.set("yamasha_user_data", {
+                ID: response.data.ID,
+                TOKEN: response.data.TOKEN,
+                NAME: response.data.NAME
+            });
+            location.replace("./index.html");
+        }
+        if (response.data.status == -1) {
+            if (location.host == "192.168.100.5") url = "http://192.168.100.5/yamasha_v2/user_panel/email_action.html?rv=" + response.data.ID;
+            else url = "https://user.yamasha.in/email_action.html?rv=" + response.data.ID;
+            location.href = url;
+        }
+        if (response.data.status == -2) {
+            if (location.host == "192.168.100.5") url = "http://192.168.100.5/yamasha_v2/user_panel/ip_action.html?r_id=" + response.data.ID + "&r_ip=" + response.data.IP;
+            else url = "https://user.yamasha.in/ip_action.html?r_id=" + response.data.ID + "&r_ip=" + response.data.IP;
+            location.href = url;
+        }
+    }).catch(function(error) {
+        console.log(error);
+    });
+}
+
+</script>
+</body>
+
+</html>

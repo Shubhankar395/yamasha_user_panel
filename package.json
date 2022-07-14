@@ -1,0 +1,35 @@
+{
+  "name": "user_panel",
+  "version": "1.0.0",
+  "description": "",
+  "source": [
+    "src/index.html",
+    "src/login.html",
+    "src/invest_whatsapp.html"
+  ],
+  "scripts": {
+    "start": "parcel ",
+    "dev": "parcel watch --public-url ./",
+    "build": "parcel build --public-url ./"
+  },
+  "devDependencies": {
+    "parcel": "latest",
+    "parcel-reporter-static-files-copy": "^1.3.4",
+    "parcel-resolver-ignore": "^2.1.3",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4"
+  },
+  "parcelIgnore": [
+    "assets/js/vendors/bootstrap.bundle.min.js",
+    "assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js",
+    "assets/plugins/scroll-bar/jquery.mCustomScrollbar.css",
+    "assets/css/dashboard.css",
+    "assets/plugins/fileuploads/js/dropify.js",
+    "assets/plugins/iconfonts/plugin.css"
+  ],  "staticFiles": {
+    "staticPath": "src/assets","staticOutPath": "assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
