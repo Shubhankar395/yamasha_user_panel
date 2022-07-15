@@ -379,10 +379,10 @@
                                         <h4 class="col-7 text-capitalize">my account details</h4>
                                         <p class="col-3 d-none"><a class="text-capitalize" href="#">Upload Form</a></p>
                                         <p class="col-1 ">
-                                            <!-- <button id="BANK_edit_btn" onclick="prof_bank_edit(true)" type="button"
-                                                class="text-light bg-darks">edit</button>
+                                            <button id="BANK_edit_btn" onclick="prof_bank_edit(true)" type="button"
+                                                class="text-light bg-darks d-none">edit</button>
                                             <button id="BANK_submit_btn" onclick="prof_bank_submit()" type="button"
-                                                class="btn bg-success text-light d-none">Submit</button> -->
+                                                class="btn bg-success text-light d-none">Submit</button>
                                         </p>
 
                                     </div>
@@ -429,8 +429,8 @@
                                             <input id="NOMINEE_RELATION" type="text" class="bg-darks text-light mb-2"
                                                 placeholder="enter nominee Relation">
                                         </div>
-                                        <!-- <button id="nominee_submit_btn" onclick="submit_nominee()" type="button"
-                                            class="btn btn-outline-info text-light mb-2 ml-4 m-4">Submit</button> -->
+                                        <button id="nominee_submit_btn" onclick="submit_nominee()" type="button"
+                                            class="btn btn-outline-info text-light mb-2 ml-4 m-4">Submit</button>
                                     </div>
                                     <div id="nominee_display_div" class="line2 my-3  d-none  ">
                                         <ul class="d-flex justify-content-between" style="list-style: none;">
@@ -450,9 +450,9 @@
                                             <p> NO nominee added to your demat account </p>
                                         </div>
                                         <div class="text-center text-light text-uppercase line2 pb-2">
-                                            <!-- <button onclick="add_nominee()"
+                                            <button onclick="add_nominee()"
                                                 class="btn  px-5 text-light font-weight-bold"
-                                                style="background-color: #2e63d8;">add nominee</button> -->
+                                                style="background-color: #2e63d8;">add nominee</button>
                                         </div>
                                     </div>
 
@@ -558,10 +558,23 @@
 
             axios.post(api_base + 'clients.php', bodyFormData)
                 .then(function (response) {
+                    res = response.data
                     console.log(response.data);
+                    
 
                     if (response.data.status == 0) {
-
+                        Swal.fire({
+                            icon: 'error',
+                            title: res.msg, toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 5000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
                     }
                     if (response.data.status == 1) {
 
@@ -577,6 +590,10 @@
                         address_span.innerHTML = response.data.ADDRESS + ',' + response.data.CITY
 
                     }
+                    if (res.status == -1) {
+                        console.log('logout triggred')
+						logOut()
+					}
 
 
                 })
@@ -592,10 +609,22 @@
 
             axios.post(api_base + 'clients_data1.php', bodyFormData)
                 .then(function (response) {
+                    res = response.data
                     console.log(response.data);
 
                     if (response.data.status == 0) {
-
+                        Swal.fire({
+                            icon: 'error',
+                            title: res.msg, toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 5000,
+                            timerProgressBar: true,
+                            didOpen: (toast) => {
+                                toast.addEventListener('mouseenter', Swal.stopTimer)
+                                toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            }
+                        })
                     }
                     if (response.data.status == 1) {
 
@@ -604,6 +633,12 @@
                         BANK_AC_NUM.value = response.data.BANK_AC_NUM
                         BANK_IFSC.value = response.data.BANK_IFSC
                         UPI_ID.value = response.data.UPI_ID
+
+                        /* validation  */
+
+                        if(response.data.BANK_AC_NUM =='' &&  response.data.UPI_ID=="" ){
+                            d_none(BANK_edit_btn,false)
+                        }
 
                         if (response.data.NOMINEE_NAME != "") {
                             d_none(nominee_add_div, true)
@@ -615,6 +650,9 @@
                         }
 
                     }
+                    if (res.status == -1) {
+						logOut()
+					}
 
 
                 })
@@ -767,7 +805,7 @@
 
                     if (response.data.status == 1) {
 
-                        edit_btn.textContent = 'edit'
+                        d_none(BANK_edit_btn,true)
 
 
 

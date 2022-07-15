@@ -786,6 +786,7 @@ function fetchWallet() {
         console.log(response.data);
         response.data.status;
         if (response.data.status == 1) main_wallet_span.innerHTML = response.data.MAIN;
+        if (res.status == -1) logOut();
     }).catch(function(error) {
         console.log(error);
     });

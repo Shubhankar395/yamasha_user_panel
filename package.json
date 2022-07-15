@@ -10,7 +10,7 @@
     "src/email_action.html"
   ],
   "scripts": {
-    
+    "start": "parcel ",
     "dev": "parcel watch --public-url ./",
     "build": "parcel build --public-url ./"
   },
