@@ -1,5 +1,6 @@
+
 *.zip
+.parcel-cache
 node_modules
 package-lock.json
-.parcel-cache
-
+.parcel-cache/data.mdb
