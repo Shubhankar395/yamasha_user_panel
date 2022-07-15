@@ -230,21 +230,15 @@
           }
           if (response.data.status == -1) {
 
-            if (location.host == "192.168.100.5") {
-              url = "http://192.168.100.5/yamasha_v2/user_panel/email_action.html?rv=" + response.data.ID;
-            } else {
-              url = "https://user.yamasha.in/email_action.html?rv=" + response.data.ID;
-            }
-
+         
+            url = "./email_action.html?rv=" + response.data.ID;
             location.href = url
           }
           if (response.data.status == -2) {
 
-            if (location.host == "192.168.100.5") {
-              url = "http://192.168.100.5/yamasha_v2/user_panel/ip_action.html?r_id=" + response.data.ID+"&r_ip="+ response.data.IP;
-            } else {
-              url = "https://user.yamasha.in/ip_action.html?r_id=" + response.data.ID+"&r_ip="+ response.data.IP;
-            }
+       
+
+            url = "./ip_action.html?r_id=" + response.data.ID+"&r_ip="+ response.data.IP;
 
             location.href = url
           }
