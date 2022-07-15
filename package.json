@@ -5,7 +5,9 @@
   "source": [
     "src/index.html",
     "src/login.html",
-    "src/invest_whatsapp.html"
+    "src/invest_whatsapp.html",
+    "src/ip_action.html",
+    "src/email_action.html"
   ],
   "scripts": {
     "start": "parcel ",
