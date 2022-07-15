@@ -3,3 +3,4 @@ testing/
 node_modules
 .parcel-cache
 package-lock.json
+.parcel-cache
