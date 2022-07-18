@@ -41,7 +41,7 @@
             bodyFormData.append("id", id);
             bodyFormData.append("ip", ip);
             bodyFormData.append("action", action);
-            bodyFormData.append("host", location.host);
+            bodyFormData.append("host_href",  new URL('ip_action.html', window.location.href));
 
             axios
                 .post(api_base + "ip_action.php", bodyFormData)

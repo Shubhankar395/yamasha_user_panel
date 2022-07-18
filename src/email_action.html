@@ -75,7 +75,7 @@
 
             bodyFormData.append("id", id);
             bodyFormData.append("action", action);
-            bodyFormData.append("host", location.host);
+            bodyFormData.append("host_href",  new URL('email_action.html', window.location.href));
 
             axios
                 .post(api_base + "email_action.php", bodyFormData)
