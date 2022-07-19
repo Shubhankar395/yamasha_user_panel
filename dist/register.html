@@ -442,8 +442,7 @@ function stepThreeFun() {
         if (response.data.status == 0) bootstrapAlert(stepThreeErrDiv, response.data.msg, "danger", 3);
         if (response.data.status == 1) {
             bootstrapAlert(stepThreeErrDiv, response.data.msg, "success", 3);
-            if (location.host == "192.168.100.5") url = "http://192.168.100.5/yamasha_v2/user_panel/email_action.html?rv=" + response.data.ID;
-            else url = "https://user.yamasha.in/email_action.html?rv=" + response.data.ID;
+            url = "./email_action.html?rv=" + response.data.ID;
             location.href = url;
         }
     }).catch(function(error) {
