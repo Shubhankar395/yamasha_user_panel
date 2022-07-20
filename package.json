@@ -28,8 +28,10 @@
     "assets/css/dashboard.css",
     "assets/plugins/fileuploads/js/dropify.js",
     "assets/plugins/iconfonts/plugin.css"
-  ],  "staticFiles": {
-    "staticPath": "src/assets","staticOutPath": "assets"
+  ],
+  "staticFiles": {
+    "staticPath": "src/assets",
+    "staticOutPath": "assets"
   },
   "keywords": [],
   "author": "",
