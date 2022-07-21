@@ -12,7 +12,7 @@
     <!--for update  Social icons -->
 
     <style>.bg_img {
-  height: auto;
+  height: 100vh;
   background-image: url("email_varification_bg-img.791cb544.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,45 +82,18 @@
           2. user requesting verification email
           3. user verified email successfully
          -->
+            <!-- User Email Varification sent-->
 
-         <!-- user have un verified email -->
-
-         <div class="bg_img">
+         <div class="bg_img  d-none" id="verification_div_one">
             <div class="container mt-5 p-5">
                 <div class="text-center wraper">
-                    <img src="request.4aa19aca.png" alt="Email Varification" class="">
-                    <h3 class=" font-weight-bold pt-3 email-text color">Confirm your email address</h3>
-                    <p class=" color">Hello Ashad  <br> You registered an account on Yamasha.in,  before being able to use <br> your account you need to verify that this is your email address by <br> clicking button below:</p>
+                    <img src="vote.f972a932.png" alt="Email Varification" class="d-none" id="email_sended_img">
+                    <h3 class="font-weight-bold py-3 email-text color" id="email_sending">Sending...</h3>
+                    <p class="color" id="before_email_send_para">Sending Email varification link on your register Email Address</p>
+                    <h3 class=" font-weight-bold pt-3 email-text color d-none" id="email_sended_p">Link successfully send on your register Email address</h3>
+                    <p class="color d-none" id="email_sended_para">Hi <br> You're almost ready to get started. Please check on your  email  <br> to varify your email address and enjoy Trading with us!</p>
 
-                  <div class="py-5">  <button class="px-5 py-2 text-light border-0  email-varify-button text-center"> Varify Your Email </button></div>
-                    <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5>
-                </div>
-
-                <div class="text-center py-3">
-                    <h2 class="get-in-touch">Get in touch</h2>
-                    <div class="text-light font-weight-bold">+917850940696</div>
-                    <div class="text-light font-weight-bold">support@yamasha.in</div>
-                    <div class="icons-wraper">
-                    <img class="imgs" src="instagram.ef02a887.png" alt="instagram">
-                    <img class="imgs" src="facebook.eac05620.png" alt="facebook">
-                    <img class="imgs" src="twitter.675c56eb.png" alt="twitter">
-                    <img class="imgs" src="linkedin.c4135b8f.png" alt="linkedin">
-                    </div>
-                </div>
-            </div>
-         </div>
-                
-
-            <!-- User Email Varification -->
-
-         <div class="bg_img  d-none">
-            <div class="container mt-5 p-5">
-                <div class="text-center wraper">
-                    <img src="vote.f972a932.png" alt="Email Varification" class="">
-                    <h3 class=" font-weight-bold pt-3 email-text color">Varify your email address</h3>
-                    <p class=" color">Hi <br> You're almost ready to get started. Please click on the button below  <br> to varify your email address and enjoy Trading with us!</p>
-
-                    <button class="px-5 py-2 text-light border-0  email-varify-button text-center"> Varify Your Email </button>
+                    <!-- <button class="px-5 py-2 text-light border-0  email-varify-button text-center"> Varify Your Email </button> -->
                     <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5>
                 </div>
             </div>
@@ -128,21 +101,22 @@
 
          <!-- user verified email successfully -->
 
-         <div class="bg_img  d-none">
+         <div class="bg_img  d-none" id="verification_div_two">
             <div class="container mt-5 p-5">
                 <div class="text-center wraper p-5">
-                    <img src="success.ed9e7605.png" alt="Email Varification" class="">
+                    <img src="success.ed9e7605.png" alt="Email Varification" class="d-none" id="v_done_img">
+                    <h3 class="color" id="v_loading">Varifying Email...</h3>
                     <h3 class=" font-weight-bold pt-4 email-text color">Hi Sir</h3>
-                    <p class=" color ">Thanks for sigin up to Yamasha. <br> Your Account is ready for now work !</p>
+                    <p class=" color d-none" id="v_done">Thanks for sigin up to Yamasha. <br> Your Account is ready for now work !</p>
 
-                    <div class="py-5 mb-5"><button class="px-5 py-2 text-light border-0  email-varify-button text-center">VISIT ACCOUNT </button></div>
+                    <!-- <div class="py-5 mb-5"><button class="px-5 py-2 text-light border-0  email-varify-button text-center">VISIT ACCOUNT </button></div> -->
                     <!-- <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5> -->
                 </div>
             </div>
          </div> 
 
 
-        <div id="verification_div_one" class="d-none">
+        <!-- <div id="verification_div_one" class='d-none'>
             <h1>Please Verify Your Email First to activate your account. </h1>
 
             <p id="email_sending">sending email ....</p>
@@ -150,12 +124,12 @@
             <p id="email_sended_p" class="d-none">
                 Email Verification link is send to your registered email. <br> If not Received please check in Spam Folder Also.
             </p>
-        </div>
+        </div> -->
       
-        <div id="verification_div_two" class="d-none">
-            <p id="v_loading">sending email ....</p>
-            <p id="v_done" class="d-none">congratulation your mail verified successfully now u can login</p>
-        </div>
+        <!-- <div id="verification_div_two" class="d-none">
+            <p id='v_loading'>sending email ....</p>
+            <p id='v_done' class='d-none'>congratulation your mail verified successfully now u can login</p>
+        </div> -->
     </div>
 
     <div id="subscription_div" class="d-none"></div>
@@ -168,6 +142,10 @@
     <script>// getting elements by id
 email_sending = byId("email_sending");
 email_sended_p = byId("email_sended_p");
+email_sended_img = byId("email_sended_img");
+email_sended_para = byId("email_sended_para");
+before_email_send_para = byId("before_email_send_para");
+v_done_img = byId("v_done_img");
 verification_div_one = byId("verification_div_one");
 verification_div_two = byId("verification_div_two");
 v_loading = byId("v_loading");
@@ -211,11 +189,15 @@ function email_action_fun(id, action) {
         });
         if (response.data.status == 1) {
             d_none(email_sending, true);
+            d_none(before_email_send_para, true);
             d_none(email_sended_p, false);
+            d_none(email_sended_img, false);
+            d_none(email_sended_para, false);
         }
         if (response.data.status == 2) {
             d_none(v_loading, true);
             d_none(v_done, false);
+            d_none(v_done_img, false);
             setTimeout(()=>{
                 location.replace("index.html");
             }, 3000);
