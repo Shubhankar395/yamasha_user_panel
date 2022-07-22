@@ -11,6 +11,7 @@
   ],
   "scripts": {
     "start": "parcel ",
+    "clean": "node clean.js",
     "dev": "parcel watch --public-url ./",
     "build": "parcel build --public-url ./"
   },
