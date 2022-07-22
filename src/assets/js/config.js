@@ -22,3 +22,4 @@ switch (location.host) {
   default:
     var api_base = 'https://api.yamasha.in/user_panel/'
 }
+ 
