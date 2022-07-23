@@ -247,12 +247,13 @@ width: 100%;
                         d_none(email_sended_img , false)
                         d_none(email_sended_para , false)
                         d_none(email_sending_img , true)
-                        d_none(varifying_img , true)
+                        
                     }
                     if (response.data.status == 2) {
                         d_none(v_loading,true)
                         d_none(v_done,false)
                         d_none(v_done_img , false)
+                        d_none(varifying_img , true)
 
                         setTimeout(() => {
                             location.replace("index.html");
