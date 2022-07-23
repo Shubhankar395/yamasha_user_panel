@@ -8,6 +8,105 @@
     <title></title>
     <!-- Dashboard css -->
     <link href="assets/css/dashboard.css" rel="stylesheet" />
+    <link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
+    <!--for update  Social icons -->
+
+    <style>
+        *{
+            margin: 0;padding: 0;
+            box-sizing: border-box;
+        }
+
+        .parent{
+            position: relative;
+            /* top: -23px; */
+            margin-top: -24px;
+        }
+
+        .bg_img{
+            background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)),url('./assets/images/emai_varification_imgs/email_varification_bg-img.jpg');
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: black;
+            position: absolute;
+             top: 0;
+            z-index: -1;
+        }
+
+        .bg_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(1.5px);
+}
+
+    .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+
+    .color{
+        color: black;
+    }
+
+        .wraper{
+            background-color: white;
+            width: 60%;
+            padding: 25px;
+            border-radius: 12px;
+            margin: auto;
+        }
+
+       .wraper img{
+           width: 30%;
+        }
+
+        .email-text{
+            letter-spacing: .2rem;
+        }
+
+        .email-varify-button{
+
+            border-radius: 10px;
+            background-color:  #094D8B;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: .1rem;
+        }
+
+        .get-in-touch{
+            color: rgba(2,133,255,0.9900000095367432);
+        }
+
+        .imgs{
+            width: 3%;
+        }
+
+        .icons-wraper{
+            display:inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 30px;
+        }
+
+        @media (min-width : 250px) and (max-width : 991px) {
+
+.wraper{
+width: 100%;
+}
+
+        }
+
+</style>
 </head>
 
 <body>
@@ -18,8 +117,45 @@
           2. user requesting verification email
           3. user verified email successfully
          -->
+            <!-- User Email Varification sent-->
 
-        <div id="verification_div_one" class='d-none'>
+         <section class="parent d-none"id="verification_div_one">
+            <div class="bg_img"></div>
+            <div class="container mt-5 p-5">
+                <div class="text-center wraper">
+                    <img src="./assets/images/emai_varification_imgs/vote.png" alt="Email Varification" class="d-none" id="email_sended_img">
+                    <img src="./assets/images/emai_varification_imgs/spinner.gif" alt="Email Varification" class="w-50" id="email_sending_img">
+                    <h3 class="font-weight-bold py-1 email-text color" id="email_sending">Sending...</h3>
+                    <p class="color" id="before_email_send_para">Sending Email varification link on your register Email Address</p>
+                    <h3 class=" font-weight-bold pt-3 email-text color d-none" id="email_sended_p">Link successfully send on your register Email address</h3>
+                    <p class="color d-none" id="email_sended_para">Hi <br> You're almost ready to get started. Please check on your  email  <br> to varify your email address and enjoy Trading with us!</p>
+
+                    <!-- <button class="px-5 py-2 text-light border-0  email-varify-button text-center"> Varify Your Email </button> -->
+                    <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5>
+                </div>
+            </div>
+         </section>
+
+         <!-- user verified email successfully -->
+
+         <div class="parent d-none" id="verification_div_two">
+            <div class="bg_img"></div>
+            <div class="container mt-5 p-5">
+                <div class="text-center wraper p-5">
+                    <img src="./assets/images/emai_varification_imgs/success.png" alt="Email Varification" class="d-none" id="v_done_img">
+                    <img src="./assets/images/emai_varification_imgs/varifying-spinner1.gif" alt="Email Varification" class="" id="varifying_img">
+                    <h3 class="color" id='v_loading'>Varifying Email...</h3>
+                    <h3 class=" font-weight-bold pt-4 email-text color">Hi Sir</h3>
+                    <p class=" color d-none" id='v_done'>Thanks for sigin up to Yamasha. <br> Your Account is ready for now work !</p>
+
+                    <!-- <div class="py-5 mb-5"><button class="px-5 py-2 text-light border-0  email-varify-button text-center">VISIT ACCOUNT </button></div> -->
+                    <!-- <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5> -->
+                </div>
+            </div>
+         </div> 
+
+
+        <!-- <div id="verification_div_one" class='d-none'>
             <h1>Please Verify Your Email First to activate your account. </h1>
 
             <p id="email_sending">sending email ....</p>
@@ -27,12 +163,12 @@
             <p id="email_sended_p" class="d-none">
                 Email Verification link is send to your registered email. <br> If not Received please check in Spam Folder Also.
             </p>
-        </div>
+        </div> -->
       
-        <div id="verification_div_two" class="d-none">
+        <!-- <div id="verification_div_two" class="d-none">
             <p id='v_loading'>sending email ....</p>
             <p id='v_done' class='d-none'>congratulation your mail verified successfully now u can login</p>
-        </div>
+        </div> -->
     </div>
 
     <div id="subscription_div" class="d-none"></div>
@@ -47,6 +183,12 @@
 
         email_sending = byId("email_sending");
         email_sended_p = byId("email_sended_p");
+        email_sended_img = byId('email_sended_img');
+        email_sended_para = byId('email_sended_para');
+        email_sending_img = byId('email_sending_img');
+        before_email_send_para = byId('before_email_send_para');
+        v_done_img = byId('v_done_img');
+        varifying_img = byId('varifying_img');
         verification_div_one = byId("verification_div_one");
         verification_div_two = byId("verification_div_two");
         v_loading = byId("v_loading");
@@ -77,7 +219,7 @@
             bodyFormData.append("action", action);
             bodyFormData.append("host_href",  new URL('email_action.html', window.location.href));
 
-            axios
+   axios
                 .post(api_base + "email_action.php", bodyFormData)
                 .then(function (response) {
                     console.log(response.data);
@@ -100,11 +242,18 @@
                     }
                     if (response.data.status == 1) {
                         d_none(email_sending,true)
+                        d_none(before_email_send_para , true)
                         d_none(email_sended_p,false)
+                        d_none(email_sended_img , false)
+                        d_none(email_sended_para , false)
+                        d_none(email_sending_img , true)
+                        
                     }
                     if (response.data.status == 2) {
                         d_none(v_loading,true)
                         d_none(v_done,false)
+                        d_none(v_done_img , false)
+                        d_none(varifying_img , true)
 
                         setTimeout(() => {
                             location.replace("index.html");
