@@ -1,161 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- Dashboard css -->
     <!-- <link href="assets/css/dashboard.css" rel="stylesheet" /> -->
 
     <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .bg_img {
+        background-image: 
+          url("../images/emai_varification_imgs/email_varification_bg-img.jpg");
+        height: 135vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: black;
+      }
 
-.parrent{
-            position: relative;
-        }
+      .color {
+        color: black;
+      }
+
+      .wraper {
+        background-color: white;
+        width: 40%;
+        padding: 15px;
+        border-radius: 12px;
+        margin: auto;
+      }
+
+      .wraper img {
+        width: 30%;
+      }
+
+      .email-text {
+        font-size: 20px;
+      }
+
+      .email-varify-button {
+        border-radius: 10px;
+        background-color: #094d8b;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+      }
+
+      .get-in-touch {
+        color: rgba(2, 133, 255, 0.9900000095367432);
+      }
+
+      .logo{
+        width: 18%;
+      }
+
+
+      .imgs {
+        width: 2.5%;
+      }
+
+      .icons-wraper {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 30px;
+      }
+
+      .font-weight-bold {
+        font-weight: 900;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-light {
+        color: white;
+      }
+
+      .border-0 {
+        border: 0;
+      }
+
+      .p-5 {
+        padding: 25px;
+      }
+      .py-2 {
+        padding: 10px 25px;
+      }
+      .py-3 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+      .py-5 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      .mt-5 {
+        margin-top: 25px;
+      }
+
+      .py-5{
+        padding-top: 45px;
+        padding-bottom: 45px;
+      }
+
+      @media (min-width: 250px) and (max-width: 991px) {
 
         .bg_img{
-            background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.623)),url('../images/emai_varification_imgs/email_varification_bg-img.jpg');
-            height: 128vh;
-            width: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-attachment: fixed;
-            background-color: black;
-            position: absolute;
-            top: 0px;
-            bottom: 0;
-            z-index: -1;
-          
+            height: auto;
         }
-
-        .bg_img::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 128vh;
-    backdrop-filter: blur(3px);
-}
-
-    .color{
-        color: black;
-    }
-
-        .wraper{
-            background-color: white;
-            width: 60%;
-            padding: 25px;
-            border-radius: 12px;
-            margin: auto;
-        }
-
-       .wraper img{
-           width: 30%;
-        }
-
-        .email-text{
-            letter-spacing: .1rem;
-        }
-
-        .email-varify-button{
-
-            border-radius: 10px;
-            background-color:  #094D8B;
-            font-size: 15px;
-            font-weight: bold;
-            letter-spacing: .1rem;
-        }
-
-        .get-in-touch{
-            color: rgba(2,133,255,0.9900000095367432);
+        .wraper {
+          width: 70%;
+          height: auto;
         }
 
         .imgs{
-            width: 3%;
+            width: 5%;
         }
 
-        .icons-wraper{
-            display:inline-flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 30px;
+        .logo{
+            width: 40%;
         }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parrent">
+      <div class="bg_img">
+        <div class="container mt-5">
+            <div class="text-center"><img src="../images/emai_varification_imgs/Yamasha Logo pdf Format (1).png" alt="" class="logo"></div>
+          <div class="text-center wraper mt-5">
+            <img
+              src="../images/emai_varification_imgs/request.png"
+              alt="Email Varification"
+              class=""
+            />
+            <h1 class="color">Confirm Your Email Address</h1>
+            <p class="color mt-5">
+              Hello Ashad <br /><br />
+              You registered an account on Yamasha.in, before being able to use
+              <br /><br />
+              your account you need to verify that this is your email address <br><br />
+              by clicking button below:
+            </p>
 
-        .font-weight-bold{
-            font: bold;
-        }
-
-        .text-center{
-            text-align: center;
-        }
-
-        .text-light{
-            color: white;
-        }
-
-        .border-0{
-            border: 0;
-        }
-
-        .p-5{
-            padding: 25px;
-        }
-        .py-2{
-            padding: 10px 25px;
-        }
-        .py-3{
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-        .py-5{
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-
-        .mt-5{
-            margin-top: 25px;
-        }
-
-        @media (min-width : 250px) and (max-width : 991px) {
-
-.wraper{
-width: 100%;
-}
-
-        }
-
-</style>
-</head>
-<body>
-    <div class="parrent d-none">
-        <div class="bg_img"></div>
-        <div class="container mt-5 p-5">
-            <div class="text-center wraper">
-                <img src="../images/emai_varification_imgs/request.png" alt="Email Varification" class="">
-                <h2 class=" font-weight-bold pt-3 email-text color">Confirm your email address</h2>
-                <p class=" color">Hello Ashad  <br> You registered an account on Yamasha.in,  before being able to use <br> your account you need to verify that this is your email address </p>
-
-              <div class="py-5">  <button class="px-5 py-2 text-light border-0  email-varify-button text-center"> Varify Your Email </button></div>
-                <h5 class=" p-3 color font-weight-bold">THANKS, <br> YAMASHA VENTURE TEAM</h5>
+            <div class="py-5">
+              <button
+                class="px-5 py-2 text-light border-0 email-varify-button text-center"
+              >
+                CLICK HERE TO VARIFY
+              </button>
             </div>
+            <h5 class="py-3 color font-weight-bold">
+              THANKS, <br />
+              YAMASHA VENTURE TEAM
+            </h5>
+          </div>
 
-            <div class="text-center py-3">
-                <h2 class="get-in-touch">Get in touch</h2>
-                <div class="text-light font-weight-bold">+917850940696</div>
-                <div class="text-light font-weight-bold">support@yamasha.in</div>
-                <div class="icons-wraper">
-                <img class="imgs" src="../images/emai_varification_imgs/social-media-icons/instagram.png" alt="instagram">
-                <img class="imgs" src="../images/emai_varification_imgs/social-media-icons/facebook.png" alt="facebook">
-                <img class="imgs" src="../images/emai_varification_imgs/social-media-icons/twitter.png" alt="twitter">
-                <img class="imgs" src="../images/emai_varification_imgs/social-media-icons/linkedin.png" alt="linkedin">
-                </div>
+          <div class="text-center py-3">
+            <h2 class="get-in-touch">Get in touch</h2>
+            <p class="text-light ">+917850940696</p>
+            <p class="text-light ">support@yamasha.in</p>
+            <div class="icons-wraper">
+              <img
+                class="imgs"
+                src="../images/emai_varification_imgs/social-media-icons/instagram.png"
+                alt="instagram"
+              />
+              <img
+                class="imgs"
+                src="../images/emai_varification_imgs/social-media-icons/facebook.png"
+                alt="facebook"
+              />
+              <img
+                class="imgs"
+                src="../images/emai_varification_imgs/social-media-icons/twitter.png"
+                alt="twitter"
+              />
+              <img
+                class="imgs"
+                src="../images/emai_varification_imgs/social-media-icons/linkedin.png"
+                alt="linkedin"
+              />
             </div>
+          </div>
         </div>
-     </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
