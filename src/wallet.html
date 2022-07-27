@@ -220,8 +220,8 @@
                                         <form action="" method='post' id='deposit_form' class="form-group">
                                             <div class="m-5">
                                                 <label for="" class="text-light">Amount</label>
-                                                <input type="number" id="deposit_txn_amount" name='TXN_AMOUNT' class="form-control"
-                                                    placeholder="Enter amount" 
+                                                <input type="number" id="deposit_txn_amount" name='TXN_AMOUNT'
+                                                    class="form-control" placeholder="Enter amount"
                                                     style="border : none;border-bottom:2px solid white ;background-color: #000;">
 
                                                 <input id='deposit_user_id' type="hidden" name="CUST_ID" value=''>
@@ -459,6 +459,31 @@
         wm_select = byId('wm_select')
         withdraw_btn = byId('withdraw_btn')
 
+        // reading query
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        // required verification
+        if (params.trx_status) {
+
+            if (params.trx_status == 'TXN_SUCCESS') {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Transaction Successful 😍',
+                   
+                  
+                })
+            }else if(params.trx_status == 'TXN_FAILURE') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Transaction Failed',
+                    text: params.res_msg,
+                  
+                })
+            }
+
+        }
+
         //updating wallets
         function fetchWallet() {
             var bodyFormData = new URLSearchParams();
@@ -477,8 +502,8 @@
                         main_wallet_span.innerHTML = response.data.MAIN
                     }
                     if (res.status == -1) {
-						logOut()
-					}
+                        logOut()
+                    }
 
                 })
                 .catch(function (error) {
@@ -691,8 +716,8 @@
 
                     }
                     if (res.status == -1) {
-						logOut()
-					}
+                        logOut()
+                    }
 
 
 
@@ -718,7 +743,7 @@
         }
 
         function deposit_fun() {
-            if(deposit_txn_amount.value <1){
+            if (deposit_txn_amount.value < 1) {
                 return false;
             }
             deposit_form.action = api_base + 'paytm/pgRedirect.php';
