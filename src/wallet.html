@@ -1,53 +1,51 @@
-
-
 <!doctype html>
 <html lang="en" dir="ltr">
 
 <head>
 
- 
- 
- 
- 
- 
- 
- <meta charset="UTF-8">
- <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="msapplication-TileColor" content="#0061da">
- <meta name="theme-color" content="#1643a3">
- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
- <meta name="apple-mobile-web-app-capable" content="yes">
- <meta name="mobile-web-app-capable" content="yes">
- <meta name="HandheldFriendly" content="True">
- <meta name="MobileOptimized" content="320">
- <link rel="icon" href="./assets/images/Vector.png" type="image/x-icon" />
- <link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
- 
- <!-- Title -->
- <title>Main Wallet</title>
-	<!-- Dashboard css --> 
-	<link href="assets/css/dashboard.css" rel="stylesheet" />
 
-	<!-- Font family -->
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
 
-	<!--C3 Charts css -->
-	<link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
 
-	<!-- Custom scroll bar css-->
-	<link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
 
-	<!--Horizontal css -->
-	<link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
-	<link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
 
-	<!-- jvectormap css -->
-	<link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
 
-	<!---Font icons css-->
-	<link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
-	<link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#0061da">
+    <meta name="theme-color" content="#1643a3">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="./assets/images/Vector.png" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
+
+    <!-- Title -->
+    <title>Main Wallet</title>
+    <!-- Dashboard css -->
+    <link href="assets/css/dashboard.css" rel="stylesheet" />
+
+    <!-- Font family -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700" rel="stylesheet">
+
+    <!--C3 Charts css -->
+    <link href="assets/plugins/charts-c3/c3-chart.css" rel="stylesheet" />
+
+    <!-- Custom scroll bar css-->
+    <link href="assets/plugins/scroll-bar/jquery.mCustomScrollbar.css" rel="stylesheet" />
+
+    <!--Horizontal css -->
+    <link href="assets/plugins/horizontal-menu/dropdown-effects/fade-down.css" rel="stylesheet" />
+    <link href="assets/plugins/horizontal-menu/horizontal.css" rel="stylesheet" />
+
+    <!-- jvectormap css -->
+    <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
+    <!---Font icons css-->
+    <link href="assets/plugins/iconfonts/plugin.css" rel="stylesheet" />
+    <link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
     <!-- File Uploads css -->
     <link href="assets/plugins/fileuploads/css/dropify.css" rel="stylesheet" type="text/css" />
 
@@ -91,15 +89,15 @@
     <div class="page">
         <div class="page-main">
 
-          	<!--app-header-->
-			<div class="app-header header d-flex" id="header_div">
-				<include src="src/includes/header.html"></include>
-			</div>
-			<!--app-header end-->
-			<!--Horizontal-menu-->
-			<div class="horizontal-main clearfix" id="nav_div">
-				<include src="src/includes/nav.html"></include>
-			</div>
+            <!--app-header-->
+            <div class="app-header header d-flex" id="header_div">
+                <include src="src/includes/header.html"></include>
+            </div>
+            <!--app-header end-->
+            <!--Horizontal-menu-->
+            <div class="horizontal-main clearfix" id="nav_div">
+                <include src="src/includes/nav.html"></include>
+            </div>
 
 
 
@@ -119,7 +117,7 @@
                     </div>
                     <!-- End page-header -->
 
-                    <div id="deposit_div" class="row d-none">
+                    <!-- <div id="deposit_div" class="row d-none">
                         <div class="col-md">
                             <div class="card overflow-hidden">
                                 <div class="card-header " style="justify-content: center;">
@@ -156,7 +154,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
                     <div id="main_wallet_div">
@@ -175,7 +173,8 @@
 
                                     <div class=" m-sm-5 m-md-0 text-center box">
                                         <p class="text-light pt-3 font-weight-bold">Total Balance</p>
-                                        <p class="display-4 font-weight-bold text-light">₹<span id="main_wallet_span">Fetching...</span></p>
+                                        <p class="display-4 font-weight-bold text-light">₹<span
+                                                id="main_wallet_span">Fetching...</span></p>
                                     </div>
                                 </div>
 
@@ -186,9 +185,13 @@
                                         <form action="" class="form-group">
                                             <div class="m-5">
                                                 <label for="" class="text-light">Amount</label>
-                                                <input type="number" id="amt_val" class="form-control" placeholder="Enter amount" style="border : none;border-bottom:2px solid white ;background-color: #000;">
-                                                <label for="wm_select" class="text-light mt-5">Select withdrawal option</label>
-                                                <select name="pets" id="wm_select" class="form-control" style="background-color: rgb(209, 204, 204);">
+                                                <input type="number" id="amt_val" class="form-control"
+                                                    placeholder="Enter amount"
+                                                    style="border : none;border-bottom:2px solid white ;background-color: #000;">
+                                                <label for="wm_select" class="text-light mt-5">Select withdrawal
+                                                    option</label>
+                                                <select name="pets" id="wm_select" class="form-control"
+                                                    style="background-color: rgb(209, 204, 204);">
                                                     <!-- <option id="bank_select" value="bank"></option>
                                                     <option id="upi_select" value="upi"></option> -->
                                                     <option disabled> Loading...</option>
@@ -200,8 +203,41 @@
                                         <div id="withdraw_err_div"></div>
 
                                         <div class="my-5 d-flex justify-content-center ">
-                                            <button class="btn btn-info px-5 mx-3 border-0 " id="withdraw_btn" onclick="withdraw_fun()" style="background-color: #2724d6; ">Withdrawal Now</button>
-                                            <button class="btn btn-info px-5 mx-3 border-0 " onclick="withdrawInitFun(false)" style="background-color: #2724d6; ">Go back</button>
+                                            <button class="btn btn-info px-5 mx-3 border-0 " id="withdraw_btn"
+                                                onclick="withdraw_fun()" style="background-color: #2724d6; ">Withdrawal
+                                                Now</button>
+                                            <button class="btn btn-info px-5 mx-3 border-0 "
+                                                onclick="withdrawInitFun(false)" style="background-color: #2724d6; ">Go
+                                                back</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="deposit_div" class="d-none">
+                                    <div class="container-fluid p-4">
+
+
+                                        <form action="" method='post' id='deposit_form' class="form-group">
+                                            <div class="m-5">
+                                                <label for="" class="text-light">Amount</label>
+                                                <input type="number" id="amt_val" name='TXN_AMOUNT' class="form-control"
+                                                    placeholder="Enter amount"
+                                                    style="border : none;border-bottom:2px solid white ;background-color: #000;">
+
+                                                <input id='deposit_user_id' type="hidden" name="CUST_ID" value=''>
+
+
+                                            </div>
+                                        </form>
+                                        <div id="withdraw_err_div"></div>
+
+                                        <div class="my-5 d-flex justify-content-center ">
+                                            <button class="btn btn-info px-5 mx-3 border-0 " id="withdraw_btn"
+                                                onclick="deposit_fun()" style="background-color: #2724d6; ">Deposit
+                                                Now</button>
+                                            <button class="btn btn-info px-5 mx-3 border-0 "
+                                                onclick="depositInitFun(false)" style="background-color: #2724d6; ">Go
+                                                back</button>
                                         </div>
                                     </div>
 
@@ -209,8 +245,11 @@
 
                                 <div id="main_wallet_btn_div">
                                     <div class="my-5 d-flex justify-content-center ">
-                                        <button class="btn btn-info px-5 mx-3 border-0" onclick="depositInitFun(true)" style="background-color: #2724d6; ">Deposit</button>
-                                        <button class="btn btn-info px-5 mx-3 border-0  " onclick="withdrawInitFun(true)" style="background-color: #2724d6; ">Withdrawal</button>
+                                        <button class="btn btn-info px-5 mx-3 border-0" onclick="depositInitFun(true)"
+                                            style="background-color: #2724d6; ">Deposit</button>
+                                        <button class="btn btn-info px-5 mx-3 border-0  "
+                                            onclick="withdrawInitFun(true)"
+                                            style="background-color: #2724d6; ">Withdrawal</button>
                                     </div>
                                 </div>
 
@@ -223,13 +262,15 @@
                                 <div class="col-md">
 
                                     <div class="mx-3 mt-5">
-                                        <p class="text-dark font-weight-bold " style="font-size: larger;border: none;">Transactions History</p>
+                                        <p class="text-dark font-weight-bold " style="font-size: larger;border: none;">
+                                            Transactions History</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <table class="table table-borderless table-responsive-sm" style="position:relative; top: -18px;">
+                                    <table class="table table-borderless table-responsive-sm"
+                                        style="position:relative; top: -18px;">
                                         <thead style="background-color: rgb(147, 146, 146);">
                                             <tr class="line">
                                                 <th scope="col-2" class="text-light pl-5">Date</th>
@@ -270,13 +311,15 @@
                                 <div class="col-md">
 
                                     <div class="mx-3 mt-5">
-                                        <p class="text-dark font-weight-bold " style="font-size: larger;border: none;">Withdrawal History</p>
+                                        <p class="text-dark font-weight-bold " style="font-size: larger;border: none;">
+                                            Withdrawal History</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md">
-                                    <table class="table table-borderless table-responsive-sm" style="position:relative; top: -18px;">
+                                    <table class="table table-borderless table-responsive-sm"
+                                        style="position:relative; top: -18px;">
                                         <thead style="background-color: rgb(147, 146, 146);">
                                             <tr class="line">
                                                 <th scope="col-2" class="text-light pl-5">Date</th>
@@ -343,44 +386,44 @@
 
                 </div>
                 <!--footer-->
-				<footer class="footer" id="footer_div">
-					<include  src="src/includes/footer.html"></include>
-				</footer>
-				<!-- End Footer-->
+                <footer class="footer" id="footer_div">
+                    <include src="src/includes/footer.html"></include>
+                </footer>
+                <!-- End Footer-->
             </div>
             <!-- End content-area-->
         </div>
     </div>
     <!-- End Page-->
-  		<!-- Back to top -->
-          <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- Back to top -->
+    <a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
-<!-- config js-->
-<script src="assets/js/config.js"></script>
-<!-- Jquery js-->
-<script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
+    <!-- config js-->
+    <script src="assets/js/config.js"></script>
+    <!-- Jquery js-->
+    <script src="assets/js/vendors/jquery-3.2.1.min.js"></script>
 
-<!--Bootstrap js-->
-<script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
-
-
-
-<!-- Custom scroll bar js-->
-<script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
-
-<!--Horizontal js-->
-<script src="assets/plugins/horizontal-menu/horizontal.js"></script>
+    <!--Bootstrap js-->
+    <script src="assets/js/vendors/bootstrap.bundle.min.js"></script>
 
 
 
-<!-- Custom js-->
-<script src="assets/js/custom.js"></script>
+    <!-- Custom scroll bar js-->
+    <script src="assets/plugins/scroll-bar/jquery.mCustomScrollbar.concat.min.js"></script>
 
-<!-- primexop js  -->
-<script src="./assets/js/primeOne.js"></script>
-<script src="./assets/js/axios.min.js"></script>
-<script src="./assets/js/store.everything.min.js"></script>
-<script src="./assets/js/sweetalert2.all.min.js"></script>
+    <!--Horizontal js-->
+    <script src="assets/plugins/horizontal-menu/horizontal.js"></script>
+
+
+
+    <!-- Custom js-->
+    <script src="assets/js/custom.js"></script>
+
+    <!-- primexop js  -->
+    <script src="./assets/js/primeOne.js"></script>
+    <script src="./assets/js/axios.min.js"></script>
+    <script src="./assets/js/store.everything.min.js"></script>
+    <script src="./assets/js/sweetalert2.all.min.js"></script>
 
     <!--File uploads js -->
     <script src="assets/plugins/fileuploads/js/dropify.js"></script>
@@ -400,6 +443,8 @@
         main_trx_body = byId('main_trx_body')
         main_wallet_div = byId('main_wallet_div')
         deposit_div = byId('deposit_div')
+        deposit_form = byId('deposit_form')
+        deposit_user_id = byId('deposit_user_id')
         verify_dep_btn = byId('verify_dep_btn')
         img_link = byId('img_link')
         deposit_err_div = byId('deposit_err_div')
@@ -420,8 +465,8 @@
             bodyFormData.append('ID', store.get('yamasha_user_data').ID);
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
 
-            axios.post(api_base+'wallets.php', bodyFormData)
-                .then(function(response) {
+            axios.post(api_base + 'wallets.php', bodyFormData)
+                .then(function (response) {
                     console.log(response.data);
 
                     if (response.data.status == 0) {
@@ -433,7 +478,7 @@
 
 
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
         }
@@ -445,8 +490,8 @@
             bodyFormData.append('ID', store.get('yamasha_user_data').ID);
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
 
-            axios.post(api_base+'main_trx.php', bodyFormData)
-                .then(function(response) {
+            axios.post(api_base + 'main_trx.php', bodyFormData)
+                .then(function (response) {
                     console.log(response.data);
 
                     if (response.data.status == 0) {
@@ -485,7 +530,7 @@
 
 
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
 
@@ -497,8 +542,8 @@
 
             bodyFormData.append('ID', store.get('yamasha_user_data').ID);
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
-            axios.post(api_base+'withdraw_history.php', bodyFormData)
-                .then(function(response) {
+            axios.post(api_base + 'withdraw_history.php', bodyFormData)
+                .then(function (response) {
                     console.log(response.data);
 
                     if (response.data.status == 0) {
@@ -556,69 +601,59 @@
 
 
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
         }
         withdrawHistoryFun()
 
-        function depositInitFun(status) {
-            if (status == true) {
-                d_none(main_wallet_div, true)
-                d_none(deposit_div, false)
-            }
-            if (status == false) {
-                d_none(main_wallet_div, false)
-                d_none(deposit_div, true)
-            }
 
-        }
 
-        function verify_dep_fun() {
-            function validURL(str) {
-                var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
-                    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-                    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-                    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-                    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-                    '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-                return !!pattern.test(str);
-            }
-            urlValidate = validURL(img_link.value)
-            if (urlValidate == false) {
-                bootstrapAlert(deposit_err_div, "Enter Valid Url or simply upload your screenshot", "danger", 3)
-                return false;
-            }
-            // call api
-            var bodyFormData = new URLSearchParams();
+        // function verify_dep_fun() {
+        //     function validURL(str) {
+        //         var pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+        //             '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        //             '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        //             '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        //             '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        //             '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+        //         return !!pattern.test(str);
+        //     }
+        //     urlValidate = validURL(img_link.value)
+        //     if (urlValidate == false) {
+        //         bootstrapAlert(deposit_err_div, "Enter Valid Url or simply upload your screenshot", "danger", 3)
+        //         return false;
+        //     }
+        //     // call api
+        //     var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
-            bodyFormData.append('img_link', img_link.value);
+        //     bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+        //     bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+        //     bodyFormData.append('img_link', img_link.value);
 
-            axios.post(api_base+'verify_deposit.php', bodyFormData)
-                .then(function(response) {
-                    console.log(response.data);
+        //     axios.post(api_base + 'verify_deposit.php', bodyFormData)
+        //         .then(function (response) {
+        //             console.log(response.data);
 
-                    if (response.data.status == 0) {
-                        bootstrapAlert(deposit_err_div, response.data.msg, "danger", 3)
-                    }
-                    if (response.data.status == 1) {
-                        bootstrapAlert(deposit_err_div, `Your Deposit verification request Submitted successfully, 
-                        this may take maximum 4 hours update balance in your wallet`, "success", 5)
-                        const myTimeout = setTimeout(() => {
-                            depositInitFun(false)
-                        }, 5 * 1000);
-                    }
-                    if (res.status == -1) {
-                        logOut()
-                    }
+        //             if (response.data.status == 0) {
+        //                 bootstrapAlert(deposit_err_div, response.data.msg, "danger", 3)
+        //             }
+        //             if (response.data.status == 1) {
+        //                 bootstrapAlert(deposit_err_div, `Your Deposit verification request Submitted successfully, 
+        //                 this may take maximum 4 hours update balance in your wallet`, "success", 5)
+        //                 const myTimeout = setTimeout(() => {
+        //                     depositInitFun(false)
+        //                 }, 5 * 1000);
+        //             }
+        //             if (res.status == -1) {
+        //                 logOut()
+        //             }
 
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
-        }
+        //         })
+        //         .catch(function (error) {
+        //             console.log(error);
+        //         });
+        // }
 
         function wm_select_fun() {
             // call api
@@ -628,8 +663,8 @@
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
 
 
-            axios.post(api_base+'clients_data1.php', bodyFormData)
-                .then(function(response) {
+            axios.post(api_base + 'clients_data1.php', bodyFormData)
+                .then(function (response) {
                     console.log(response.data);
 
                     if (response.data.status == 0) {
@@ -644,7 +679,7 @@
 
                         // bank selection
                         if (response.data.BANK_NAME != '' && response.data.BANK_AC_NUM != '') {
-                            wm_select.innerHTML += `<option id="bank_select" value="bank">${response.data.BANK_NAME}(${response.data.BANK_AC_NUM })</option>`;
+                            wm_select.innerHTML += `<option id="bank_select" value="bank">${response.data.BANK_NAME}(${response.data.BANK_AC_NUM})</option>`;
                         }
 
                         if (response.data.UPI_ID == '' && response.data.BANK_NAME == '') {
@@ -655,10 +690,30 @@
 
 
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
 
+        }
+
+        function depositInitFun(status) {
+            if (status == true) {
+                d_none(main_wallet_btn_div, true)
+                d_none(deposit_div, false)
+                d_none(main_trx_div, true)
+            }
+            if (status == false) {
+                d_none(main_wallet_btn_div, false)
+                d_none(deposit_div, true)
+                d_none(main_trx_div, false)
+            }
+
+        }
+
+        function deposit_fun() {
+            deposit_form.action = api_base + 'paytm/pgRedirect.php';
+            deposit_user_id.value = store.get('yamasha_user_data').ID;
+            deposit_form.submit()
         }
 
         function withdrawInitFun(status) {
@@ -697,8 +752,8 @@
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
             bodyFormData.append('amt_val', amt_val.value);
             bodyFormData.append('wm_select', wm_select.value);
-            axios.post(api_base+'withdraw_request.php', bodyFormData)
-                .then(function(response) {
+            axios.post(api_base + 'withdraw_request.php', bodyFormData)
+                .then(function (response) {
                     btn_loading(withdraw_btn, 'Processing...', false)
                     res = response.data
                     console.log(res);
@@ -722,7 +777,7 @@
                                 location.href = "./index.html";
                             }
                         })
-                       
+
                         fetchWallet()
                         withdrawHistoryFun()
                     }
@@ -730,25 +785,25 @@
                         logOut()
                     }
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
         }
 
-        function withdraw_cancel_fun(SN){
+        function withdraw_cancel_fun(SN) {
             // api call
-            cw_btn = byId('cw_btn'+SN)
+            cw_btn = byId('cw_btn' + SN)
             btn_loading(cw_btn, '...', true)
             var bodyFormData = new URLSearchParams();
             bodyFormData.append('ID', store.get('yamasha_user_data').ID);
             bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
             bodyFormData.append('SN', SN);
-           
-            axios.post(api_base+'withdraw_cancel.php', bodyFormData)
-                .then(function(response) {
+
+            axios.post(api_base + 'withdraw_cancel.php', bodyFormData)
+                .then(function (response) {
                     btn_loading(cw_btn, '...', false)
                     fetchWallet()
-                        withdrawHistoryFun()
+                    withdrawHistoryFun()
                     res = response.data
                     console.log(res);
                     if (res.status == 0) {
@@ -758,12 +813,12 @@
                             text: res.msg,
                             icon: 'error',
                             timer: 3000,
-                         
+
                             timerProgressBar: true,
                             showConfirmButton: false,
 
                         }).then((result) => {
-                          
+
                         })
 
                     }
@@ -773,21 +828,21 @@
                             text: 'Withdraw amount is refunded in your wallet',
                             icon: 'success',
                             timer: 3000,
-                         
+
                             timerProgressBar: true,
                             showConfirmButton: false,
 
                         }).then((result) => {
-                          
+
                         })
-                       
-                        
+
+
                     }
                     if (res.status == -1) {
                         logOut()
                     }
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                     console.log(error);
                 });
 
@@ -831,7 +886,7 @@
                         progress(e.lengthComputable, e.loaded, e.total);
                     };
 
-                    request.onload = function() {
+                    request.onload = function () {
                         if (request.status >= 200 && request.status < 300) {
                             load(request.responseText);
                         } else {
@@ -839,7 +894,7 @@
                         }
                     };
 
-                    request.onreadystatechange = function() {
+                    request.onreadystatechange = function () {
                         if (this.readyState == 4) {
                             if (this.status == 200) {
                                 let response = JSON.parse(this.responseText);
