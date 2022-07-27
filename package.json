@@ -10,10 +10,10 @@
     "src/email_action.html"
   ],
   "scripts": {
-    "start": "parcel ",
+    "start": "npm run dev",
     "clean": "node clean.js",
-    "dev": "parcel watch --public-url ./",
-    "build": "parcel build --public-url ./"
+    "dev": "node clean.js && parcel watch --public-url ./",
+    "build": "node clean.js && parcel build --public-url ./"
   },
   "devDependencies": {
     "parcel": "latest",
@@ -29,8 +29,10 @@
     "assets/css/dashboard.css",
     "assets/plugins/fileuploads/js/dropify.js",
     "assets/plugins/iconfonts/plugin.css"
-  ],  "staticFiles": {
-    "staticPath": "src/assets","staticOutPath": "assets"
+  ],
+  "staticFiles": {
+    "staticPath": "src/assets",
+    "staticOutPath": "assets"
   },
   "keywords": [],
   "author": "",
