@@ -220,8 +220,8 @@
                                         <form action="" method='post' id='deposit_form' class="form-group">
                                             <div class="m-5">
                                                 <label for="" class="text-light">Amount</label>
-                                                <input type="number" id="amt_val" name='TXN_AMOUNT' class="form-control"
-                                                    placeholder="Enter amount"
+                                                <input type="number" id="deposit_txn_amount" name='TXN_AMOUNT' class="form-control"
+                                                    placeholder="Enter amount" 
                                                     style="border : none;border-bottom:2px solid white ;background-color: #000;">
 
                                                 <input id='deposit_user_id' type="hidden" name="CUST_ID" value=''>
@@ -444,6 +444,7 @@
         main_wallet_div = byId('main_wallet_div')
         deposit_div = byId('deposit_div')
         deposit_form = byId('deposit_form')
+        deposit_txn_amount = byId('deposit_txn_amount')
         deposit_user_id = byId('deposit_user_id')
         verify_dep_btn = byId('verify_dep_btn')
         img_link = byId('img_link')
@@ -711,6 +712,9 @@
         }
 
         function deposit_fun() {
+            if(deposit_txn_amount.value <1){
+                return false;
+            }
             deposit_form.action = api_base + 'paytm/pgRedirect.php';
             deposit_user_id.value = store.get('yamasha_user_data').ID;
             deposit_form.submit()
