@@ -1,3 +1,4 @@
+
 var imported = document.createElement('script');
 imported.src = './assets/js/pako_inflate.js';
 document.head.appendChild(imported);

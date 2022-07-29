@@ -23,7 +23,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="./assets/images/Vector.png" />
 
 	<!-- Title -->
-	<title>Dashboard</title>
+	<title>advisory</title>
 	<!-- Dashboard css -->
 	<link href="assets/css/dashboard.css" rel="stylesheet" />
 
@@ -228,84 +228,25 @@
 			<!--content-area-->
 			<div class="content-area">
 
-				<div class="bg-img">
+				<div>
+                    <button> Subscribe</button>  <button> unsubscribe</button>
+                </div>
+                <div>
+                    <table class='table text-white'>
+                        <thead>
+                            <td> date </td>
+                            <td> Company name  </td>
+                            <td> Message  </td>
+                            <td> Category </td>
+                            <td> Buy Price  </td>
+                            <td> Sl Price   </td>
+                        
+                        </thead>
+                        <tbody id='data_table_body'>
 
-					<div class="row p-5 mr-0 ">
-						<div class="col-lg-6 fontHeight">
-							<h1 class="text-light text-uppercase text-font">
-								we shape the <br>perfect <br>Solutions.
-							</h1>
-							<p class="text-light text-capitalize  textPara">
-								you need tested strategies powerful. and experienced traders to arm you with
-								knowledge.that's where we come in
-							</p>
-						</div>
-						<div
-							class="col-lg-6 d-flex justify-content-around flex-column flex-lg-row box-elmnt-font fontHeight">
-							<div class=" col-lg-5 box-Shadow">
-								<h6 class="text-light text-capitalize pt-3">
-									yamasha live stock price
-								</h6>
-								<div class="mt-4">
-									<h2 class="text-light text-uppercase mt-5 font-weight-bold">
-										yamasha
-									</h2>
-									<h6 class="text-light text-capitalize">
-										yamasha venture limited
-									</h6>
-								</div>
-								<div class="mt-5">
-									<h2 class="text-light font-weight-bold"> <span id="yamasha_stock_price">...</span>
-									</h2>
-									<h6 style="color: rgb(9, 240, 9);">+<span id="yamasha_stock_gain">...</span></h6>
-								</div>
-							</div>
-							<div class="col-lg-5 box-Shadow" onclick="location.href='./wallet.html'">
-								<div class="mt-4 pt-5 ">
-									<h2 class="text-light text-uppercase font-weight-bold">
-										wallet <br> balance
-									</h2>
-								</div>
-								<div class="py-5 ">
-									<h2 class="text-light">₹<span id="main_wallet_span">Fetching...</span></h2>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- ICONS  -->
-
-					<div class="row mr-0 IconsDiv">
-						<div class="col-lg-2 box-Shadow text-center pt-lg-3 pt-5 mx-lg-0 mx-5 mb-3"
-							onclick="location.href='./auto_investment.html'">
-							<i class="text-center"><img
-									src="https://cdn.discordapp.com/attachments/962990670962900992/965293995578261574/Group_67.png"
-									alt="#error" class="icon-img"></i>
-							<h6 class="text-light text-uppercase mt-5">auto <br> investment</h6>
-						</div>
-						<div class="col-lg-2 box-Shadow text-center pt-lg-3 pt-5 mx-lg-0 mx-5 mb-3">
-							<i class="text-warning"><img
-									src="https://cdn.discordapp.com/attachments/962990670962900992/965293995301412924/stock2.png"
-									alt="#error" class="icon-img"></i>
-							<h6 class="text-light text-uppercase mt-5">trading</h6>
-						</div>
-						<div class="col-lg-2 box-Shadow text-center pt-lg-3 pt-5 mx-lg-0 mx-5 mb-3"
-							onclick="location.href='./invest_whatsapp.html'">
-							<i class="text-warning"><img
-									src="https://cdn.discordapp.com/attachments/962990670962900992/965293996006076556/archives_1.png"
-									alt="#error" class="icon-img"></i>
-							<h6 class="text-light text-uppercase mt-5">copy <br> trading</h6>
-						</div>
-						<div class="col-lg-2 box-Shadow text-center pt-lg-3 pt-5 mx-lg-0 mx-5 mb-3"
-							onclick="location.href='./invest_whatsapp.html'">
-							<i class="text-warning"><img
-									src="https://cdn.discordapp.com/attachments/962990670962900992/965293995041361950/time_1.png"
-									alt="#error" class="icon-img"></i>
-							<h6 class="text-light text-uppercase mt-5">Bnpl</h6>
-						</div>
-					</div>
-
-				</div>
+                        </tbody>
+                    </table>
+                </div>
 				<!--footer-->
 				<footer class="footer" id="footer_div">
 					<include  src="src/includes/footer.html"></include>
@@ -381,7 +322,7 @@
 	<script src="./assets/js/axios.min.js"></script>
 	<script src="./assets/js/store.everything.min.js"></script>
 	<script src="./assets/js/sweetalert2.all.min.js"></script>
-	<script type='module' src='./index.js'></script>
+	<script type='module' src='./advisory.js'></script>
 </body>
 
 </html>

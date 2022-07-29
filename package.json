@@ -15,12 +15,22 @@
     "dev": "node clean.js && parcel watch --public-url ./",
     "build": "node clean.js && parcel build --public-url ./"
   },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "clipboard": "^2.0.11",
+    "moment": "^2.29.4",
+    "store": "^2.0.12",
+    "sweetalert2": "^11.4.24"
+  },
   "devDependencies": {
+    "buffer": "^6.0.3",
+    "eslint": "^8.20.0",
     "parcel": "latest",
     "parcel-reporter-static-files-copy": "^1.3.4",
     "parcel-resolver-ignore": "^2.1.3",
     "posthtml-doctype": "^1.1.1",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
   },
   "parcelIgnore": [
     "assets/js/vendors/bootstrap.bundle.min.js",
