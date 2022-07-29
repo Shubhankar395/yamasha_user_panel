@@ -303,7 +303,8 @@ $page_title = 'Auto Investment !'
 
         axios.post(api_base + 'wallets.php', bodyFormData)
             .then(function(response) {
-                console.log(response.data);
+               let res = response.data;
+                    console.log(response.data);
 
                 if (response.data.status == 0) {
 
@@ -331,7 +332,8 @@ $page_title = 'Auto Investment !'
 
         axios.post(api_base + 'ai_trx.php', bodyFormData)
             .then(function(response) {
-                console.log(response.data);
+               let res = response.data;
+                    console.log(response.data);
 
                 if (response.data.status == 0) {
 
@@ -391,7 +393,8 @@ $page_title = 'Auto Investment !'
 
         axios.post(api_base + 'ai_action.php', bodyFormData)
             .then(function(response) {
-                console.log(response.data);
+               let res = response.data;
+                    console.log(response.data);
 
                 if (response.data.status == 0) {
                     bootstrapAlert(ai_action_err_div, response.data.msg, "danger", 3)

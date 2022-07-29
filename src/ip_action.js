@@ -46,6 +46,7 @@
             axios
                 .post(api_base + "ip_action.php", bodyFormData)
                 .then(function (response) {
+                   let res = response.data;
                     console.log(response.data);
                     res = response.data;
 

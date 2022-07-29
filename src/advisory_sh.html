@@ -305,6 +305,7 @@
 
             axios.post(api_base+'ai_trx.php', bodyFormData)
                 .then(function(response) {
+                   let res = response.data;
                     console.log(response.data);
 
                     if (response.data.status == 0) {

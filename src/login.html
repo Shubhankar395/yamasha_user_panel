@@ -181,73 +181,12 @@
         alt="#error" class="logo-img" />
     </div>
   </footer>
-  <script src="./assets/js/config.js?"></script>
+  <!-- <script src="./assets/js/config.js"></script>
   <script src="./assets/js/primeOne.js"></script>
   <script src="./assets/js/axios.min.js"></script>
-  <script src="./assets/js/store.everything.min.js"></script>
+  <script src="./assets/js/store.everything.min.js"></script> -->
 
-  <script>
-    MOB_NUMBER = byId("MOB_NUMBER");
-    PASS = byId("PASS");
-    err_div = byId("err_div");
-    login_btn = byId("login_btn");
-
-    function errorMessage(msg) {
-      err_div.parentElement.classList.remove("d-none");
-      err_div.innerHTML = msg;
-
-      const myTimeout = setTimeout(() => {
-        err_div.parentElement.classList.add("d-none");
-      }, 3000);
-    }
-
-    function login() {
-      btn_loading(login_btn,"Loading...",true)
-      var bodyFormData = new URLSearchParams();
-
-      bodyFormData.append("MOB_NUMBER", MOB_NUMBER.value);
-      bodyFormData.append("PASS", PASS.value);
-
-      axios
-        .post(api_base + "login.php", bodyFormData)
-        .then(function (response) {
-          console.log(response.data);
-          btn_loading(login_btn,"Loading...",false)
-
-          if (response.data.status == 0) {
-            // loading(false);
-            errorMessage(response.data.msg);
-          }
-          if (response.data.status == 1) {
-            // location.replace('./index.html');
-            // storing data to local storage
-            store.set("yamasha_user_data", {
-              ID: response.data.ID,
-              TOKEN: response.data.TOKEN,
-              NAME: response.data.NAME,
-            });
-            location.replace("./index.html");
-          }
-          if (response.data.status == -1) {
-
-         
-            url = "./email_action.html?rv=" + response.data.ID;
-            location.href = url
-          }
-          if (response.data.status == -2) {
-
-       
-
-            url = "./ip_action.html?r_id=" + response.data.ID+"&r_ip="+ response.data.IP;
-
-            location.href = url
-          }
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
-    }
-  </script>
+  <script type='module' src='login.js'></script>
 </body>
 
 </html>
