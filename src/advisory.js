@@ -5,7 +5,7 @@ import store from 'store';
 // import { DataTable } from "simple-datatables";
 import moment from 'moment';
 import { api_base } from './assets/modules/config.js';
-import { byId, loginCheck, logOut, setUsernameInHeader, Toast } from './assets/modules/yamasha_utility.js';
+import { byId, d_none, loginCheck, logOut, setUsernameInHeader, Toast } from './assets/modules/yamasha_utility.js';
 loginCheck();
 window.logOut = logOut;
 setUsernameInHeader();
@@ -15,16 +15,16 @@ setUsernameInHeader();
 
 
 let data_table_body = byId('data_table_body');
-// yamasha_stock_price = byId('yamasha_stock_price')
-// yamasha_stock_gain = byId('yamasha_stock_gain')
+let subscribe_btn = byId('subscribe_btn');
+let unsubscribe_btn = byId('unsubscribe_btn');
 
 function fetch_advisory_fun() {
     var bodyFormData = new URLSearchParams();
     bodyFormData.append('action', 'get');
 
     console.log(store.get('yamasha_user_data').ID);
-  
-// return false;
+
+    // return false;
     bodyFormData.append('ID', store.get('yamasha_user_data').ID);
     bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
     axios.post(api_base + 'advisory.php', bodyFormData)
@@ -73,3 +73,65 @@ function fetch_advisory_fun() {
         });
 }
 fetch_advisory_fun();
+
+window.client_alerts_data_fun = client_alerts_data_fun;
+function client_alerts_data_fun(action) {
+    var bodyFormData = new URLSearchParams();
+    bodyFormData.append('action', action);
+    bodyFormData.append('ID', store.get('yamasha_user_data').ID);
+    bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    axios.post(api_base + 'client_alerts_data.php', bodyFormData)
+        .then(function (response) {
+            let res = response.data;
+            console.log(res);
+            if (res.status == 0) {
+                Toast.fire({
+                    icon: 'error',
+                    title: res.msg
+                });
+            }
+            if (res.status == 1) {
+
+                if (res.ADVISORY_SUBSCRIBE_STATUS == 0) {
+                    d_none(subscribe_btn, false);
+                }
+                if (res.ADVISORY_SUBSCRIBE_STATUS == 1) {
+                    d_none(unsubscribe_btn, false);
+                }
+            }
+            if (res.status == 2) {
+
+
+                d_none(subscribe_btn, true);
+
+
+                d_none(unsubscribe_btn, false);
+                Toast.fire({
+                    icon: 'success',
+                    title: "advisory alerts Subscribed"
+                });
+
+
+            }
+            if (res.status == 3) {
+
+
+                d_none(subscribe_btn, false);
+
+
+                d_none(unsubscribe_btn, true);
+                Toast.fire({
+                    icon: 'warning',
+                    title: "advisory alerts Unsubscribed"
+                });
+
+            }
+            if (res.status == -1) {
+                logOut();
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+client_alerts_data_fun('advisory_get');
