@@ -59,16 +59,16 @@ setUsernameInHeader();
 
 
         // setting id from local
-        cid_span1.innerHTML = store.get('yamasha_user_data').ID;
-        cid_span2.innerHTML = store.get('yamasha_user_data').ID;
+        cid_span1.innerHTML = store.get('yamasha_user_data1').ID;
+        cid_span2.innerHTML = store.get('yamasha_user_data1').ID;
 
 
 
         function fetch_clients_data() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base + 'clients.php', bodyFormData)
                 .then(function (response) {
@@ -111,8 +111,8 @@ setUsernameInHeader();
         function fetch_clients_data1() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base + 'clients_data1.php', bodyFormData)
                 .then(function (response) {
@@ -250,8 +250,8 @@ window.prof_submit=prof_submit;
             let  input_value = document.getElementById(input_id).value;
 
             var bodyFormData = new URLSearchParams();
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             bodyFormData.append('info_name', id_base);
             bodyFormData.append(id_base, input_value);
 
@@ -300,8 +300,8 @@ window.prof_submit=prof_submit;
             edit_btn.textContent = 'Processing';
             edit_btn.disabled = true;
             var bodyFormData = new URLSearchParams();
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             bodyFormData.append('info_name', 'BANK');
             bodyFormData.append('BANK_NAME', name_input.value);
             bodyFormData.append('BANK_AC_NUM', ac_num_input.value);
@@ -354,8 +354,8 @@ window.submit_nominee=submit_nominee;
             nominee_submit_btn.disabled = true;
 
             var bodyFormData = new URLSearchParams();
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             bodyFormData.append('info_name', 'NOMINEE');
             bodyFormData.append('NOMINEE_NAME', NOMINEE_NAME.value);
             bodyFormData.append('NOMINEE_NUMBER', NOMINEE_NUMBER.value);

@@ -24,8 +24,8 @@ let yamasha_stock_gain = byId('yamasha_stock_gain');
 function fetchWallet() {
     var bodyFormData = new URLSearchParams();
 
-    bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-    bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+    bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
     axios.post(api_base + 'wallets.php', bodyFormData)
         .then(function (response) {
@@ -57,8 +57,8 @@ fetchWallet();
 function fetch_yamasha_stock_data_fun() {
     var bodyFormData = new URLSearchParams();
 
-    bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-    bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+    bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'yamasha_stock.php', bodyFormData)
         .then(function (response) {
             let res = response.data;

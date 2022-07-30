@@ -38,7 +38,7 @@ function login() {
             if (response.data.status == 1) {
                 // location.replace('./index.html');
                 // storing data to local storage
-                store.set("yamasha_user_data", {
+                store.set("yamasha_user_data1", {
                     ID: response.data.ID,
                     TOKEN: response.data.TOKEN,
                     NAME: response.data.NAME,

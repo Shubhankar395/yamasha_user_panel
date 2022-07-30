@@ -63,8 +63,8 @@ setUsernameInHeader();
         function fetchWallet() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base + 'wallets.php', bodyFormData)
                 .then(function (response) {
@@ -94,8 +94,8 @@ setUsernameInHeader();
         function mainTrxFun() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base + 'main_trx.php', bodyFormData)
                 .then(function (response) {
@@ -151,8 +151,8 @@ setUsernameInHeader();
         function withdrawHistoryFun() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             axios.post(api_base + 'withdraw_history.php', bodyFormData)
                 .then(function (response) {
                    let res = response.data;
@@ -245,8 +245,8 @@ setUsernameInHeader();
         //     // call api
         //     var bodyFormData = new URLSearchParams();
 
-        //     bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-        //     bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+        //     bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+        //     bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
         //     bodyFormData.append('img_link', img_link.value);
 
         //     axios.post(api_base + 'verify_deposit.php', bodyFormData)
@@ -278,8 +278,8 @@ setUsernameInHeader();
             // call api
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
 
             axios.post(api_base + 'clients_data1.php', bodyFormData)
@@ -342,7 +342,7 @@ window.deposit_fun=deposit_fun;
                 return false;
             }
             deposit_form.action = api_base + 'paytm/pgRedirect.php';
-            deposit_user_id.value = store.get('yamasha_user_data').ID;
+            deposit_user_id.value = store.get('yamasha_user_data1').ID;
             deposit_form.submit();
         }
 window.withdrawInitFun=withdrawInitFun;
@@ -378,8 +378,8 @@ window.withdraw_fun=withdraw_fun;
             }
             // api call
             var bodyFormData = new URLSearchParams();
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             bodyFormData.append('amt_val', amt_val.value);
             bodyFormData.append('wm_select', wm_select.value);
             axios.post(api_base + 'withdraw_request.php', bodyFormData)
@@ -427,8 +427,8 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
           let  cw_btn = byId('cw_btn' + SN);
             btn_loading(cw_btn, '...', true);
             var bodyFormData = new URLSearchParams();
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             bodyFormData.append('SN', SN);
 
             axios.post(api_base + 'withdraw_cancel.php', bodyFormData)

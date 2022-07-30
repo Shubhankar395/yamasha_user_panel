@@ -4,7 +4,7 @@ var byId = function( id ) { return document.getElementById( id ); };
 // check login
 
 function loginCheck(){
-    if(!store.get('yamasha_user_data')){
+    if(!store.get('yamasha_user_data1')){
          location.replace('./login.html')
     }
 }
@@ -12,7 +12,7 @@ function loginCheck(){
 // logout function
 
 function logOut(){
-    store.remove('yamasha_user_data')
+    store.remove('yamasha_user_data1')
     location.replace('./login.html')
 }
 
@@ -22,7 +22,7 @@ function setUsernameInHeader(){
     header_name_span1=document.getElementById('header_name_span1')
     header_name_span2=document.getElementById('header_name_span2')
 
-    header_name_span1.innerHTML=header_name_span2.innerHTML=store.get('yamasha_user_data').NAME
+    header_name_span1.innerHTML=header_name_span2.innerHTML=store.get('yamasha_user_data1').NAME
 }
 
 function d_none(div_id,status){

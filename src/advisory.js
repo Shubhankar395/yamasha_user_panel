@@ -22,11 +22,11 @@ function fetch_advisory_fun() {
     var bodyFormData = new URLSearchParams();
     bodyFormData.append('action', 'get');
 
-    console.log(store.get('yamasha_user_data').ID);
+    console.log(store.get('yamasha_user_data1').ID);
 
     // return false;
-    bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-    bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+    bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'advisory.php', bodyFormData)
         .then(function (response) {
             let res = response.data;
@@ -78,8 +78,8 @@ window.client_alerts_data_fun = client_alerts_data_fun;
 function client_alerts_data_fun(action) {
     var bodyFormData = new URLSearchParams();
     bodyFormData.append('action', action);
-    bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-    bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+    bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+    bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'client_alerts_data.php', bodyFormData)
         .then(function (response) {
             let res = response.data;

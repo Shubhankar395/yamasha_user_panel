@@ -34,7 +34,7 @@ let url = new URL( './register.html',location.href)
         // } else {
         //     url = 'https://user.yamasha.in/register.html';
         // }
-        refer_link.value = url + '?refer=' + store.get('yamasha_user_data').ID;
+        refer_link.value = url + '?refer=' + store.get('yamasha_user_data1').ID;
 
         new ClipboardJS('#copy_btn');
 
@@ -60,8 +60,8 @@ let url = new URL( './register.html',location.href)
         function fetchWallet() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base+'wallets.php', bodyFormData)
                 .then(function(response) {
@@ -90,8 +90,8 @@ let url = new URL( './register.html',location.href)
         function referral_history_fun() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base+'referral_history.php', bodyFormData)
                 .then(function(response) {

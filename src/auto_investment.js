@@ -31,8 +31,8 @@ setUsernameInHeader();
 		function fetchWallet() {
 			var bodyFormData = new URLSearchParams();
 
-			bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-			bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+			bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+			bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
 			axios.post(api_base+'wallets.php', bodyFormData)
 				.then(function(response) { let res = response.data;
@@ -60,8 +60,8 @@ setUsernameInHeader();
 		function aiTrxFun() {
             var bodyFormData = new URLSearchParams();
 
-            bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-            bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+            bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+            bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
             axios.post(api_base+'ai_trx.php', bodyFormData)
                 .then(function(response) { 
@@ -125,8 +125,8 @@ window.ai_action_fun=ai_action_fun;
 			var bodyFormData = new URLSearchParams();
 			bodyFormData.append('action', action);
 			bodyFormData.append('amt_val', amt_val.value);
-			bodyFormData.append('ID', store.get('yamasha_user_data').ID);
-			bodyFormData.append('TOKEN', store.get('yamasha_user_data').TOKEN);
+			bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
+			bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
 			axios.post(api_base+'ai_action.php', bodyFormData)
 				.then(function(response) {
