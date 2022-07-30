@@ -28,16 +28,16 @@ setUsernameInHeader();
         let   refer_link = byId('refer_link');
 
        
-let url;
-        if (location.host == '192.168.100.5') {
-            url = 'http://192.168.100.5/yamasha_v1/user_panel/register.html';
-        } else {
-            url = 'https://user.yamasha.in/register.html';
-        }
+let url = new URL( './register.html',location.href)
+        // if (location.host == '192.168.100.5') {
+        //     url = 'http://192.168.100.5/yamasha_v1/user_panel/register.html';
+        // } else {
+        //     url = 'https://user.yamasha.in/register.html';
+        // }
         refer_link.value = url + '?refer=' + store.get('yamasha_user_data').ID;
 
         new ClipboardJS('#copy_btn');
-window.showReferrals=showReferrals;
+
         const showReferrals = () => {
 
             const showReferralsList = document.getElementById('refList');
@@ -47,13 +47,15 @@ window.showReferrals=showReferrals;
             viewRef.style.display = "none";
 
         };
-        window.show=show;
+        window.showReferrals=showReferrals;
+     
         const show = () => {
             const hide = document.getElementById('hide');
             const d_show = document.getElementById("show");
             d_show.style.display = "block";
             hide.style.display = "none";
         };
+        window.show=show;
 
         function fetchWallet() {
             var bodyFormData = new URLSearchParams();
