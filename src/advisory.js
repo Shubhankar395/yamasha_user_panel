@@ -14,9 +14,9 @@ setUsernameInHeader();
 
 
 
-let data_table_body = byId('data_table_body');
-let subscribe_btn = byId('subscribe_btn');
-let unsubscribe_btn = byId('unsubscribe_btn'); 
+const data_table_body = byId('data_table_body');
+const subscribe_btn = byId('subscribe_btn');
+const unsubscribe_btn = byId('unsubscribe_btn'); 
 
 function fetch_advisory_fun() {
     var bodyFormData = new URLSearchParams();
@@ -29,21 +29,21 @@ function fetch_advisory_fun() {
     bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'advisory.php', bodyFormData)
         .then(function (response) {
-            let res = response.data;
+            const res = response.data;
             console.log(res);
-            if (res.status == 0) {
+            if (res.status === 0) {
                 Toast.fire({
                     icon: 'error',
                     title: res.msg
                 });
             }
-            if (res.status == 1) {
+            if (res.status === 1) {
                 // console.log(res.res_data[0]);
                 // adding data to table
                 let i = 0;
                 while (res.res_data.length > i) {
                     // let   init_data = res.res_data[i]
-                    let time = moment(res.res_data[i].TIME * 1000).startOf().fromNow();
+                    const time = moment(res.res_data[i].TIME * 1000).startOf().fromNow();
                     data_table_body.innerHTML += `
                             <tr>
                                                 <td>${time}</td>
@@ -64,7 +64,7 @@ function fetch_advisory_fun() {
                 // Initiate Datatables
 
             }
-            if (res.status == -1) {
+            if (res.status === -1) {
                 logOut();
             }
         })
@@ -82,24 +82,24 @@ function client_alerts_data_fun(action) {
     bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'client_alerts_data.php', bodyFormData)
         .then(function (response) {
-            let res = response.data;
+            const res = response.data;
             console.log(res);
-            if (res.status == 0) {
+            if (res.status === 0) {
                 Toast.fire({
                     icon: 'error',
                     title: res.msg
                 });
             }
-            if (res.status == 1) {
+            if (res.status === 1) {
 
-                if (res.ADVISORY_SUBSCRIBE_STATUS == 0) {
+                if (res.ADVISORY_SUBSCRIBE_STATUS === 0) {
                     d_none(subscribe_btn, false);
                 }
-                if (res.ADVISORY_SUBSCRIBE_STATUS == 1) {
+                if (res.ADVISORY_SUBSCRIBE_STATUS === 1) {
                     d_none(unsubscribe_btn, false);
                 }
             }
-            if (res.status == 2) {
+            if (res.status === 2) {
 
 
                 d_none(subscribe_btn, true);
@@ -113,7 +113,7 @@ function client_alerts_data_fun(action) {
 
 
             }
-            if (res.status == 3) {
+            if (res.status === 3) {
 
 
                 d_none(subscribe_btn, false);
@@ -126,7 +126,7 @@ function client_alerts_data_fun(action) {
                 });
 
             }
-            if (res.status == -1) {
+            if (res.status === -1) {
                 logOut();
             }
         })

@@ -5,10 +5,10 @@ import { api_base } from './assets/modules/config.js';
 import { byId, btn_loading, Toast } from './assets/modules/yamasha_utility.js';
 
 
-let MOB_NUMBER = byId('MOB_NUMBER');
-let PASS = byId('PASS');
+const MOB_NUMBER = byId('MOB_NUMBER');
+const PASS = byId('PASS');
 //   let  err_div = byId("err_div");
-let login_btn = byId('login_btn');
+const login_btn = byId('login_btn');
 
 function errorMessage(msg) {
     Toast.fire({
@@ -16,7 +16,7 @@ function errorMessage(msg) {
         title: msg
     });
 }
-window.login = login;
+
 function login() {
     btn_loading(login_btn, 'Loading...', true);
     var bodyFormData = new URLSearchParams();
@@ -27,15 +27,15 @@ function login() {
     axios
         .post(api_base + 'login.php', bodyFormData)
         .then(function (response) {
-           let res = response.data;
+           const res = response.data;
                     console.log(res);
             btn_loading(login_btn, 'Loading...', false);
 
-            if (response.data.status == 0) {
+            if (response.data.status === 0) {
                 // loading(false);
                 errorMessage(response.data.msg);
             }
-            if (response.data.status == 1) {
+            if (response.data.status === 1) {
                 // location.replace('./index.html');
                 // storing data to local storage
                 store.set('yamasha_user_data1', {
@@ -45,17 +45,17 @@ function login() {
                 });
                 location.replace('./index.html');
             }
-            if (response.data.status == -1) {
+            if (response.data.status === -1) {
 
 
-                let url = './email_action.html?rv=' + response.data.ID;
+                const url = './email_action.html?rv=' + response.data.ID;
                 location.href = url;
             }
-            if (response.data.status == -2) {
+            if (response.data.status === -2) {
 
 
 
-                let url = './ip_action.html?r_id=' + response.data.ID + '&r_ip=' + response.data.IP;
+                const url = './ip_action.html?r_id=' + response.data.ID + '&r_ip=' + response.data.IP;
 
                 location.href = url;
             }
@@ -64,3 +64,4 @@ function login() {
             console.log(error);
         });
 } 
+window.login = login;

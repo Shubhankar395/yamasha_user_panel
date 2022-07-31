@@ -12,13 +12,22 @@
     "rules": {
         "semi": ["warn", "always"],
         "quotes": ["warn", "single", { "avoidEscape": true ,"allowTemplateLiterals":true}],
-        "eqeqeq": ["off", "smart"],
+        "eqeqeq": ["warn", "smart"],
         "no-alert": "error",
-        "no-use-before-define": ["warn", {
+        "no-use-before-define": ["error", {
             "functions": true,
             "classes": true,
             "variables": true,
             "allowNamedExports": false
-        }]
+        }],
+        "semi-spacing": ["warn", {"before": false, "after": true}],
+        "default-case": "warn",
+        "wrap-regex": "warn",
+        "no-useless-rename": ["error", {
+            "ignoreDestructuring": false,
+            "ignoreImport": false,
+            "ignoreExport": false
+        }],
+        "prefer-const": "warn"
     }
 }

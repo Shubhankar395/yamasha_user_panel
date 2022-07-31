@@ -13,18 +13,18 @@ import { byId, d_none } from './assets/modules/yamasha_utility.js';
 
 
 
-let email_sending = byId('email_sending');
-let email_sended_p = byId('email_sended_p');
-let email_sended_img = byId('email_sended_img');
-let email_sended_para = byId('email_sended_para');
-let email_sending_img = byId('email_sending_img');
-let before_email_send_para = byId('before_email_send_para');
-let v_done_img = byId('v_done_img');
-let verifying_img = byId('verifying_img');
-let verification_div_one = byId('verification_div_one');
-let verification_div_two = byId('verification_div_two');
-let v_loading = byId('v_loading');
-let v_done = byId('v_done');
+const email_sending = byId('email_sending');
+const email_sended_p = byId('email_sended_p');
+const email_sended_img = byId('email_sended_img');
+const email_sended_para = byId('email_sended_para'); 
+const email_sending_img = byId('email_sending_img');
+const before_email_send_para = byId('before_email_send_para');
+const v_done_img = byId('v_done_img');
+const verifying_img = byId('verifying_img');
+const verification_div_one = byId('verification_div_one');
+const verification_div_two = byId('verification_div_two');
+const v_loading = byId('v_loading');
+const v_done = byId('v_done');
 
 // reading query
 const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -60,7 +60,7 @@ function email_action_fun(id, action) {
             console.log(response.data);
             res = response.data;
 
-            if (response.data.status == 0) {
+            if (response.data.status === 0) {
                 Swal.fire({
                     icon: 'error',
                     title: res.msg,
@@ -75,7 +75,7 @@ function email_action_fun(id, action) {
                     },
                 });
             }
-            if (response.data.status == 1) {
+            if (response.data.status === 1) {
                 d_none(email_sending, true);
                 d_none(before_email_send_para, true);
                 d_none(email_sended_p, false);
@@ -84,7 +84,7 @@ function email_action_fun(id, action) {
                 d_none(email_sending_img, true);
 
             }
-            if (response.data.status == 2) {
+            if (response.data.status === 2) {
                 d_none(v_loading, true);
                 d_none(v_done, false);
                 d_none(v_done_img, false);

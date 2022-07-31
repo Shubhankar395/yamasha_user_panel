@@ -36,22 +36,23 @@ function feed_token_fun(action) {
 
     axios.post(api_base + 'feed_token.php', bodyFormData)
         .then(function (response) {
-            let res = response.data;
+            const res = response.data;
 
             console.log(res);
 
 
-            if (res.status == 0) {
+            if (res.status === 0) {
                 Toast.fire({
                     icon: 'error',
                     title: res.msg
                 });
             }
-            if (res.status == 1) {
+            if (res.status === 1) {
                 store.set('yamasha_feed_token', res.feed_token);
 
-                if (action == 'update') {
+                if (action === 'update') {
                     // location.reload()
+                    // eslint-disable-next-line no-use-before-define
                     index_websocket_fun();
                 }
             }
@@ -94,40 +95,41 @@ function websocket_fun(mw_command) {
 
     // let ws = new web_socket('M101612', store.get('yamasha_feed_token'));
 
-    let ws = new web_socket({
+    const ws = new web_socket({
         client_code: 'M101612',
         feed_token: store.get('yamasha_feed_token')
     });
- 
-    
+
+
     ws.connect()
         .then(() => {
             ws.runScript(mw_command, 'mw'); // SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
-    
+
             // setTimeout(function () {
             //     ws.close();
             // }, 3000);
         });
 
-   
+
 
 
 
     //add callback method where you can manipulate socket data
-    ws.on('tick', receiveTick);
+
+
 
     //user defined function
     function receiveTick(data) {
 
         // console.log(data);
-        if (data == 'Socket Closed') {
+        if (data === 'Socket Closed') {
             console.log('Socket Closed');
             // location.reload()
             // ws.connection();
             websocket_fun();
         }
         // let result = JSON.parse(data);
-        let result = data;
+        const result = data;
         // console.log(result);
 
 
@@ -136,17 +138,17 @@ function websocket_fun(mw_command) {
         let i = 0;
         while (result.length > i) {
 
-            if (result[i].name == 'sf') {
-                if (result[i].ltt == 'NA') {
+            if (result[i].name === 'sf') {
+                if (result[i].ltt === 'NA') {
                     return false;
                 }
-                let token = result[i].tk;
+                const token = result[i].tk;
 
                 // checking old net change 
 
-                let old_netchng_data = Number(document.getElementById('old_netchng_' + token).innerHTML);
+                const old_netchng_data = Number(document.getElementById('old_netchng_' + token).innerHTML);
 
-                let diff = Number(result[i].cng) - old_netchng_data;
+                const diff = Number(result[i].cng) - old_netchng_data;
                 let class_name;
                 switch (true) {
                     case diff > 0:
@@ -164,7 +166,7 @@ function websocket_fun(mw_command) {
 
                 document.getElementById('ltp_' + token).innerHTML = numberWithCommas(result[i].ltp);
                 document.getElementById('netchng_' + token).innerHTML = Number(result[i].cng).toFixed(2);
-                if (diff != 0) {
+                if (diff !== 0) {
                     document.getElementById('netchng_' + token).className = class_name;
                 }
                 document.getElementById('percentagechange_' + token).innerHTML = Number(result[i].nc).toFixed(2);
@@ -172,13 +174,13 @@ function websocket_fun(mw_command) {
                 document.getElementById('old_netchng_' + token).innerHTML = Number(result[i].cng);
 
             }
-            if (result[i].name == 'if') {
+            if (result[i].name === 'if') {
                 console.log('if');
             }
 
             // checking connection $ getting new feed token
-            if (result[i].task == 'cn') {
-                if (result[i].ak == 'nk') {
+            if (result[i].task === 'cn') {
+                if (result[i].ak === 'nk') {
                     // trigger feed token refresher
                     console.log('feed token expired');
                     feed_token_fun('update');
@@ -195,13 +197,13 @@ function websocket_fun(mw_command) {
 
 
 
-    }
+    } ws.on('tick', receiveTick);
 }
 
 function watch_list_fun() {
 
 
-    let watchListArr = store.get('yamasha_watch_list_data1');
+    const watchListArr = store.get('yamasha_watch_list_data1');
 
     var mw_command = '';
 
@@ -271,13 +273,13 @@ function watch_list_fun() {
 }
 watch_list_fun();
 
-window.watch_list_action_fun = watch_list_action_fun;
+
 function watch_list_action_fun(action, data) {
-    
+
     console.log(store.get('yamasha_watch_list_data1'));
-    let old_arr = store.get('yamasha_watch_list_data1');
+    const old_arr = store.get('yamasha_watch_list_data1');
     let new_arr;
-    if (action == 'delete') {
+    if (action === 'delete') {
 
         if (data > -1) {
             old_arr.splice(data, 1); // 2nd parameter means remove one item only
@@ -285,7 +287,7 @@ function watch_list_action_fun(action, data) {
         new_arr = old_arr;
 
     }
-    if (action == 'add') {
+    if (action === 'add') {
         old_arr.push(data);
         new_arr = old_arr;
         d_none(byId('search_res_div'), true);
@@ -295,37 +297,37 @@ function watch_list_action_fun(action, data) {
     // console.log('actin');
     // console.log(store.get('yamasha_watch_list_data1'));
     watch_list_fun();
-}
+}window.watch_list_action_fun = watch_list_action_fun;
 
 function index_websocket_fun() {
 
 
-    let ws = new web_socket({
+    const ws = new web_socket({
         client_code: 'M101612',
         feed_token: store.get('yamasha_feed_token')
     });
- 
+
 
     ws.connect()
-    .then(() => {
-        ws.runScript('bse_cm|SENSEX&nse_cm|Nifty 50', 'sfi');// SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
+        .then(() => {
+            ws.runScript('bse_cm|SENSEX&nse_cm|Nifty 50', 'sfi');// SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
 
-        // setTimeout(function () {
-        //     ws.close();
-        // }, 3000);
-    });
+            // setTimeout(function () {
+            //     ws.close();
+            // }, 3000);
+        });
 
 
 
 
     //add callback method where you can manipulate socket data
-    ws.on('tick', receiveTick);
+  
 
     //user defined function
     function receiveTick(data) {
 
         // console.log(data);
-        if (data == 'Socket Closed') {
+        if (data === 'Socket Closed') {
             console.log('Socket Closed');
             index_websocket_fun();
             // location.reload()
@@ -342,27 +344,27 @@ function index_websocket_fun() {
 
         while (result.length > i) {
 
-            if (result[i].name == 'if') {
-                if (result[i].tvalue == 'NA') {
+            if (result[i].name === 'if') {
+                if (result[i].tvalue === 'NA') {
                     return false;
                 }
                 var token = result[i].tk;
                 // console.log(token);
-                if (token == 'Nifty 50') {
+                if (token === 'Nifty 50') {
                     token = 'nifty';
                 }
-                if (token == 'SENSEX') {
+                if (token === 'SENSEX') {
                     token = 'sensex';
                 }
                 // console.log(token);
 
                 // checking old net change 
 
-                let old_netchng_data = Number(document.getElementById('old_cng_' + token).innerHTML);
+                const old_netchng_data = Number(document.getElementById('old_cng_' + token).innerHTML);
 
                 // console.log(old_netchng_data)
 
-                let diff = Number(result[i].cng) - old_netchng_data;
+                const diff = Number(result[i].cng) - old_netchng_data;
                 let class_name;
                 switch (true) {
                     case diff > 0:
@@ -380,7 +382,7 @@ function index_websocket_fun() {
 
                 document.getElementById('iv_' + token).innerHTML = numberWithCommas(result[i].iv);
                 document.getElementById('cng_' + token).innerHTML = Number(result[i].cng).toFixed(2);
-                if (diff != 0) {
+                if (diff !== 0) {
                     document.getElementById('cng_' + token).className = class_name;
                 }
                 document.getElementById('nc_' + token).innerHTML = Number(result[i].nc).toFixed(2);
@@ -391,8 +393,8 @@ function index_websocket_fun() {
 
 
             // checking connection $ getting new feed token
-            if (result[i].task == 'cn') {
-                if (result[i].ak == 'nk') {
+            if (result[i].task === 'cn') {
+                if (result[i].ak === 'nk') {
                     // trigger feed token refresher
                     console.log('feed token expired');
                     feed_token_fun('update');
@@ -402,24 +404,24 @@ function index_websocket_fun() {
         }
 
 
-        // if (data.length == 0) {
+        // if (data.length === 0) {
         //     ws.close();
         // }
 
 
 
 
-    }
+    }  ws.on('tick', receiveTick);
 }
 index_websocket_fun();
-window.search_fun = search_fun;
-function search_fun() {
-    let query = byId('search_input').value;
 
-    let search_btn = byId('search_btn');
+function search_fun() {
+    const query = byId('search_input').value;
+
+    const search_btn = byId('search_btn');
     btn_loading(search_btn, 'Searching', true);
 
-    if (query == '') {
+    if (query === '') {
         btn_loading(search_btn, '', false);
         return false;
     }
@@ -432,18 +434,18 @@ function search_fun() {
     axios.post(api_base + 'script_master.php', bodyFormData)
         .then(function (response) {
             btn_loading(search_btn, '', false);
-            let res = response.data;
+            const res = response.data;
 
             console.log(res);
-            let search_res_div = byId('search_res_div');
+            const search_res_div = byId('search_res_div');
 
-            if (res.status == 0) {
+            if (res.status === 0) {
                 Toast.fire({
                     icon: 'error',
                     title: res.msg
                 });
             }
-            if (res.status == 1) {
+            if (res.status === 1) {
                 //    console.log(res.res_data.length);
                 if (res.res_data.length > 0) {
                     d_none(search_res_div, false);
@@ -467,4 +469,4 @@ function search_fun() {
         });
 
 
-}
+}window.search_fun = search_fun;

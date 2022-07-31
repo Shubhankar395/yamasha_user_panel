@@ -13,26 +13,26 @@ setUsernameInHeader();
      
 
 
-      let  main_wallet_span = byId('main_wallet_span');
-      let  main_trx_body = byId('main_trx_body');
+      const  main_wallet_span = byId('main_wallet_span');
+      const  main_trx_body = byId('main_trx_body');
     //   let  main_wallet_div = byId('main_wallet_div')
-      let  deposit_div = byId('deposit_div');
-      let  deposit_form = byId('deposit_form');
-      let  deposit_txn_amount = byId('deposit_txn_amount');
-      let  deposit_user_id = byId('deposit_user_id');
+      const  deposit_div = byId('deposit_div');
+      const  deposit_form = byId('deposit_form');
+      const  deposit_txn_amount = byId('deposit_txn_amount');
+      const  deposit_user_id = byId('deposit_user_id');
     //   let  verify_dep_btn = byId('verify_dep_btn')
     //   let   img_link = byId('img_link')
     //   let   deposit_err_div = byId('deposit_err_div')
-      let   withdraw_err_div = byId('withdraw_err_div');
-      let   main_wallet_btn_div = byId('main_wallet_btn_div');
-      let   main_trx_div = byId('main_trx_div');
-      let   withdraw_history_div = byId('withdraw_history_div');
-      let  withdraw_history_body = byId('withdraw_history_body');
-      let withdraw_div =byId('withdraw_div');
+      const   withdraw_err_div = byId('withdraw_err_div');
+      const   main_wallet_btn_div = byId('main_wallet_btn_div');
+      const   main_trx_div = byId('main_trx_div');
+      const   withdraw_history_div = byId('withdraw_history_div');
+      const  withdraw_history_body = byId('withdraw_history_body');
+      const withdraw_div =byId('withdraw_div');
       
-      let  amt_val = byId('amt_val');
-      let  wm_select = byId('wm_select');
-      let  withdraw_btn = byId('withdraw_btn');
+      const  amt_val = byId('amt_val');
+      const  wm_select = byId('wm_select');
+      const  withdraw_btn = byId('withdraw_btn');
 
         // reading query
         const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -41,14 +41,14 @@ setUsernameInHeader();
         // required verification
         if (params.trx_status) {
 
-            if (params.trx_status == 'TXN_SUCCESS') {
+            if (params.trx_status === 'TXN_SUCCESS') {
                 Swal.fire({
                     icon: 'success',
                     title: 'Transaction Successful 😍',
                    
                   
                 });
-            }else if(params.trx_status == 'TXN_FAILURE') {
+            }else if(params.trx_status === 'TXN_FAILURE') {
                 Swal.fire({
                     icon: 'error',
                     title: 'Transaction Failed',
@@ -68,19 +68,19 @@ setUsernameInHeader();
 
             axios.post(api_base + 'wallets.php', bodyFormData)
                 .then(function (response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
                         main_wallet_span.innerHTML = response.data.MAIN;
                     }
-                    if (res.status == -1) {
+                    if (res.status === -1) {
                         logOut();
                     }
 
@@ -99,16 +99,16 @@ setUsernameInHeader();
 
             axios.post(api_base + 'main_trx.php', bodyFormData)
                 .then(function (response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
                         let     res_index = 0;
                         // console.log(response.data.res_data[res_index]);
                         if (response.data.res_data.length > 0) {
@@ -155,16 +155,16 @@ setUsernameInHeader();
             bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
             axios.post(api_base + 'withdraw_history.php', bodyFormData)
                 .then(function (response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
                         let     res_index = 0;
                         withdraw_history_body.innerHTML = '';
                         // console.log(response.data.res_data[res_index]);
@@ -173,17 +173,17 @@ setUsernameInHeader();
 
 
                                 let STATUS , cancel_btn_class;
-                                if (response.data.res_data[res_index].STATUS == 0) {
+                                if (response.data.res_data[res_index].STATUS === 0) {
                                     STATUS = 'Pending';
                                     cancel_btn_class = '';
 
                                 }
-                                if (response.data.res_data[res_index].STATUS == 1) {
+                                if (response.data.res_data[res_index].STATUS === 1) {
                                     STATUS = 'Completed';
                                     cancel_btn_class = 'd-none';
 
                                 }
-                                if (response.data.res_data[res_index].STATUS == 2) {
+                                if (response.data.res_data[res_index].STATUS === 2) {
                                     STATUS = 'Cancelled';
                                     cancel_btn_class = 'd-none';
                                 }
@@ -264,7 +264,7 @@ setUsernameInHeader();
         //                     depositInitFun(false)
         //                 }, 5 * 1000);
         //             }
-        //             if (res.status == -1) {
+        //             if (res.status === -1) {
         //                 logOut()
         //             }
 
@@ -284,33 +284,33 @@ setUsernameInHeader();
 
             axios.post(api_base + 'clients_data1.php', bodyFormData)
                 .then(function (response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
                         wm_select.innerHTML = '';
-                        if (response.data.UPI_ID != '') {
+                        if (response.data.UPI_ID !== '') {
                             wm_select.innerHTML += `<option id="upi_select" value="upi">${response.data.UPI_ID}</option>`;
                         }
 
 
                         // bank selection
-                        if (response.data.BANK_NAME != '' && response.data.BANK_AC_NUM != '') {
+                        if (response.data.BANK_NAME !== '' && response.data.BANK_AC_NUM !== '') {
                             wm_select.innerHTML += `<option id="bank_select" value="bank">${response.data.BANK_NAME}(${response.data.BANK_AC_NUM})</option>`;
                         }
 
-                        if (response.data.UPI_ID == '' && response.data.BANK_NAME == '') {
+                        if (response.data.UPI_ID === '' && response.data.BANK_NAME === '') {
                             wm_select.innerHTML += `<option value=""> No Data Found</option>`;
                         }
 
                     }
-                    if (res.status == -1) {
+                    if (res.status === -1) {
                         logOut();
                     }
 
@@ -322,21 +322,21 @@ setUsernameInHeader();
                 });
 
         }
-window.depositInitFun=depositInitFun;
+
         function depositInitFun(status) {
-            if (status == true) {
+            if (status === true) {
                 d_none(main_wallet_btn_div, true);
                 d_none(deposit_div, false);
                 d_none(main_trx_div, true);
             }
-            if (status == false) {
+            if (status === false) {
                 d_none(main_wallet_btn_div, false);
                 d_none(deposit_div, true);
                 d_none(main_trx_div, false);
             }
 
-        }
-window.deposit_fun=deposit_fun;
+        }window.depositInitFun=depositInitFun;
+
         function deposit_fun() {
             if (deposit_txn_amount.value < 1) {
                 return false;
@@ -344,25 +344,25 @@ window.deposit_fun=deposit_fun;
             deposit_form.action = api_base + 'paytm/pgRedirect.php';
             deposit_user_id.value = store.get('yamasha_user_data1').ID;
             deposit_form.submit();
-        }
-window.withdrawInitFun=withdrawInitFun;
+        }window.deposit_fun=deposit_fun;
+
         function withdrawInitFun(status) {
-            if (status == true) {
+            if (status === true) {
                 d_none(main_wallet_btn_div, true);
                 d_none(withdraw_div, false);
                 d_none(main_trx_div, true);
                 d_none(withdraw_history_div, false);
                 wm_select_fun();
             }
-            if (status == false) {
+            if (status === false) {
                 d_none(main_wallet_btn_div, false);
                 d_none(withdraw_div, true);
                 d_none(main_trx_div, false);
                 d_none(withdraw_history_div, true);
             }
 
-        }
-window.withdraw_fun=withdraw_fun;
+        }window.withdrawInitFun=withdrawInitFun;
+
         function withdraw_fun() {
             btn_loading(withdraw_btn, 'Processing...', true);
             // validating inputs
@@ -371,7 +371,7 @@ window.withdraw_fun=withdraw_fun;
                 btn_loading(withdraw_btn, 'Processing...', false);
                 return false;
             }
-            if ((wm_select.value != 'bank') & (wm_select.value != 'upi')) {
+            if ((wm_select.value !== 'bank') & (wm_select.value !== 'upi')) {
                 bootstrapAlert(withdraw_err_div, 'invalid Withdraw Method', 'danger', 3);
                 btn_loading(withdraw_btn, 'Processing...', false);
                 return false;
@@ -385,15 +385,15 @@ window.withdraw_fun=withdraw_fun;
             axios.post(api_base + 'withdraw_request.php', bodyFormData)
                 .then(function (response) {
                     btn_loading(withdraw_btn, 'Processing...', false);
-                  let  res = response.data;
+                  const  res = response.data;
                     console.log(res);
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (res.status == 1) {
+                    if (res.status === 1) {
                         Swal.fire({
                             title: 'Withdraw requested successfully',
                             text: 'It will Reflect in your account in 2 working Days !!!',
@@ -413,18 +413,18 @@ window.withdraw_fun=withdraw_fun;
                         fetchWallet();
                         withdrawHistoryFun();
                     }
-                    if (res.status == -1) {
+                    if (res.status === -1) {
                         logOut();
                     }
                 })
                 .catch(function (error) {
                     console.log(error);
                 });
-        }
-window.withdraw_cancel_fun=withdraw_cancel_fun;
+        }window.withdraw_fun=withdraw_fun;
+
         function withdraw_cancel_fun(SN) {
             // api call
-          let  cw_btn = byId('cw_btn' + SN);
+          const  cw_btn = byId('cw_btn' + SN);
             btn_loading(cw_btn, '...', true);
             var bodyFormData = new URLSearchParams();
             bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
@@ -436,9 +436,9 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
                     btn_loading(cw_btn, '...', false);
                     fetchWallet();
                     withdrawHistoryFun();
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         bootstrapAlert(withdraw_err_div, res.msg, 'danger', 3);
                         Swal.fire({
                             title: 'Error',
@@ -452,7 +452,7 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
                         });
 
                     }
-                    if (res.status == 1) {
+                    if (res.status === 1) {
                         Swal.fire({
                             title: 'Withdraw Cancelled successfully',
                             text: 'Withdraw amount is refunded in your wallet',
@@ -465,7 +465,7 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
                         });
 
                     }
-                    if (res.status == -1) {
+                    if (res.status === -1) {
                         logOut();
                     }
                 })
@@ -473,5 +473,5 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
                     console.log(error);
                 });
 
-        }
+        }window.withdraw_cancel_fun=withdraw_cancel_fun;
    

@@ -11,38 +11,38 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
 
         // getting elements by id 
         // step1
-     let   stepOneDiv = byId('stepOneDiv');
-     let   stepOneBtn = byId('stepOneBtn');
-     let   MOB_NUMBER = byId('MOB_NUMBER');
-     let   stepOneErrDiv = byId('stepOneErrDiv');
+     const   stepOneDiv = byId('stepOneDiv');
+     const   stepOneBtn = byId('stepOneBtn');
+     const   MOB_NUMBER = byId('MOB_NUMBER');
+     const   stepOneErrDiv = byId('stepOneErrDiv');
 
         //step2
-        let    stepTwoDiv = byId('stepTwoDiv');
-        let   MOB_OTP1 = byId('MOB_OTP1');
-        let   MOB_OTP2 = byId('MOB_OTP2');
-        let   MOB_OTP3 = byId('MOB_OTP3');
-        let  MOB_OTP4 = byId('MOB_OTP4');
+        const    stepTwoDiv = byId('stepTwoDiv');
+        const   MOB_OTP1 = byId('MOB_OTP1');
+        const   MOB_OTP2 = byId('MOB_OTP2');
+        const   MOB_OTP3 = byId('MOB_OTP3');
+        const  MOB_OTP4 = byId('MOB_OTP4');
         // let  stepTwoBtn = byId('stepTwoBtn');
         // let  stepTwoErrDiv = byId('stepTwoErrDiv');
-        let  ID2 = byId('ID2');
+        const  ID2 = byId('ID2');
 
         //step3
-        let   stepThreeDiv = byId('stepThreeDiv');
-        let   NAME = byId('NAME');
-        let  ALT_NUM = byId('ALT_NUM');
-        let  DOB = byId('DOB');
-        let  DOC_TYPE = byId('DOC_TYPE');
-        let  DOC_ID = byId('DOC_ID');
-        let  MOB_NUMBER2 = byId('MOB_NUMBER2');
-        let  EMAIL = byId('EMAIL');
-        let  AADHAR_NUM = byId('AADHAR_NUM');
-        let  CITY = byId('CITY');
-        let ADDRESS = byId('ADDRESS');
-        let  PASS = byId('PASS');
-        let  PASS2 = byId('PASS2');
-        let  ref_code = byId('ref_code');
+        const   stepThreeDiv = byId('stepThreeDiv');
+        const   NAME = byId('NAME');
+        const  ALT_NUM = byId('ALT_NUM');
+        const  DOB = byId('DOB');
+        const  DOC_TYPE = byId('DOC_TYPE');
+        const  DOC_ID = byId('DOC_ID');
+        const  MOB_NUMBER2 = byId('MOB_NUMBER2');
+        const  EMAIL = byId('EMAIL');
+        const  AADHAR_NUM = byId('AADHAR_NUM');
+        const  CITY = byId('CITY');
+        const ADDRESS = byId('ADDRESS');
+        const  PASS = byId('PASS');
+        const  PASS2 = byId('PASS2');
+        const  ref_code = byId('ref_code');
         // let   stepThreeBtn = byId('stepThreeBtn');
-        let  stepThreeErrDiv = byId('stepThreeErrDiv');
+        const  stepThreeErrDiv = byId('stepThreeErrDiv');
 
         // checking query
         // reading query
@@ -50,7 +50,7 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
             get: (searchParams, prop) => searchParams.get(prop),
         });
 
-        let refer = params.refer;
+        const refer = params.refer;
         console.log(refer);
         ref_code.value = refer;
         ref_code.disabled = true;
@@ -59,11 +59,11 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
 
 
         // api functions
-        window.stepOneFun=stepOneFun;
+   
         function stepOneFun() {
             btn_loading(stepOneBtn, 'Loading...', true);
             // validating
-            if (MOB_NUMBER.value.length != 10) {
+            if (MOB_NUMBER.value.length !== 10) {
 
                 bootstrapAlert(stepOneErrDiv, 'Enter valid 10 Digit Number', 'danger', 3);
                 return false;
@@ -78,17 +78,17 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
             bodyFormData.append('step', 'one');
             axios.post(api_base + 'register.php', bodyFormData)
                 .then(function (response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
                     btn_loading(stepOneBtn, 'Loading...', false);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
 
 
                         bootstrapAlert(stepOneErrDiv, response.data.msg, 'danger', 3);
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         stepOneDiv.classList.add('d-none');
                         stepTwoDiv.classList.remove('d-none');
@@ -103,8 +103,8 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
                 .catch(function (error) {
                     console.log(error);
                 });
-        }
-        window.stepTwoFun=stepTwoFun;
+        }     window.stepOneFun=stepOneFun;
+       
         function stepTwoFun() {
 
 
@@ -121,10 +121,10 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
             axios.post(api_base + 'register.php', bodyFormData)
                 .then(function (response) {
                     
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
                         Toast.fire({
                             icon: 'error',
@@ -133,7 +133,7 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
 
                         
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         stepTwoDiv.classList.add('d-none');
                         stepThreeDiv.classList.remove('d-none');
@@ -146,17 +146,17 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
                 .catch(function (error) {
                     console.log(error);
                 });
-        }
-window.stepThreeFun=stepThreeFun;
+        } window.stepTwoFun=stepTwoFun;
+
         function stepThreeFun() {
 
             // validations
-            if (PASS.value != PASS2.value) {
+            if (PASS.value !== PASS2.value) {
 
                 bootstrapAlert(stepThreeErrDiv, 'Confirmation Password not matching', 'danger', 3);
                 return false;
             }
-            if (ALT_NUM.value.length != 10) {
+            if (ALT_NUM.value.length !== 10) {
 
                 bootstrapAlert(stepThreeErrDiv, 'Enter valid 10 Digit Alternate Number', 'danger', 3);
                 return false;
@@ -199,10 +199,10 @@ window.stepThreeFun=stepThreeFun;
             axios.post(api_base + 'register.php', bodyFormData)
                 .then(function (response) {
             
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
 
                         Toast.fire({
@@ -211,11 +211,11 @@ window.stepThreeFun=stepThreeFun;
                         });
 
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         bootstrapAlert(stepThreeErrDiv, response.data.msg, 'success', 3);
                    
-                     let   url = './email_action.html?rv=' + response.data.ID;
+                     const   url = './email_action.html?rv=' + response.data.ID;
                         location.href = url;
 
                     }
@@ -225,5 +225,5 @@ window.stepThreeFun=stepThreeFun;
                 .catch(function (error) {
                     console.log(error);
                 });
-        }
+        }window.stepThreeFun=stepThreeFun;
     

@@ -17,29 +17,29 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
 
         // getting elements by id 
         // step1
-    let    stepOneDiv = byId('stepOneDiv');
-    let   stepOneBtn = byId('stepOneBtn');
-    let    MOB_NUMBER = byId('MOB_NUMBER');
-    let    stepOneErrDiv = byId('stepOneErrDiv');
+    const    stepOneDiv = byId('stepOneDiv');
+    const   stepOneBtn = byId('stepOneBtn');
+    const    MOB_NUMBER = byId('MOB_NUMBER');
+    const    stepOneErrDiv = byId('stepOneErrDiv');
         
         //step2
-        let   stepTwoDiv = byId('stepTwoDiv');
-        let   MOB_OTP1 = byId('MOB_OTP1');
-        let   MOB_OTP2 = byId('MOB_OTP2');
-        let   MOB_OTP3 = byId('MOB_OTP3');
-        let   MOB_OTP4 = byId('MOB_OTP4');
+        const   stepTwoDiv = byId('stepTwoDiv');
+        const   MOB_OTP1 = byId('MOB_OTP1');
+        const   MOB_OTP2 = byId('MOB_OTP2');
+        const   MOB_OTP3 = byId('MOB_OTP3');
+        const   MOB_OTP4 = byId('MOB_OTP4');
         // let   stepTwoBtn = byId('stepTwoBtn');
-        let   stepTwoErrDiv = byId('stepTwoErrDiv');
-        let  ID2 = byId('ID2');
+        const   stepTwoErrDiv = byId('stepTwoErrDiv');
+        const  ID2 = byId('ID2');
 
         //step3
-        let  stepThreeDiv = byId('stepThreeDiv');
+        const  stepThreeDiv = byId('stepThreeDiv');
 
-        let   PASS = byId('PASS');
-        let   PASS2 = byId('PASS2');
+        const   PASS = byId('PASS');
+        const   PASS2 = byId('PASS2');
 
         // let   stepThreeBtn = byId('stepThreeBtn');
-        let  stepThreeErrDiv = byId('stepThreeErrDiv');
+        const  stepThreeErrDiv = byId('stepThreeErrDiv');
 
     
 
@@ -51,7 +51,7 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
         function stepOneFun() {
             btn_loading(stepOneBtn, 'Loading...', true);
             // validating
-            if (MOB_NUMBER.value.length != 10) {
+            if (MOB_NUMBER.value.length !== 10) {
 
                 bootstrapAlert(stepOneErrDiv, 'Enter valid 10 Digit Number', 'danger', 3);
                 return false;
@@ -64,17 +64,17 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
             bodyFormData.append('step', 'one');
             axios.post(api_base+'forgot_password.php', bodyFormData)
                 .then(function(response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
                     btn_loading(stepOneBtn, 'Loading...', false);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
 
 
                         bootstrapAlert(stepOneErrDiv, response.data.msg, 'danger', 3);
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         stepOneDiv.classList.add('d-none');
                         stepTwoDiv.classList.remove('d-none');
@@ -106,16 +106,16 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
             bodyFormData.append('step', 'two');
             axios.post(api_base+'forgot_password.php', bodyFormData)
                 .then(function(response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
 
 
                         bootstrapAlert(stepTwoErrDiv, response.data.msg, 'danger', 3);
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         stepTwoDiv.classList.add('d-none');
                         stepThreeDiv.classList.remove('d-none');
@@ -134,7 +134,7 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
         function stepThreeFun() {
 
             // validations
-            if (PASS.value != PASS2.value) {
+            if (PASS.value !== PASS2.value) {
 
                 bootstrapAlert(stepThreeErrDiv, 'Confirmation Password not matching', 'danger', 3);
                 return false;
@@ -157,16 +157,16 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
             bodyFormData.append('step', 'three');
             axios.post(api_base+'forgot_password.php', bodyFormData)
                 .then(function(response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
 
 
 
                         bootstrapAlert(stepThreeErrDiv, response.data.msg, 'danger', 3);
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
 
                         bootstrapAlert(stepThreeErrDiv, response.data.msg, 'success', 3);
                          
