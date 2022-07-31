@@ -92,7 +92,7 @@ function email_action_fun(id, action) {
 
                 setTimeout(() => {
                     location.replace('index.html');
-                }, 3000);
+                }, 1000);
             }
         })
         .catch(function (error) {

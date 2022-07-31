@@ -47,7 +47,7 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
 
 
         // api functions
-        window.stepOneFun=stepOneFun;
+        
         function stepOneFun() {
             btn_loading(stepOneBtn, 'Loading...', true);
             // validating
@@ -89,8 +89,8 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
                 .catch(function(error) {
                     console.log(error);
                 });
-        }
-window.stepTwoFun=stepTwoFun;
+        }window.stepOneFun=stepOneFun;
+
         function stepTwoFun() {
 
 
@@ -128,8 +128,9 @@ window.stepTwoFun=stepTwoFun;
                 .catch(function(error) {
                     console.log(error);
                 });
-        }
-window.stepThreeFun=stepThreeFun;
+        }window.stepTwoFun=stepTwoFun;
+      
+    
         function stepThreeFun() {
 
             // validations
@@ -181,5 +182,4 @@ window.stepThreeFun=stepThreeFun;
                 .catch(function(error) {
                     console.log(error);
                 });
-        }
-    
+        }  window.stepThreeFun=stepThreeFun;
