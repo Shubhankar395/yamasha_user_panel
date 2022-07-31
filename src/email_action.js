@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 // import { DataTable } from "simple-datatables";
 // import moment from 'moment';
 import { api_base } from './assets/modules/config.js';
-import { byId, d_none } from './assets/modules/yamasha_utility.js';
+import { byId } from './assets/modules/yamasha_utility.js';
 
 
 
