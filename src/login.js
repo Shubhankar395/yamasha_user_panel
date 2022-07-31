@@ -18,6 +18,16 @@ function errorMessage(msg) {
 }
 
 function login() {
+
+
+    
+            // eslint-disable-next-line no-useless-escape
+            if (!MOB_NUMBER.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+
+                
+                errorMessage('Enter valid Email');
+                return false;
+            }
     btn_loading(login_btn, 'Loading...', true);
     var bodyFormData = new URLSearchParams();
 
