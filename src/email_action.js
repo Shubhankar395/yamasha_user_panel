@@ -9,7 +9,7 @@ import { byId } from './assets/modules/yamasha_utility.js';
 
 
 
-// getting elements by id
+// getting elements by id  
 
 
 
