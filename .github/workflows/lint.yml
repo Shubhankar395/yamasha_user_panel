@@ -3,9 +3,9 @@ name: Lint
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
-  push:
-    branches:
-      - main
+ # push:
+  #  branches:
+   #   - main
   pull_request:
     branches:
       - main
@@ -34,3 +34,4 @@ jobs:
           eslint: true
           auto_fix: true
           continue_on_error: false
+          neutral_check_on_warning: true
