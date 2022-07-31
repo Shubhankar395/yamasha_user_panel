@@ -3,12 +3,12 @@ name: Lint
 on:
   # Trigger the workflow on push or pull request,
   # but only for the main branch
-  push:
-    branches:
-      - dev
+ # push:
+  #  branches:
+   #   - main
   pull_request:
     branches:
-      - dev
+      - main
 
 jobs:
   run-linters:
@@ -32,3 +32,6 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
+          auto_fix: true
+          continue_on_error: false
+          neutral_check_on_warning: true
