@@ -74,7 +74,7 @@ function fetch_advisory_fun() {
 }
 fetch_advisory_fun();
 
-window.client_alerts_data_fun = client_alerts_data_fun;
+
 function client_alerts_data_fun(action) {
     var bodyFormData = new URLSearchParams();
     bodyFormData.append('action', action);
@@ -134,4 +134,5 @@ function client_alerts_data_fun(action) {
             console.log(error);
         });
 }
+window.client_alerts_data_fun = client_alerts_data_fun;
 client_alerts_data_fun('advisory_get');

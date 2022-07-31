@@ -13,9 +13,10 @@
     "lint": "eslint ./src/ --fix",
     "clean": "node clean.js",
     "dev": "eslint ./src/ && node clean.js && parcel watch --public-url ./",
-    "build": "node clean.js && parcel build --public-url ./"
+    "build": "eslint ./src/ && node clean.js && parcel build --public-url ./"
   },
   "eslintIgnore": [
+    ".github",
     "/src/assets",
     "/src/includes",
     "watch_list2.js",

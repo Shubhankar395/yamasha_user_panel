@@ -1,4 +1,4 @@
-
+'use strict';
 import axios from 'axios';
 import store from 'store';
 import Swal from 'sweetalert2';
@@ -11,7 +11,10 @@ window.logOut = logOut;
 setUsernameInHeader();
 
 
+let a =123;
 
+ a='abc';
+ a;
 
 
 
