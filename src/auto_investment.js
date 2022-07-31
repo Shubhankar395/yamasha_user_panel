@@ -15,17 +15,17 @@ setUsernameInHeader();
 		loginCheck();
 		setUsernameInHeader();
 
-	let	ai_locked_span = byId('ai_locked_span');
-	let	ai_profit_span = byId('ai_profit_span');
-	let	ai_total_span = byId('ai_total_span');
-	let	ai_action_div = byId('ai_action_div');
-	let	amt_val = byId('amt_val');
+	const	ai_locked_span = byId('ai_locked_span');
+	const	ai_profit_span = byId('ai_profit_span');
+	const	ai_total_span = byId('ai_total_span');
+	const	ai_action_div = byId('ai_action_div');
+	const	amt_val = byId('amt_val');
 	// let	i_i_n_btn = byId('i_i_n_btn');
 	// let	d_i_n_btn = byId('d_i_n_btn');
 	// let	r_p_n_btn = byId('r_p_n_btn');
-	let	ai_action_init_div = byId('ai_action_init_div');
-	let	ai_action_err_div = byId('ai_action_err_div');
-    let ai_trx_body = byId('ai_trx_body');
+	const	ai_action_init_div = byId('ai_action_init_div');
+	const	ai_action_err_div = byId('ai_action_err_div');
+    const ai_trx_body = byId('ai_trx_body');
 
 		//updating wallets
 		function fetchWallet() {
@@ -35,16 +35,16 @@ setUsernameInHeader();
 			bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
 
 			axios.post(api_base+'wallets.php', bodyFormData)
-				.then(function(response) { let res = response.data;
+				.then(function(response) { const res = response.data;
 					console.log(response.data);
 
-					if (response.data.status == 0) {
+					if (response.data.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
 					}
-					if (response.data.status == 1) {
+					if (response.data.status === 1) {
 						ai_locked_span.innerHTML = Number(response.data.AI_LOCKED).toFixed(2);
 						ai_profit_span.innerHTML = Number(response.data.AI_PROFIT).toFixed(2);
 						ai_total_span.innerHTML = Number(Number(response.data.AI_LOCKED) + Number(response.data.AI_PROFIT)).toFixed(2);
@@ -66,16 +66,16 @@ setUsernameInHeader();
             axios.post(api_base+'ai_trx.php', bodyFormData)
                 .then(function(response) { 
                 
-                   let res = response.data;
+                   const res = response.data;
                     console.log(response.data);
 
-                    if (response.data.status == 0) {
+                    if (response.data.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (response.data.status == 1) {
+                    if (response.data.status === 1) {
                         let  res_index = 0;
                         // console.log(response.data.res_data[res_index]);
                         if (response.data.res_data.length > 0) {
@@ -114,13 +114,13 @@ setUsernameInHeader();
 
         }
         aiTrxFun();
-window.ai_action_init_fun=ai_action_init_fun;
+
 		function ai_action_init_fun(btn_id) {
 			d_none(ai_action_div, false);
 			d_none(btn_id, false);
 			d_none(ai_action_init_div, true);
-		}
-window.ai_action_fun=ai_action_fun;
+		}window.ai_action_init_fun=ai_action_init_fun;
+
 		function ai_action_fun(action) {
 			var bodyFormData = new URLSearchParams();
 			bodyFormData.append('action', action);
@@ -132,10 +132,10 @@ window.ai_action_fun=ai_action_fun;
 				.then(function(response) {
 					console.log(response.data);
 
-					if (response.data.status == 0) {
+					if (response.data.status === 0) {
 						bootstrapAlert(ai_action_err_div, response.data.msg, 'danger', 3);
 					}
-					if (response.data.status == 1) {
+					if (response.data.status === 1) {
 						bootstrapAlert(ai_action_err_div, response.data.msg, 'success', 3);
 						fetchWallet();
 						ai_trx_body.innerHTML ='';
@@ -148,4 +148,4 @@ window.ai_action_fun=ai_action_fun;
 					console.log(error);
 				});
 		}
-	
+		window.ai_action_fun=ai_action_fun;

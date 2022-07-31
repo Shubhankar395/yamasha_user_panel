@@ -68,7 +68,7 @@ let url = new URL( './register.html',location.href);
                    let res = response.data;
                     console.log(res);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
@@ -98,13 +98,13 @@ let url = new URL( './register.html',location.href);
                   let  res = response.data;
                     console.log(res);
 
-                    if (res.status == 0) {
+                    if (res.status === 0) {
                         Toast.fire({
                             icon: 'error',
                             title: res.msg
                         });
                     }
-                    if (res.status == 1) {
+                    if (res.status === 1) {
 
 
                         if (res.res_data.length > 0) {
