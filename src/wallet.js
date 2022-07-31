@@ -367,12 +367,12 @@ window.withdraw_fun=withdraw_fun;
             btn_loading(withdraw_btn, 'Processing...', true);
             // validating inputs
             if (amt_val.value < 100) {
-                bootstrapAlert(withdraw_err_div, "Withdraw amount must be 100+", "danger", 3);
+                bootstrapAlert(withdraw_err_div, 'Withdraw amount must be 100+', 'danger', 3);
                 btn_loading(withdraw_btn, 'Processing...', false);
                 return false;
             }
             if ((wm_select.value != 'bank') & (wm_select.value != 'upi')) {
-                bootstrapAlert(withdraw_err_div, "invalid Withdraw Method", "danger", 3);
+                bootstrapAlert(withdraw_err_div, 'invalid Withdraw Method', 'danger', 3);
                 btn_loading(withdraw_btn, 'Processing...', false);
                 return false;
             }
@@ -406,7 +406,7 @@ window.withdraw_fun=withdraw_fun;
                             /* Read more about isConfirmed, isDenied below */
                             if (result.isConfirmed) {
 
-                                location.href = "./index.html";
+                                location.href = './index.html';
                             }
                         });
 
@@ -439,7 +439,7 @@ window.withdraw_cancel_fun=withdraw_cancel_fun;
                    let res = response.data;
                     console.log(res);
                     if (res.status == 0) {
-                        bootstrapAlert(withdraw_err_div, res.msg, "danger", 3);
+                        bootstrapAlert(withdraw_err_div, res.msg, 'danger', 3);
                         Swal.fire({
                             title: 'Error',
                             text: res.msg,

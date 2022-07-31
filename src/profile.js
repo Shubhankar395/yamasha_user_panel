@@ -98,7 +98,7 @@ setUsernameInHeader();
 
                     }
                     if (res.status == -1) {
-                        console.log('logout triggred');
+                        console.log('logout triggered');
 						logOut();
 					}
 
@@ -144,11 +144,11 @@ setUsernameInHeader();
 
                         /* validation  */
 
-                        if(response.data.BANK_AC_NUM =='' &&  response.data.UPI_ID=="" ){
+                        if(response.data.BANK_AC_NUM =='' &&  response.data.UPI_ID=='' ){
                             d_none(BANK_edit_btn,false);
                         }
 
-                        if (response.data.NOMINEE_NAME != "") {
+                        if (response.data.NOMINEE_NAME != '') {
                             d_none(nominee_add_div, true);
                             d_none(nominee_display_div, false);
 
@@ -181,8 +181,8 @@ setUsernameInHeader();
             document.getElementById(input_id).removeAttribute('readonly');
 
             //   console.log(document.getElementById(input_id).classList)
-            document.getElementById(edit_btn_id).classList.add("d-none");
-            document.getElementById(submit_btn_id).classList.remove("d-none");
+            document.getElementById(edit_btn_id).classList.add('d-none');
+            document.getElementById(submit_btn_id).classList.remove('d-none');
 
         }
 
@@ -200,16 +200,16 @@ setUsernameInHeader();
                 ac_num_input.removeAttribute('readonly');
                 ifsc_input.removeAttribute('readonly');
                 upi_input.removeAttribute('readonly');
-                edit_btn.classList.add("d-none");
-                submit_btn.classList.remove("d-none");
+                edit_btn.classList.add('d-none');
+                submit_btn.classList.remove('d-none');
             }
             if (status == false) {
                 name_input.setAttribute('readonly', '');
                 ac_num_input.setAttribute('readonly', '');
                 ifsc_input.setAttribute('readonly', '');
                 upi_input.setAttribute('readonly', '');
-                edit_btn.classList.remove("d-none");
-                submit_btn.classList.add("d-none");
+                edit_btn.classList.remove('d-none');
+                submit_btn.classList.add('d-none');
             }
 
 
@@ -219,8 +219,8 @@ window.add_nominee=add_nominee;
 
             let   nominee_submit_div = document.getElementById('nominee_submit_div');
             nominee_add_div = document.getElementById('nominee_add_div');
-            nominee_submit_div.classList.remove("d-none");
-            nominee_add_div.classList.add("d-none");
+            nominee_submit_div.classList.remove('d-none');
+            nominee_add_div.classList.add('d-none');
         }
 
         function prof_processing(id_base, status) {
@@ -264,8 +264,8 @@ window.prof_submit=prof_submit;
 
                     if (response.data.status == 1) {
                         document.getElementById(input_id).setAttribute('readonly', '');
-                        document.getElementById(submit_btn_id).classList.add("d-none");
-                        document.getElementById(edit_btn_id).classList.remove("d-none");
+                        document.getElementById(submit_btn_id).classList.add('d-none');
+                        document.getElementById(edit_btn_id).classList.remove('d-none');
 
                     } else {
                       

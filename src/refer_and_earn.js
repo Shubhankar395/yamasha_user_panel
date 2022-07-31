@@ -28,7 +28,7 @@ setUsernameInHeader();
         let   refer_link = byId('refer_link');
 
        
-let url = new URL( './register.html',location.href)
+let url = new URL( './register.html',location.href);
         // if (location.host == '192.168.100.5') {
         //     url = 'http://192.168.100.5/yamasha_v1/user_panel/register.html';
         // } else {
@@ -43,17 +43,17 @@ let url = new URL( './register.html',location.href)
             const showReferralsList = document.getElementById('refList');
             const viewRef = document.getElementById('referrals');
 
-            showReferralsList.style.display = "block";
-            viewRef.style.display = "none";
+            showReferralsList.style.display = 'block';
+            viewRef.style.display = 'none';
 
         };
         window.showReferrals=showReferrals;
      
         const show = () => {
             const hide = document.getElementById('hide');
-            const d_show = document.getElementById("show");
-            d_show.style.display = "block";
-            hide.style.display = "none";
+            const d_show = document.getElementById('show');
+            d_show.style.display = 'block';
+            hide.style.display = 'none';
         };
         window.show=show;
 
@@ -81,7 +81,7 @@ let url = new URL( './register.html',location.href)
 
                 })
                 .catch(function(error) {
-                    console.log(error);
+                    console.log(error); 
                 });
         }
         fetchWallet();

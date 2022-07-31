@@ -25,7 +25,7 @@ console.log(store.get('yamasha_feed_token'));
 
 
 function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 function feed_token_fun(action) {
@@ -95,14 +95,14 @@ function websocket_fun(mw_command) {
     // let ws = new web_socket('M101612', store.get('yamasha_feed_token'));
 
     let ws = new web_socket({
-        client_code: "M101612",
+        client_code: 'M101612',
         feed_token: store.get('yamasha_feed_token')
     });
  
     
     ws.connect()
         .then(() => {
-            ws.runScript(mw_command, "mw"); // SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
+            ws.runScript(mw_command, 'mw'); // SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
     
             // setTimeout(function () {
             //     ws.close();
@@ -301,14 +301,14 @@ function index_websocket_fun() {
 
 
     let ws = new web_socket({
-        client_code: "M101612",
+        client_code: 'M101612',
         feed_token: store.get('yamasha_feed_token')
     });
  
 
     ws.connect()
     .then(() => {
-        ws.runScript('bse_cm|SENSEX&nse_cm|Nifty 50', "sfi");// SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
+        ws.runScript('bse_cm|SENSEX&nse_cm|Nifty 50', 'sfi');// SCRIPT: nse_cm|2885, mcx_fo|222900  TASK: mw|sfi|dp
 
         // setTimeout(function () {
         //     ws.close();

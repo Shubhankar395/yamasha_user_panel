@@ -6,15 +6,21 @@
     "src/index.html",
     "src/login.html",
     "src/invest_whatsapp.html",
-    "src/ip_action.html",
     "src/email_action.html"
   ],
   "scripts": {
     "start": "npm run dev",
+    "lint": "eslint ./src/ --fix",
     "clean": "node clean.js",
-    "dev": "node clean.js && parcel watch --public-url ./",
+    "dev": "eslint ./src/ && node clean.js && parcel watch --public-url ./",
     "build": "node clean.js && parcel build --public-url ./"
   },
+  "eslintIgnore": [
+    "/src/assets",
+    "/src/includes",
+    "watch_list2.js",
+    "ip_action.js"
+  ],
   "dependencies": {
     "axios": "^0.27.2",
     "clipboard": "^2.0.11",

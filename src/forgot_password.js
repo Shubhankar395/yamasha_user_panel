@@ -49,11 +49,11 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
         // api functions
         window.stepOneFun=stepOneFun;
         function stepOneFun() {
-            btn_loading(stepOneBtn, "Loading...", true);
+            btn_loading(stepOneBtn, 'Loading...', true);
             // validating
             if (MOB_NUMBER.value.length != 10) {
 
-                bootstrapAlert(stepOneErrDiv, "Enter valid 10 Digit Number", 'danger', 3);
+                bootstrapAlert(stepOneErrDiv, 'Enter valid 10 Digit Number', 'danger', 3);
                 return false;
             }
 
@@ -66,7 +66,7 @@ import { byId, btn_loading, bootstrapAlert } from './assets/modules/yamasha_util
                 .then(function(response) {
                    let res = response.data;
                     console.log(res);
-                    btn_loading(stepOneBtn, "Loading...", false);
+                    btn_loading(stepOneBtn, 'Loading...', false);
 
                     if (response.data.status == 0) {
 
@@ -135,7 +135,7 @@ window.stepThreeFun=stepThreeFun;
             // validations
             if (PASS.value != PASS2.value) {
 
-                bootstrapAlert(stepThreeErrDiv, "Confirmation Password not matching", 'danger', 3);
+                bootstrapAlert(stepThreeErrDiv, 'Confirmation Password not matching', 'danger', 3);
                 return false;
             }
 

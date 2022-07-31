@@ -61,11 +61,11 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
         // api functions
         window.stepOneFun=stepOneFun;
         function stepOneFun() {
-            btn_loading(stepOneBtn, "Loading...", true);
+            btn_loading(stepOneBtn, 'Loading...', true);
             // validating
             if (MOB_NUMBER.value.length != 10) {
 
-                bootstrapAlert(stepOneErrDiv, "Enter valid 10 Digit Number", 'danger', 3);
+                bootstrapAlert(stepOneErrDiv, 'Enter valid 10 Digit Number', 'danger', 3);
                 return false;
             }
 
@@ -80,7 +80,7 @@ import { byId, btn_loading, bootstrapAlert,  Toast } from './assets/modules/yama
                 .then(function (response) {
                    let res = response.data;
                     console.log(res);
-                    btn_loading(stepOneBtn, "Loading...", false);
+                    btn_loading(stepOneBtn, 'Loading...', false);
 
                     if (response.data.status == 0) {
 
@@ -153,17 +153,17 @@ window.stepThreeFun=stepThreeFun;
             // validations
             if (PASS.value != PASS2.value) {
 
-                bootstrapAlert(stepThreeErrDiv, "Confirmation Password not matching", 'danger', 3);
+                bootstrapAlert(stepThreeErrDiv, 'Confirmation Password not matching', 'danger', 3);
                 return false;
             }
             if (ALT_NUM.value.length != 10) {
 
-                bootstrapAlert(stepThreeErrDiv, "Enter valid 10 Digit Alternate Number", 'danger', 3);
+                bootstrapAlert(stepThreeErrDiv, 'Enter valid 10 Digit Alternate Number', 'danger', 3);
                 return false;
             }
             if (CITY.value.length < 3) {
 
-                bootstrapAlert(stepOneErrDiv, "Enter valid City", 'danger', 3);
+                bootstrapAlert(stepOneErrDiv, 'Enter valid City', 'danger', 3);
                 return false;
             }
             // email validation
@@ -171,7 +171,7 @@ window.stepThreeFun=stepThreeFun;
             var mail_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if (!EMAIL.value.match(mail_format)) {
 
-                bootstrapAlert(stepThreeErrDiv, "Enter valid Email", 'danger', 3);
+                bootstrapAlert(stepThreeErrDiv, 'Enter valid Email', 'danger', 3);
                 return false;
             }
 
@@ -215,7 +215,7 @@ window.stepThreeFun=stepThreeFun;
 
                         bootstrapAlert(stepThreeErrDiv, response.data.msg, 'success', 3);
                    
-                     let   url = "./email_action.html?rv=" + response.data.ID;
+                     let   url = './email_action.html?rv=' + response.data.ID;
                         location.href = url;
 
                     }
