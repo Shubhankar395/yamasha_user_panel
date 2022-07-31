@@ -23,12 +23,12 @@ setUsernameInHeader();
 
 
         //updating wallets
-        let   referral_points = byId('referral_points');
-        let   t_body = byId('t_body');
-        let   refer_link = byId('refer_link');
+        const   referral_points = byId('referral_points');
+        const   t_body = byId('t_body');
+        const   refer_link = byId('refer_link');
 
        
-let url = new URL( './register.html',location.href);
+const url = new URL( './register.html',location.href);
         // if (location.host == '192.168.100.5') {
         //     url = 'http://192.168.100.5/yamasha_v1/user_panel/register.html';
         // } else {
@@ -65,7 +65,7 @@ let url = new URL( './register.html',location.href);
 
             axios.post(api_base+'wallets.php', bodyFormData)
                 .then(function(response) {
-                   let res = response.data;
+                   const res = response.data;
                     console.log(res);
 
                     if (res.status === 0) {
@@ -95,7 +95,7 @@ let url = new URL( './register.html',location.href);
 
             axios.post(api_base+'referral_history.php', bodyFormData)
                 .then(function(response) {
-                  let  res = response.data;
+                  const  res = response.data;
                     console.log(res);
 
                     if (res.status === 0) {
