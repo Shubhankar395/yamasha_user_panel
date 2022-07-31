@@ -16,7 +16,7 @@ setUsernameInHeader();
 
 let data_table_body = byId('data_table_body');
 let subscribe_btn = byId('subscribe_btn');
-let unsubscribe_btn = byId('unsubscribe_btn');
+let unsubscribe_btn = byId('unsubscribe_btn'); 
 
 function fetch_advisory_fun() {
     var bodyFormData = new URLSearchParams();
@@ -108,7 +108,7 @@ function client_alerts_data_fun(action) {
                 d_none(unsubscribe_btn, false);
                 Toast.fire({
                     icon: 'success',
-                    title: "advisory alerts Subscribed"
+                    title: 'advisory alerts Subscribed'
                 });
 
 
@@ -122,7 +122,7 @@ function client_alerts_data_fun(action) {
                 d_none(unsubscribe_btn, true);
                 Toast.fire({
                     icon: 'warning',
-                    title: "advisory alerts Unsubscribed"
+                    title: 'advisory alerts Unsubscribed'
                 });
 
             }

@@ -133,12 +133,12 @@ window.ai_action_fun=ai_action_fun;
 					console.log(response.data);
 
 					if (response.data.status == 0) {
-						bootstrapAlert(ai_action_err_div, response.data.msg, "danger", 3);
+						bootstrapAlert(ai_action_err_div, response.data.msg, 'danger', 3);
 					}
 					if (response.data.status == 1) {
-						bootstrapAlert(ai_action_err_div, response.data.msg, "success", 3);
+						bootstrapAlert(ai_action_err_div, response.data.msg, 'success', 3);
 						fetchWallet();
-						ai_trx_body.innerHTML ="";
+						ai_trx_body.innerHTML ='';
 						aiTrxFun();
 					}
 
