@@ -148,4 +148,4 @@ setUsernameInHeader();
 					console.log(error);
 				});
 		}
-		window.ai_action_fun=ai_action_fun;
+		window.ai_action_fun=ai_action_fun; 
