@@ -59,8 +59,8 @@ function proceedFun(action) {
   
 
     if(action ==='send_email'){
- // eslint-disable-next-line no-useless-escape
- if (!EMAIL_INPUT.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+
+ if (!EMAIL_INPUT.value.match(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/)) {
 
 
     Swal.fire({
