@@ -60,6 +60,7 @@ fetchWallet();
 function fetch_yamasha_stock_data_fun() {
     var bodyFormData = new URLSearchParams();
 
+    bodyFormData.append('action', 'get_price');
     bodyFormData.append('ID', store.get('yamasha_user_data1').ID);
     bodyFormData.append('TOKEN', store.get('yamasha_user_data1').TOKEN);
     axios.post(api_base + 'yamasha_stock.php', bodyFormData)
