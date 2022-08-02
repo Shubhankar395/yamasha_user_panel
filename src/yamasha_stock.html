@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yamasha stock</title>
+    
+</head>
+<body>
+    
+    <div>
+
+        
+        <p id='yamasha_stock_price_display'></p>
+
+        <p id='yamasha_stock_gain_display'></p>
+        <!-- calculate percentage of change and display here  -->
+        <p></p>
+    </div>
+
+
+    <div>
+
+        <!-- this  is buy stock form  -->
+
+        <input type="number" id='stock_quantity_input' >
+
+        <button id='stock_buy_btn'> Buy now</button>
+
+    </div>
+
+
+    <div>
+ <!-- this is history data   -->
+        <div>
+            <table class='table text-white'>
+                <thead>
+                    <td> Date and Time </td>
+                    <td> Quantity </td>
+                    <td> Price </td>
+                    <td> Locking Period </td>
+                
+                
+                </thead>
+                <tbody id='data_table_body'>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script type='module' src="./yamasha_stock.js"></script>
+</body>
+</html>
