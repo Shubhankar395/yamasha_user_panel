@@ -1,17 +1,23 @@
 import axios from 'axios';
-import { byId, logOut, Toast , d_none ,loginCheck ,setUsernameInHeader } from './assets/modules/yamasha_utility';
+
 
 import moment from 'moment';
 import store from 'store';
 import Swal from 'sweetalert2';
 import { api_base } from './assets/modules/config';
+import { byId, d_none, loginCheck, logOut, setUsernameInHeader, Toast } from './assets/modules/yamasha_utility';
 
-window.loginCheck=loginCheck;
-window.setUsernameInHeader=setUsernameInHeader;
+loginCheck();
+setUsernameInHeader();
 window.logOut = logOut;
 
 
 const yamasha_stock_price_display = byId('yamasha_stock_price_display');
+
+const yamasha_stock_price_display1 = byId('yamasha_stock_price_display1');
+const yamasha_stock_gain_display1 = byId('yamasha_stock_gain_display1');
+const yamasha_stock_gain_in_percent_display1 = byId('yamasha_stock_gain_in_percent_display1');
+
 const yamasha_stock_gain_display = byId('yamasha_stock_gain_display');
 const stock_quantity_input = byId('stock_quantity_input');
 const popup_show = byId('popup_show');
@@ -53,15 +59,20 @@ function yamasha_stock_action_fun(action, stock_quantity) {
                 });
             }
             if (res.status === 1) {
-
+                yamasha_stock_price_display1.innerHTML = '₹' + res.yamasha_stock_price;
                 yamasha_stock_price_display.value = res.yamasha_stock_price;
-                yamasha_stock_gain_display.innerHTML = res.yamasha_stock_gain;
+                yamasha_stock_gain_display1.innerHTML = '+' + res.yamasha_stock_gain;
+                let percentVal = (100 * res.yamasha_stock_gain) / res.yamasha_stock_price;
+                percentVal = Math.round(percentVal * 100) / 100;
+                yamasha_stock_gain_in_percent_display1.innerHTML = '(' + percentVal + '%)';
 
-                const tAmount = yamasha_stock_price_display.value * stock_quantity;
-    console.log(stock_quantity);
+                // yamasha_stock_gain_display.innerHTML = res.yamasha_stock_gain;
 
-                yamasha_stock_gain_display.value = tAmount;
-                
+                // const tAmount = yamasha_stock_price_display.value * stock_quantity;
+                // console.log(stock_quantity);
+
+                // yamasha_stock_gain_display.value = tAmount;
+
             }
             if (res.status === 2) {
 
@@ -88,13 +99,13 @@ function yamasha_stock_action_fun(action, stock_quantity) {
                     // let   init_data = res.res_data[i]
                     // const time = moment(res.res_data[i].TIME * 1000).startOf().fromNow();
 
-                    const date =moment(res.res_data[i].TIME * 1000).format('DD/MM/YYYY');
-                    const time =moment(res.res_data[i].TIME * 1000).format('LT');
-                     
-                    const after_year_date=moment(res.res_data[i].TIME * 1000).add(1, 'y');
+                    const date = moment(res.res_data[i].TIME * 1000).format('DD/MM/YYYY');
+                    const time = moment(res.res_data[i].TIME * 1000).format('LT');
+
+                    const after_year_date = moment(res.res_data[i].TIME * 1000).add(1, 'y');
 
                     const lock_in_time = after_year_date.fromNow(true);
-                    
+
                     data_table_body.innerHTML += `
             <tr class="text-light">
                 <td>${date} ${time}</td>
@@ -130,40 +141,40 @@ yamasha_stock_action_fun('get_history', 0);
 
 stock_buy_btn.addEventListener('click', function () { yamasha_stock_action_fun('buy_stocks', stock_quantity_input.value); }, false);
 
-stock_quantity_input.addEventListener('change', function (e) { 
+stock_quantity_input.addEventListener('input', function (e) {
     // const stock_quantity_input = byId('stock_quantity_input');
     const yamasha_stock_price_display = byId('yamasha_stock_price_display');
-    const yamasha_stock_gain_display = byId('yamasha_stock_gain_display');
-    
-    const tAmount = (e.target.value) * (yamasha_stock_price_display.value);
+    const yamasha_stock_total_amount = byId('yamasha_stock_total_amount');
 
-    yamasha_stock_gain_display.value = tAmount;
+    let tAmount = (e.target.value) * (yamasha_stock_price_display.value);
+    tAmount =  Math.round(tAmount * 100) / 100;
+    yamasha_stock_total_amount.value = tAmount;
 
 });
 
 
-function stock_sell_function (){
+function stock_sell_function() {
     console.log('success');
     Swal.fire({
-        title: 'You can not sell stock',
-        text: 'You can not sell due to login period  of 1 year',
+        title: "You can't sell stock",
+        text: "You can't sell due to lock-in period  of 1 Year",
         icon: 'warning',
         buttons: true,
         dangerMode: true
-      });
-} 
+    });
+}
 window.stock_sell_function = stock_sell_function;
 
 
-function popup_hide(){
-  d_none(popup_show , true);
+function popup_hide() {
+    d_none(popup_show, true);
 }
 window.popup_hide = popup_hide;
 
-function stock_buy_function(){
+function stock_buy_function() {
 
-  d_none(popup_show , false);
-      
+    d_none(popup_show, false);
+
 }
 window.stock_buy_function = stock_buy_function;
 
