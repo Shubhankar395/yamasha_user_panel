@@ -11,10 +11,6 @@ window.logOut = logOut;
 setUsernameInHeader();
 
 
-let a =123;
-
- a='abc';
- a;
 
 
 
