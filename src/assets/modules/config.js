@@ -10,6 +10,9 @@ switch (location.host) {
   case "127.0.0.1:5501":
     api_base = 'http://192.168.100.5/yamasha_live/api/user_panel/';
     break;
+  case "127.0.0.1:5502":
+    api_base = 'http://192.168.100.5/yamasha_live/api/user_panel/';
+    break;
 
   default:
 
