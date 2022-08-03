@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email-Design</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        position: relative;
+        top: 0;
+        margin: auto;
+      }
+
+      /* .container{
+        padding: 35px;
+      } */
+      .bg_img {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.63),
+            rgba(0, 0, 0, 0.623)
+          ),
+          url("https://cdn.discordapp.com/attachments/962990670962900992/1003762057134477312/email_varification_bg-img.jpg");
+        height: auto;
+        width: 100%;
+        top: -30%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .bg_img::before {
+        content: "";
+        position: absolute;
+
+        width: 70%;
+        height: auto;
+        backdrop-filter: blur(3px);
+      }
+
+      .color {
+        color: black;
+      }
+
+      .mt-3{
+          margin-top: 15px;
+      }
+
+      .mt-5{
+          margin-top: 25px;
+      }
+
+      .p-5{
+        padding: 25px;
+      }
+
+      .py-4{
+        padding-top: 20px;
+        padding-bottom: 20px;;
+      }
+
+      .container{
+        /* margin: 45px; */
+        width: 98%;
+      }
+
+
+      .transaction-wraper{
+        width: 80%;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        padding: 10px;
+        margin: auto;
+      }
+
+      .transaction-wraper h4{
+        letter-spacing: .1rem;
+      }
+
+      .wraper {
+        background-color: white;
+        width: 95%;
+        padding: 15px;
+        border-radius: 12px;
+        border: 4px solid #094d8b;
+        /* text-align: center; */
+        margin: auto;
+      }
+
+      .wraper img {
+        width: 30%;
+      }
+
+      .email-text {
+        letter-spacing: 0.2rem;
+      }
+
+      .d-flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap : 1.5rem;
+      }
+
+      .flex-column{
+        flex-direction: column;
+      }
+
+      .text-left{
+
+        text-align: left;
+      }
+
+      .text-center{
+        text-align: center;
+      }
+
+      .text-success{
+        color: green;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .msg-text{
+
+        padding: 35px;
+
+      }
+
+      .yamasha-text{
+        padding: 30px;
+      }
+
+      .yamasha-text h5{
+        font-weight: bold;
+      }
+
+      .yamasha-important{
+        padding: 45px;
+      }
+
+      @media screen  and (max-width:991px)and (min-width : 250px) {
+        
+        /* .tra{
+          width: 100%;
+        } */
+
+        .transaction-wraper{
+          width : 100%;
+        }
+
+        .yamasha-text{
+          display : none;
+        }
+
+        .wraper{
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent" id="verification_div_one">
+      <div class="bg_img"></div>
+      <div class="container mt-5">
+        <div class="text-center wraper">
+          <div class="text-left">
+            <img src="https://cdn.discordapp.com/attachments/962990670962900992/1003762056408879134/Yamasha-email-varification-logo.png" alt="logo" />
+          </div>
+          <div class="container mt-3 transaction-wraper">
+            <div class="text-center py-4">
+                <h2 class="text-success font-weight-bold">₹ 5556.890</h2>
+              </div>
+              <div class="container text-center">
+                <div class="d-flex">
+                    <h5 class="color">Txn.ID : </h5>
+                    <h5 class="color">09876543234567 </h5>
+                </div>
+                <div class="d-flex">
+                    <h5 class="color">Txn.Status : </h5>
+                    <h5 class="color">Success </h5>
+                  </div>
+                  <div class="d-flex">
+                    <h5 class="color">Debited from : </h5>
+                    <div class="">
+                        <h5 class="color">09876543234567 </h5>
+                        <h5 class="color">HDFC BANK LTD</h5>
+                    </div>
+                  </div>
+                  <div class="d-flex">
+                    <h5 class="color">Bank Ref No. : </h5>
+                    <h5 class="color">21876543234567 </h5>
+                  </div>
+              </div>
+          </div>
+
+          <div class="msg-text">
+            <p>Hi <strong> Ashad Raja </strong>  <br> In case if you didn’t make this transection or notice any error, <br> contact us on  <a href="#">support@yamasha</a> </p>
+          </div>
+          <div class="yamasha-text">
+            <h5 class="color">THANKS ,<br> YAMASHA VENTURE TEAM</h5>
+          </div>
+          <div class="yamasha-important">
+            <p>Note: our executives never ask for your password or any kind of OTP. To refrain fraudulent activity please don’t share any kind of pin with anyone. <br> <br> <a href="#">support@yamasha.in</a></p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
