@@ -48,160 +48,42 @@
 	<link href="assets/fonts/fonts/font-awesome.min.css" rel="stylesheet">
 
 	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
 
-		.bg-img {
-			background-image: url('https://cdn.discordapp.com/attachments/962990670962900992/969981439015805008/pattern-1.png');
-			/* background-repeat: no-repeat; */
-			background-color: #222429;
-			/* height: 100vh; */
-		}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        
+        .bg-color{
+            background-color: black;
+            height: 80vh;
+            width: 100%;
+        }
 
-		.text-font {
-			font-size: 55px;
-		}
+        .content-header{
+            background-color: #0761cf;
+            height: 45px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
-		.box-Shadow {
-			background-color: black;
-			/* box-shadow: 0px 0px 5px 1px black; */
-			border-radius: 12px;
-		}
+        .radius{
+            border-radius: 04px;
+        }
 
-		.icon-img {
-			/* height: 90px; */
-			height: auto;
-			/* width: 70px */
-			width: 50%;
-		}
+        .display{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            gap: 150px;
+            margin-left: 8rem;
+        }
 
-		@media (min-width:1441px) and (max-width:5555px) {
-			.bg-img {
-				height: 100vh;
-			}
+        /* .table-header{
+            background-color: rgb(147, 146, 146);
+        } */
 
-			.fontHeight {
-				margin-top: 0;
-			}
-
-			.IconsDiv {
-				justify-content: space-evenly;
-				margin-top: 5px;
-			}
-
-			.box-Shadow {
-				text-align: center;
-				margin-bottom: 17px;
-			}
-
-			.icon-img {
-				width: 60%;
-			}
-
-			.IconsDiv .box-Shadow h6 {
-				font-size: 40px;
-			}
-
-
-			.fontHeight h1 {
-				font-size: 70px;
-			}
-
-			.fontHeight p {
-				font-size: 25px;
-			}
-
-			.box-elmnt-font h6 {
-				font-size: x-large;
-			}
-
-			.box-elmnt-font h2 {
-				font-size: 40px;
-			}
-		}
-
-		@media (min-width:992px) and (max-width:1440px) {
-
-
-			/* .fontHeight h1{
-                font-size: 85px;
-            }
-            .fontHeight p{
-                font-size: 32px;
-            }
-
-            .box-elmnt-font h6{
-                font-size: xx-large;
-            }
-
-            .box-elmnt-font h2{
-                font-size: 55px;
-            } */
-
-			.IconsDiv {
-				justify-content: space-evenly;
-				margin-top: 26px;
-			}
-
-			.box-Shadow {
-				text-align: center;
-				margin-bottom: 17px;
-			}
-
-			.icon-img {
-				height: auto;
-				width: 30%;
-			}
-
-			/* .IconsDiv .box-Shadow h6{
-                font-size: 50px;
-            } */
-
-		}
-
-		@media (min-width:577px) and (max-width:991px) {
-
-			.box-Shadow {
-				text-align: center;
-				margin-bottom: 17px;
-			}
-
-			.icon-img {
-				height: auto;
-				width: 20%;
-			}
-
-			.bg-img {
-				height: auto;
-			}
-		}
-
-		@media (max-width:576px) {
-
-			.bg-img {
-				height: auto;
-			}
-
-			.box-Shadow {
-				text-align: center;
-				margin-bottom: 17px;
-			}
-
-			.text-font br {
-				display: none;
-			}
-
-			.text-font {
-				font-size: small;
-			}
-
-			.textPara {
-				font-size: xx-small;
-			}
-		}
 	</style>
+	
+	
 
 </head>
 
@@ -228,25 +110,45 @@
 			<!--content-area-->
 			<div class="content-area">
 
-				<div>
-                    <button class='d-none' id='subscribe_btn' onclick="client_alerts_data_fun('advisory_subscribe')"> Subscribe</button>  <button class='d-none' id='unsubscribe_btn' onclick="client_alerts_data_fun('advisory_unsubscribe')"> unsubscribe</button>
-                </div>
-                <div>
-                    <table class='table text-white'>
-                        <thead>
-                            <td> date </td>
-                            <td> Company name  </td>
-                            <td> Message  </td>
-                            <td> Category </td>
-                            <td> Buy Price  </td>
-                            <td> Sl Price   </td>
-                        
-                        </thead>
-                        <tbody id='data_table_body'>
+				<div class="advisory bg-color">
+					<div class="py-5">
+					   <div class="content-header ">
+							<div class="display ml-5">
+								<h5 class ='text-light mt-2'>Advisory</h5>
+								<button class=" d-none btn btn-danger text-light border-0 radius px-4 py-1 ml-5" id='subscribe_btn' onclick="client_alerts_data_fun('advisory_subscribe')">Subscribe</button>
+								<button class="btn btn-danger text-light border-0 radius px-4 py-1 ml-5 d-none" id='unsubscribe_btn' onclick="client_alerts_data_fun('advisory_unsubscribe')">UnSubscribe</button>
+							</div>
+					   </div>
+					</div>
 
-                        </tbody>
-                    </table>
-                </div>
+					<!--  -->
+
+				   <div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<table class="table table-borderless table-responsive-sm table-hover"
+								>
+								<thead style=" background-color: rgb(147, 146, 146);">
+									<tr>
+										<th scope="col-lg-2" class="text-light">Date</th>
+										<th scope="col-lg-2" class="text-light">Company Name</th>
+										<th scope="col-2" class="text-light">Message</th>
+										<th scope="col-2" class="text-light">Sub-Category</th>
+										<th scope="col-2" class="text-light">Buy Price</th>
+										<th scope="col-2" class="text-light">Sell Price</th>
+									</tr>
+								</thead>
+								<tbody id="data_table_body">
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				   </div>
+				</div>
+				
+				
+				
 				<!--footer-->
 				<footer class="footer" id="footer_div">
 					<include  src="src/includes/footer.html"></include>

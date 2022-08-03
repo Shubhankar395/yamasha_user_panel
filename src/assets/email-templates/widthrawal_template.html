@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email-Design</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        position: relative;
+        top: 0;
+        margin: auto;
+      }
+      .bg_img {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.63),
+            rgba(0, 0, 0, 0.623)
+          ),
+          url("https://cdn.discordapp.com/attachments/962990670962900992/1003762057134477312/email_varification_bg-img.jpg");
+        height: auto;
+        width: 100%;
+        top: -30%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-attachment: fixed;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+      }
+
+      .bg_img::before {
+        content: "";
+        position: absolute;
+
+        width: 70%;
+        height: auto;
+        backdrop-filter: blur(3px);
+      }
+
+      .color {
+        color: black;
+      }
+
+      .mt-3{
+          margin-top: 15px;
+      }
+
+      .mt-5{
+          margin-top: 25px;
+      }
+
+      .p-5{
+        padding: 25px;
+      }
+
+      .py-4{
+        padding-top: 20px;
+        padding-bottom: 20px;;
+      }
+
+      .container{
+        /* margin: 45px; */
+        width: 98%;
+      }
+
+
+      .transaction-wraper{
+        width: 90%;
+        padding: 10px;
+        margin: auto;
+      }
+
+      .transaction-wraper p{
+        letter-spacing: .1;
+      }
+
+      .wraper {
+        background-color: white;
+        width: 90%;
+        padding: 25px;
+        border-radius: 12px;
+        border: 4px solid #094d8b;
+        /* text-align: center; */
+        margin: auto;
+      }
+
+      .wraper img {
+        width: 40%;
+      }
+
+      .email-text {
+        letter-spacing: 0.2rem;
+      }
+
+      .d-flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap : 1.5rem;
+      }
+
+      .flex-column{
+        flex-direction: column;
+      }
+
+      .text-left{
+
+        text-align: left;
+      }
+
+      .text-center{
+        text-align: center;
+      }
+
+      .text-success{
+        color: green;
+      }
+
+      .font-weight-bold{
+        font-weight: 600;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .msg-text{
+
+        padding: 35px;
+
+      }
+
+      .yamasha-text{
+        padding: 30px;
+      }
+
+      .yamasha-text h5{
+        font-weight: bold;
+      }
+
+      .yamasha-important{
+        padding: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent" id="verification_div_one">
+      <div class="bg_img"></div>
+      <div class="container mt-5">
+        <div class="text-center wraper">
+          <div class="text-left">
+            <img src="https://cdn.discordapp.com/attachments/962990670962900992/1003762056408879134/Yamasha-email-varification-logo.png" alt="logo" />
+          </div>
+          <div class="container mt-3 transaction-wraper">
+            <img src="https://cdn.discordapp.com/attachments/962990670962900992/1003762056794734733/v289_38.png" alt="Success">
+            <div class="text-center py-4">
+                <h1 class="text-success">Payment Successful</h1>
+                <p>Transaction No :  ikhjgh546kjhg </p>
+            </div>
+            <div class="text-center py-4">
+                <h1 class="text-success">₹ 7654.5678</h1>
+                <p class="date font-weight-bold mt-3">21-12-2022  | 23:46PM</p>
+            </div>
+          </div>
+
+          <div class="msg-text">
+            <p>Hi <strong> Ashad Raja </strong> <br> In case if you didn’t make this transection or notice any error, contact us on  <a href="#">support@yamasha</a> </p>
+          </div>
+          <div class="yamasha-text">
+            <h5 class="color">THANKS ,<br> YAMASHA VENTURE TEAM</h5>
+          </div>
+          <div class="yamasha-important">
+            <p>Note: our executives never ask for your password or any kind of OTP. To refrain fraudulent activity please don’t share any kind of pin with anyone. <a href="#">support@yamasha.in</a></p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

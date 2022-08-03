@@ -46,12 +46,12 @@ function fetch_advisory_fun() {
                     const time = moment(res.res_data[i].TIME * 1000).startOf().fromNow();
                     data_table_body.innerHTML += `
                             <tr>
-                                                <td>${time}</td>
-                                                <td>${res.res_data[i].COMPANY_NAME}</td>
-                                                <td>${res.res_data[i].CATEGORY}</td>
-                                                <td>${res.res_data[i].MESSAGE}</td>
-                                                <td>${res.res_data[i].BUY_PRICE}</td>
-                                                <td>${res.res_data[i].SL_PRICE}</td>
+                                                <td class='text-light'>${time}</td>
+                                                <td class='text-light' >${res.res_data[i].COMPANY_NAME}</td>
+                                                <td class='text-light' >${res.res_data[i].CATEGORY}</td>
+                                                <td class='text-light' >${res.res_data[i].MESSAGE}</td>
+                                                <td class='text-light' >${res.res_data[i].BUY_PRICE}</td>
+                                                <td class='text-light' >${res.res_data[i].SL_PRICE}</td>
                                                
                                               
                                              

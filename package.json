@@ -6,7 +6,8 @@
     "src/index.html",
     "src/login.html",
     "src/invest_whatsapp.html",
-    "src/email_action.html"
+    "src/email_action.html",
+    "src/yamasha_stock_venture.html"
   ],
   "scripts": {
     "start": "npm run dev",
