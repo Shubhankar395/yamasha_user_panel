@@ -18,7 +18,7 @@ const yamasha_stock_price_display1 = byId('yamasha_stock_price_display1');
 const yamasha_stock_gain_display1 = byId('yamasha_stock_gain_display1');
 const yamasha_stock_gain_in_percent_display1 = byId('yamasha_stock_gain_in_percent_display1');
 
-const yamasha_stock_gain_display = byId('yamasha_stock_gain_display');
+
 const stock_quantity_input = byId('stock_quantity_input');
 const popup_show = byId('popup_show');
 const stock_buy_btn = byId('stock_buy_btn');
