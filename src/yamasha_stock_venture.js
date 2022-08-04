@@ -185,17 +185,17 @@ function yamasha_stock_action_fun(action, stock_quantity) {
                         type: 'value',
                         boundaryGap: [0, '50%']
                     },
-                    dataZoom: [
-                        {
-                            type: 'inside',
-                            start: 80,
-                            end: 100
-                        },
-                        {
-                            start: 80,
-                            end: 100
-                        }
-                    ],
+                    // dataZoom: [
+                    //     {
+                    //         type: 'inside',
+                    //         start: 80,
+                    //         end: 100
+                    //     },
+                    //     {
+                    //         start: 80,
+                    //         end: 100
+                    //     }
+                    // ],
                     series: [
                         {
                             name: 'Price',
