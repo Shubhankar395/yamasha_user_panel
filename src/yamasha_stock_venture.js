@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-
+import * as echarts from 'echarts';
 import moment from 'moment';
 import store from 'store';
 import Swal from 'sweetalert2';
@@ -104,14 +103,15 @@ function yamasha_stock_action_fun(action, stock_quantity) {
 
                     const after_year_date = moment(res.res_data[i].TIME * 1000).add(1, 'y');
 
-                    const lock_in_time = after_year_date.fromNow(true);
+                    const lock_in_time = after_year_date.format('DD/MM/YYYY');
 
                     data_table_body.innerHTML += `
             <tr class="text-light">
                 <td>${date} ${time}</td>
               
                 <td>${res.res_data[i].QUANTITY}</td>
-                <td>${res.res_data[i].PRICE}</td>
+                <td>${res.res_data[i].TYPE}</td>
+                <td>₹${res.res_data[i].PRICE}</td>
                 <td>${lock_in_time}</td>
             
             
@@ -126,7 +126,89 @@ function yamasha_stock_action_fun(action, stock_quantity) {
 
             }
 
+            if (res.status === 4) {
 
+                // adding data to table
+                let i = 0;
+                const data = [];
+                while (res.res_data.length > i) {
+      
+
+                    data.push([res.res_data[i].TIME * 1000, res.res_data[i].PRICE]);
+
+
+                    i++;
+                }
+
+
+                // graph code 
+                var chartDom = document.getElementById('graph_main_div');
+                var myChart = echarts.init(chartDom);
+                var option;
+
+
+
+                console.log(data);
+                option = {
+                    
+                    tooltip: {
+                        trigger: 'axis',
+                        position: function (pt) {
+                            return [pt[0], '10%'];
+                        },
+                        // axisPointer: {
+                        //     type: 'cross'
+                        //   }
+                    },
+                    title: {
+                        left: 'center',
+                        text: 'Yamasha stock price history'
+                    },
+                    toolbox: {
+                        feature: {
+                            dataZoom: {
+                                yAxisIndex: 'none'
+                            },
+                            restore: {},
+                            saveAsImage: {}
+                        }
+                    },
+                    xAxis: {
+                        type: 'time',
+                        boundaryGap: false,
+                        axisLabel:{
+                            // formatter: '{dd}/{MM}/{yyyy} {hh}:{mm}'
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        boundaryGap: [0, '50%']
+                    },
+                    dataZoom: [
+                        {
+                            type: 'inside',
+                            start: 80,
+                            end: 100
+                        },
+                        {
+                            start: 80,
+                            end: 100
+                        }
+                    ],
+                    series: [
+                        {
+                            name: 'Price',
+                            type: 'line',
+                            smooth: true,
+                            symbol: 'none',
+                            areaStyle: {},
+                            data: data
+                        }
+                    ]
+                };
+
+                option && myChart.setOption(option);
+            }
             if (res.status === -1) {
                 logOut();
             }
@@ -138,6 +220,7 @@ function yamasha_stock_action_fun(action, stock_quantity) {
 
 yamasha_stock_action_fun('get_price', 0);
 yamasha_stock_action_fun('get_history', 0);
+yamasha_stock_action_fun('get_graph_data', 0);
 
 stock_buy_btn.addEventListener('click', function () { yamasha_stock_action_fun('buy_stocks', stock_quantity_input.value); }, false);
 
@@ -147,7 +230,7 @@ stock_quantity_input.addEventListener('input', function (e) {
     const yamasha_stock_total_amount = byId('yamasha_stock_total_amount');
 
     let tAmount = (e.target.value) * (yamasha_stock_price_display.value);
-    tAmount =  Math.round(tAmount * 100) / 100;
+    tAmount = Math.round(tAmount * 100) / 100;
     yamasha_stock_total_amount.value = tAmount;
 
 });
@@ -177,4 +260,7 @@ function stock_buy_function() {
 
 }
 window.stock_buy_function = stock_buy_function;
+
+
+
 

@@ -201,12 +201,21 @@
                       <h4 class="text-success font-weight-bold yamasha-text" ><span id='yamasha_stock_gain_display1'>+1.45 </span>  <span id='yamasha_stock_gain_in_percent_display1'>(2.45%)</span></h4>
                     </div>
                   </div>
+                 
                   <div class="col-lg-4">
                     <div class="d-flex align-items-center gap">
                         <button type="button" class="btn btn-success px-5 py-1 font-weight-bold radius" id="stock_buy_button" onclick="stock_buy_function()">BUY</button>
                         <button type="button" class="btn btn-danger px-5 py-1 font-weight-bold radius" id="stock_sell_button" onclick="stock_sell_function()">SELL</button>
                     
                     </div>
+                  </div>
+
+                  <div class="col-8" >
+                    <div id='graph_main_div' style='height:500px; width: 900px;'>
+                  </div>
+
+                 
+                    
                   </div>
                 </div>
               </div>
@@ -240,8 +249,9 @@
 									<tr>
 										<th scope="col-lg-2" class="text-light">Order Time</th>
 										<th scope="col-lg-4" class="text-light">Quantity</th>
-										<th scope="col-2" class="text-light">Buy Price</th>
-										<th scope="col-2" class="text-light">Lock-In Period</th>
+										<th scope="col-2" class="text-light">Type</th>
+										<th scope="col-2" class="text-light">Price</th>
+										<th scope="col-2" class="text-light">Lock-In Till</th>
 									</tr>
 								</thead>
                 <tbody id='data_table_body'>
