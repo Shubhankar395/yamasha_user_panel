@@ -178,6 +178,7 @@ function yamasha_stock_action_fun(action, stock_quantity) {
                         boundaryGap: false,
                         axisLabel:{
                             // formatter: '{dd}/{MM}/{yyyy} {hh}:{mm}'
+                            interval: 'auto'
                         }
                     },
                     yAxis: {
