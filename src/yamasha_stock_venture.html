@@ -116,6 +116,10 @@
         width: 90%;
       }
 
+      .graph-color{
+        color: red;
+      }
+
       @media (min-width:577px) and (max-width : 991px) {
         .logo_div img{
             width:25%;
@@ -137,7 +141,7 @@
       .graph-container{
         margin-top: 15px;
         height: 70vh;
-        width: 75vw;
+        width: 100%;
       }
       }
 
@@ -145,7 +149,7 @@
 
         .graph-container{
         height: 68vh;
-        width: 65vw;
+        width: 100%;
       }
 
       }
@@ -162,6 +166,9 @@
             font-size: large;
         }
 
+        .border_bottom{
+        border-bottom: 0;
+      }
         .popup-data{
         width: 80%;
         background-color: white;
@@ -169,8 +176,8 @@
 
       .graph-container{
         margin-top: 15px;
-        height: 63vh;
-        width: 85%;
+        height: 55vh;
+        width: 100%;
       }
       }
       @media (max-width : 380px) {
@@ -188,8 +195,8 @@
 
       .graph-container{
         margin-top: 15px;
-        height: 70vh;
-        width:78%;
+        height: 58vh;
+        width:100%;
       }
         
   }
@@ -252,19 +259,48 @@
                   </div>
                   <div id='graph_main_div' class="graph-container  graph-color" ></div>
                 </div>
-              <!-- </div> -->
               <div class="col-lg-3">
                 <div>
                     <img src="./assets/images/yamasha_stock_venture_img/Frame_img.png" alt="" class="banner">
                 </div>
               </div>
             </div>
+
             <div class="my-4">
-                <div class="text-left py-4 d-flex gap">
+              <div class="text-left py-4 gap">
+                  <h1 class="text-light font-weight-bold  about_heading">
+                      Current Portfolio Value
+                  </h1>
+                  <h2 class=" font-weight-bold  py-3 mt-2 text-light">₹ 7654.87</h2>
+              </div>
+              <div class="row" id="">
+                  <div class="col-lg-9">
+                      <table class="table table-borderless table-responsive-sm table-hover"
+              >
+              <thead style=" background-color: rgb(147, 146, 146);">
+                <tr>
+                  <th scope="col-2" class="text-light">Script Name</th>
+                  <th scope="col-2" class="text-light">Qty</th>
+                  <th scope="col-2" class="text-light">Average Price</th>
+                  <th scope="col-2" class="text-light">Investment Value</th>
+                  <th scope="col-2" class="text-light">Cur Value</th>
+                  <th scope="col-2" class="text-light">Gain/Loss</th>
+                </tr>
+              </thead>
+              <tbody id='portfolio_data_table_body'>
+
+              </tbody>
+            </table>
+                  </div>
+              </div>
+          </div>
+            <div class="my-4">
+                <div class="text-left py-4 d-flex align-items-center gap">
                     <h1 class="text-light font-weight-bold border_bottom about_heading">
                         Order History
                     </h1>
-                    <h2 class="btn btn-success font-weight-bold radius px-5 py-2 mt-2" onclick="show()">SHOW</h2>
+                    <h2 class="btn btn-success font-weight-bold radius px-5 py-2 mt-2" onclick="show()" id="show_button">SHOW</h2>
+                    <h2 class="btn btn-danger font-weight-bold radius px-5 py-2 mt-2 d-none" onclick="hide()" id="hide_button">HIDE</h2>
                 </div>
                 <div class="row d-none" id="history-show">
                     <div class="col-lg-9">

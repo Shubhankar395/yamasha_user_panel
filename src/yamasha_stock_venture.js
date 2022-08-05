@@ -28,9 +28,23 @@ const data_table_body = byId('data_table_body');
 
 function show(){
     const history_div= byId('history-show');
-
+    const show_button = byId('show_button');
+    const hide_button = byId('hide_button');
+    d_none(show_button , true);
+    d_none(hide_button , false);
     d_none(history_div , false);
 }
+function hide(){
+    const hide_button = byId('hide_button');
+    const history_div= byId('history-show');
+    const show_button = byId('show_button');
+
+    d_none(hide_button , true);
+    d_none(history_div ,true );
+    d_none(show_button , false);
+
+}
+window.hide = hide;
 window.show = show;
 function yamasha_stock_action_fun(action, stock_quantity) {
 
@@ -237,16 +251,15 @@ stock_quantity_input.addEventListener('input', function (e) {
     // const stock_quantity_input = byId('stock_quantity_input');
     const yamasha_stock_price_display = byId('yamasha_stock_price_display');
     const yamasha_stock_total_amount = byId('yamasha_stock_total_amount');
-
-    let tAmount = (e.target.value) * (yamasha_stock_price_display.value);
-    tAmount = Math.round(tAmount * 100) / 100;
+    const tAmount = (e.target.value) * (yamasha_stock_price_display.value);
+    // tAmount = Math.round(tAmount * 100) / 100;
     yamasha_stock_total_amount.value = tAmount;
 
 });
 
 
 function stock_sell_function() {
-    console.log('success');
+    // console.log('success');
     Swal.fire({
         title: "You can't sell stock",
         text: "You can't sell due to lock-in period  of 1 Year",
