@@ -24,6 +24,14 @@ const stock_buy_btn = byId('stock_buy_btn');
 const data_table_body = byId('data_table_body');
 
 
+
+
+function show(){
+    const history_div= byId('history-show');
+
+    d_none(history_div , false);
+}
+window.show = show;
 function yamasha_stock_action_fun(action, stock_quantity) {
 
     if (action === 'buy_stocks' && stock_quantity < 1) {

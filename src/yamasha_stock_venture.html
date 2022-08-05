@@ -110,9 +110,15 @@
         border-bottom: 2px solid white;
       }
 
+
+      .graph-container{
+        height: 80vh; 
+        width: 90%;
+      }
+
       @media (min-width:577px) and (max-width : 991px) {
         .logo_div img{
-            width:25%
+            width:25%;
         }
 
         .banner{
@@ -127,6 +133,21 @@
         width: 70%;
         background-color: white;
       }
+
+      .graph-container{
+        margin-top: 15px;
+        height: 70vh;
+        width: 75vw;
+      }
+      }
+
+      @media (min-width:577px) and (max-width : 768px){
+
+        .graph-container{
+        height: 68vh;
+        width: 65vw;
+      }
+
       }
 
       @media (min-width:250px) and (max-width : 576px) {
@@ -145,6 +166,12 @@
         width: 80%;
         background-color: white;
       }
+
+      .graph-container{
+        margin-top: 15px;
+        height: 63vh;
+        width: 85%;
+      }
       }
       @media (max-width : 380px) {
   .yamasha-text{
@@ -157,6 +184,12 @@
         .popup-data{
         width: 80%;
         background-color: white;
+      }
+
+      .graph-container{
+        margin-top: 15px;
+        height: 70vh;
+        width:78%;
       }
         
   }
@@ -210,15 +243,16 @@
                     </div>
                   </div>
 
-                  <div class="col-8" >
-                    <div id='graph_main_div' style='height:300px; width: 900px;'>
-                  </div>
+                  <!-- <div class="col-8" >
+                     <div id='graph_main_div' style='height:80vh; width: 100%;'> 
+                  </div> -->
 
                  
                     
                   </div>
+                  <div id='graph_main_div' class="graph-container  graph-color" ></div>
                 </div>
-              </div>
+              <!-- </div> -->
               <div class="col-lg-3">
                 <div>
                     <img src="./assets/images/yamasha_stock_venture_img/Frame_img.png" alt="" class="banner">
@@ -226,22 +260,13 @@
               </div>
             </div>
             <div class="my-4">
-                <div class="text-left py-4">
-                    <h1 class="text-light font-weight-bold border_bottom about_heading">
-                        About Yamasha Venture Ltd.
-                    </h1>
-                </div>
-                <p class="text-light px-2">
-                  We kick-started operations with the goal of breaking all barriers that traders and investors face in India in terms of cost, support, and technology. Today, our disruptive Copy Trading models and in-house technology have made us the Most Trusted stock broker in India in terms of active retail clients.At Yamasha Venture Limited (formerly known as Yamasha), a digital-first approach is something that has always been deep rooted in our hearts. Right from the time we started our operations, we have effectively leveraged technology to deliver our products, services, and class-leading experience to our ever expanding client base. And as one of the original trailblazers in the stockbroking industry, we have been leading from the front for over two decades. For quite a few time, we have been first-hand witnesses of the rise of a new age of young investors. In fact, we were one of the first broking houses to recognize the evolving expectations of this set of investors, which goes far beyond just mutual fund investments and stock trading and into the realm of rule based investing trading. This led us to Yamasha.
-                </p>
-            </div>
-            <div class="my-4">
-                <div class="text-left py-4">
+                <div class="text-left py-4 d-flex gap">
                     <h1 class="text-light font-weight-bold border_bottom about_heading">
                         Order History
                     </h1>
+                    <h2 class="btn btn-success font-weight-bold radius px-5 py-2 mt-2" onclick="show()">SHOW</h2>
                 </div>
-                <div class="row">
+                <div class="row d-none" id="history-show">
                     <div class="col-lg-9">
                         <table class="table table-borderless table-responsive-sm table-hover"
 								>
